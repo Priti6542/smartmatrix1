@@ -16,7 +16,7 @@ const FeatureSection = () => {
           image={feature.images}
           backgroundImage={feature.backgroundImage}
           speed={0.5} // Set the parallax speed for each section
-          isReversed={index % 2 !== 0} // Alternate layout for even-indexed items
+          isReversed={index % 2 !== 0} // Alternate layout for even-indexed items   
         />
       ))}
     </div>
