@@ -1,67 +1,127 @@
 import React from "react";
 import { Box, Typography, Button, Divider, Grid, IconButton } from "@mui/material";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-  const navigate = useNavigate(); // ✅ Initialize navigation function
+  const navigate = useNavigate();
 
   return (
-    <Box sx={{ bgcolor: "#212121", color: "#bdbdbd", py: 6, px: 3 }}>
+    <Box sx={{ bgcolor: "#212121", color: "#bdbdbd", pt: 8, pb: 4, px: { xs: 3, md: 6 } }}>
       {/* CTA Section */}
-      <Box maxWidth="lg" mx="auto" textAlign={{ xs: "center", md: "left" }}>
-        <Typography variant="caption" textTransform="uppercase" color="gray">
+      <Box
+        maxWidth="lg"
+        mx="auto"
+        textAlign={{ xs: "center", md: "left" }}
+        mb={6}
+      >
+        <Typography
+          variant="caption"
+          textTransform="uppercase"
+          color="gray"
+          fontWeight={500}
+        >
           Get started
         </Typography>
-        <Typography variant="h5" fontWeight="bold" color="white" mt={1}>
-          Boost your productivity. <br /> Start using our app today.
+        <Typography
+          variant="h5"
+          fontWeight="bold"
+          color="white"
+          mt={1}
+          lineHeight={1.4}
+        >
+          Boost your productivity.<br />
+          Start using our app today.
         </Typography>
         <Button
           variant="contained"
-          sx={{ mt: 3, bgcolor: "#ff7043", ":hover": { bgcolor: "#f4511e" } }}
+          sx={{
+            mt: 3,
+            bgcolor: "#ff7043",
+            ":hover": { bgcolor: "#f4511e" },
+            px: 4,
+            py: 1.5,
+            borderRadius: 2,
+            textTransform: "none",
+            fontWeight: "bold"
+          }}
+          onClick={() => navigate("/")}
         >
           Get Started
         </Button>
       </Box>
 
       {/* Footer Links Section */}
-      <Divider sx={{ my: 5, bgcolor: "#424242" }} />
-      <Grid container spacing={1} maxWidth="lg" mx="auto">
-        <Grid item xs={12} md={3} textAlign={{ xs: "center", md: "left" }}>
-          <img src="https://smartmatrixds.com/assets/img/smds-logo.jpeg" alt="Company Logo" style={{ height: 40 }}
-          onClick={() => navigate("/")} />
+      <Divider sx={{ bgcolor: "#424242", mb: 6 }} />
+      <Grid
+        container
+        spacing={{ xs: 2, md: 4 }}
+        maxWidth="lg"
+        mx="auto"
+        textAlign={{ xs: "center", md: "left" }}
+      >
+        {/* Logo */}
+        <Grid item xs={12} md={3} sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
+          <img
+            src="https://smartmatrixds.com/assets/img/smds-logo.jpeg"
+            alt="Company Logo"
+            style={{ height: 50, cursor: "pointer" }}
+            onClick={() => navigate("/")}
+          />
         </Grid>
 
+        {/* Sections */}
         {["Services", "US Healthcare", "Contact US"].map((section, index) => (
-          <Grid item xs={12} md={3} key={index}>
-            <Typography variant="subtitle1" color="white" fontWeight="bold">
+          <Grid item xs={12} sm={4} md={3} key={index}>
+            <Typography variant="subtitle1" color="white" fontWeight="bold" mb={2}>
               {section}
             </Typography>
-            <Box mt={2}>
+            <Box>
               {section === "Services" &&
-                ["Management", "Digital Marketing", "Management Courses", "Devlopment", "IT Courses","Courses"].map((item) => (
-                  <Typography key={item} variant="body2" sx={{ cursor: "pointer", ":hover": { color: "white" } }}
-                  onClick={() => navigate("/services")}>
+                ["Management", "Digital Marketing", "Management Courses", "Development", "IT Courses", "Courses"].map((item) => (
+                  <Typography
+                    key={item}
+                    variant="body2"
+                    sx={{
+                      cursor: "pointer",
+                      mb: 1,
+                      transition: "0.3s",
+                      ":hover": { color: "white" },
+                    }}
+                    onClick={() => navigate("/services")}
+                  >
                     {item}
                   </Typography>
                 ))}
-
               {section === "US Healthcare" &&
                 ["AR Caller", "Medical Coding", "Medical Billing"].map((item) => (
                   <Typography
                     key={item}
                     variant="body2"
-                    sx={{ cursor: "pointer", ":hover": { color: "white" } }}
-                    onClick={() => navigate("/ushealthcare")} // ✅ Corrected onClick placement
+                    sx={{
+                      cursor: "pointer",
+                      mb: 1,
+                      transition: "0.3s",
+                      ":hover": { color: "white" },
+                    }}
+                    onClick={() => navigate("/ushealthcare")}
                   >
                     {item}
                   </Typography>
                 ))}
-
               {section === "Contact US" &&
-                ["contact"].map((item) => (
-                  <Typography key={item} variant="body2" sx={{ cursor: "pointer", ":hover": { color: "white" } }}
-                  onClick={() => navigate("/contact")}>
+                ["Contact"].map((item) => (
+                  <Typography
+                    key={item}
+                    variant="body2"
+                    sx={{
+                      cursor: "pointer",
+                      mb: 1,
+                      transition: "0.3s",
+                      ":hover": { color: "white" },
+                    }}
+                    onClick={() => navigate("/contact")}
+                  >
                     {item}
                   </Typography>
                 ))}
@@ -71,22 +131,25 @@ const Footer = () => {
       </Grid>
 
       {/* Social Media & Copyright */}
-      <Divider sx={{ my: 5, bgcolor: "#424242" }} />
+      <Divider sx={{ bgcolor: "#424242", my: 6 }} />
       <Box
         maxWidth="lg"
         mx="auto"
-        textAlign="center"
         display="flex"
         flexDirection={{ xs: "column", md: "row" }}
         justifyContent="space-between"
         alignItems="center"
+        textAlign={{ xs: "center", md: "left" }}
       >
-        <Typography variant="body2" color="gray">
-          © 2024 Your Company, Inc. All rights reserved.
+        <Typography variant="body2" color="gray" mb={{ xs: 2, md: 0 }}>
+          © 2024 SmartMatrix Digital Services Pvt. Ltd. All rights reserved.
         </Typography>
-        <Box mt={{ xs: 2, md: 0 }}>
+        <Box>
           {[FaFacebookF, FaTwitter, FaInstagram, FaYoutube].map((Icon, index) => (
-            <IconButton key={index} sx={{ color: "gray", ":hover": { color: "white" } }}>
+            <IconButton
+              key={index}
+              sx={{ color: "gray", ":hover": { color: "white" }, mx: 0.5 }}
+            >
               <Icon size={18} />
             </IconButton>
           ))}
