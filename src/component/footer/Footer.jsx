@@ -2,12 +2,14 @@ import React from "react";
 import { Box, Typography, Button, Divider, Grid, IconButton } from "@mui/material";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import NavbarData from "../../datafiles/NavbarData";
 
 const Footer = () => {
   const navigate = useNavigate();
 
   return (
     <Box sx={{ bgcolor: "#212121", color: "#bdbdbd", pt: 8, pb: 4, px: { xs: 3, md: 6 } }}>
+      
       {/* CTA Section */}
       <Box
         maxWidth="lg"
@@ -70,64 +72,93 @@ const Footer = () => {
           />
         </Grid>
 
-        {/* Sections */}
-        {["Services", "US Healthcare", "Contact US"].map((section, index) => (
-          <Grid item xs={12} sm={4} md={3} key={index}>
-            <Typography variant="subtitle1" color="white" fontWeight="bold" mb={2}>
-              {section}
-            </Typography>
-            <Box>
-              {section === "Services" &&
-                ["Management", "Digital Marketing", "Management Courses", "Development", "IT Courses", "Courses"].map((item) => (
-                  <Typography
-                    key={item}
-                    variant="body2"
-                    sx={{
-                      cursor: "pointer",
-                      mb: 1,
-                      transition: "0.3s",
-                      ":hover": { color: "white" },
-                    }}
-                    onClick={() => navigate("/services")}
-                  >
-                    {item}
-                  </Typography>
-                ))}
-              {section === "US Healthcare" &&
-                ["AR Caller", "Medical Coding", "Medical Billing"].map((item) => (
-                  <Typography
-                    key={item}
-                    variant="body2"
-                    sx={{
-                      cursor: "pointer",
-                      mb: 1,
-                      transition: "0.3s",
-                      ":hover": { color: "white" },
-                    }}
-                    onClick={() => navigate("/ushealthcare")}
-                  >
-                    {item}
-                  </Typography>
-                ))}
-              {section === "Contact US" &&
-                ["Contact"].map((item) => (
-                  <Typography
-                    key={item}
-                    variant="body2"
-                    sx={{
-                      cursor: "pointer",
-                      mb: 1,
-                      transition: "0.3s",
-                      ":hover": { color: "white" },
-                    }}
-                    onClick={() => navigate("/contact")}
-                  >
-                    {item}
-                  </Typography>
-                ))}
-            </Box>
-          </Grid>
-        ))}
+        {/* Navigation Links */}
+        <Grid item xs={12} sm={4} md={3}>
+          <Typography variant="subtitle1" color="white" fontWeight="bold" mb={2}>
+            Navigation
+          </Typography>
+          <Box>
+            {NavbarData.map((item) => (
+              <Typography
+                key={item.title}
+                variant="body2"
+                sx={{
+                  cursor: "pointer",
+                  mb: 1,
+                  transition: "0.3s",
+                  ":hover": { color: "white" },
+                }}
+                onClick={() => navigate(item.path)}
+              >
+                {item.title}
+              </Typography>
+            ))}
+          </Box>
+        </Grid>
+
+        {/* Services Links */}
+        <Grid item xs={12} sm={4} md={3}>
+          <Typography variant="subtitle1" color="white" fontWeight="bold" mb={2}>
+            Services
+          </Typography>
+          <Box>
+            {["Management", "Digital Marketing", "Management Courses", "Development", "IT Courses", "Courses"].map((item) => (
+              <Typography
+                key={item}
+                variant="body2"
+                sx={{
+                  cursor: "pointer",
+                  mb: 1,
+                  transition: "0.3s",
+                  ":hover": { color: "white" },
+                }}
+                onClick={() => navigate("/services")}
+              >
+                {item}
+              </Typography>
+            ))}
+          </Box>
+        </Grid>
+
+        {/* US Healthcare & Contact */}
+        <Grid item xs={12} sm={4} md={3}>
+          <Typography variant="subtitle1" color="white" fontWeight="bold" mb={2}>
+            US Healthcare
+          </Typography>
+          <Box mb={3}>
+            {["AR Caller", "Medical Coding", "Medical Billing"].map((item) => (
+              <Typography
+                key={item}
+                variant="body2"
+                sx={{
+                  cursor: "pointer",
+                  mb: 1,
+                  transition: "0.3s",
+                  ":hover": { color: "white" },
+                }}
+                onClick={() => navigate("/ushealthcare")}
+              >
+                {item}
+              </Typography>
+            ))}
+          </Box>
+
+          <Typography variant="subtitle1" color="white" fontWeight="bold" mb={2}>
+            Contact Us
+          </Typography>
+          <Typography
+            variant="body2"
+            sx={{
+              cursor: "pointer",
+              mb: 1,
+              transition: "0.3s",
+              ":hover": { color: "white" },
+            }}
+            onClick={() => navigate("/contact")}
+          >
+            Contact
+          </Typography>
+        </Grid>
       </Grid>
 
       {/* Social Media & Copyright */}
