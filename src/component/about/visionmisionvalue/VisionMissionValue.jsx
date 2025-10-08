@@ -7,7 +7,7 @@ import styles from "./VissionMissionValue.module.css"; // Import CSS module
 
 const VisionMissionValue = () => {
   return (
-    <Container maxWidth="lg" className={styles.container}>
+    <Container maxWidth="100%" className={styles.container}>
       <Typography variant="h3" className={styles.heading}>
         Vision, Mission & Values
       </Typography>

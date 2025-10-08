@@ -1,13 +1,12 @@
 import React from "react";
 import HomeData from "../../../datafiles/HomeData/HomeData";
 import styles from "./HomeCard.module.css";
+import useScrollAnimation from "../../parallex/useScrollAnimation";
 
-// Single Service Card
 const Card = ({ Icon, title, copy, backgroundImg }) => {
   return (
     <a
-      href="#"
-      className={styles.cardItem}
+      className={`${styles.cardItem} cardItem`}
       style={{
         backgroundImage: `url(${backgroundImg})`,
       }}
@@ -24,29 +23,27 @@ const Card = ({ Icon, title, copy, backgroundImg }) => {
   );
 };
 
-// Main Services Section
 const HomeCard = () => {
+  useScrollAnimation(); // Scroll fade-in for cards
+
   return (
     <section className={styles.servicesSection}>
       <div className={styles.container}>
-        {/* Heading */}
         <div className={styles.header}>
           <h2 className={styles.title}>Our Services</h2>
           <p className={styles.subtitle}>
-            We provide high-quality services to help your business grow and
-            succeed.
+            We provide high-quality services to help your business grow and succeed.
           </p>
         </div>
 
-        {/* Service Cards */}
         <div className={styles.cardRow}>
           {HomeData.cardData?.map((card, index) => (
             <Card
               key={index}
-              Icon={card.icon} // Pass the MUI icon component
+              Icon={card.icon}
               title={card.title}
               copy={card.copy}
-              // backgroundImg={card.backgroundImg}
+              // backgroundImg={card.backgroundImg || ""}
             />
           ))}
         </div>

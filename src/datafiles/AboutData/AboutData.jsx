@@ -20,7 +20,7 @@ const AboutData = {
         {
             Heading: "About Us",
             title: "At Smart Matrix Software Solutions Pvt. Ltd., we believe in the power of collaboration and the strength of our team. Each member brings a unique set of skills, expertise, and personality to our organization, contributing to our collective success.", 
-            video: "https://devconsoftware.com/assets/img/3209211-hd_1920_1080_25fps.mp4",
+            video: "https://www.pexels.com/download/video/7534239/",
             description: "Smart Matrix Software Solutions Pvt Ltd is a software company that specializes in providing custom software development and IT consulting services. Based in India, the company has a team of skilled software developers, engineers, and designers who work together to create high-quality software products and services for clients."
         }
     ],

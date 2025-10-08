@@ -1,121 +1,177 @@
+/* Container */
 .container {
-    margin-top: 40px;
-    text-align: center;
-  }
-  
-  .heading {
-    font-weight: bold;
-    /* margin-bottom: 50px; */
-    padding-bottom: 40px;
-  }
-  
-  .timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-  
-  .verticalLine {
-    position: absolute;
-    width: 5px;
-    height: 100%;
-    background-color: #1976d2;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-  
-  .cardContainer {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-top:0px ;
-    position: relative;
-  }
-  
-  .left {
-    justify-content: flex-start;
-  }
-  
-  .right {
-    justify-content: flex-end;
-  }
-  
-  .circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #1976d2;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .card {
-    max-width: 400px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    z-index: 1;
-  }
-  
-  .cardTitle {
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .cardDescription {
-    color: #666;
-  }
-  
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 6rem 1rem;
+  overflow: hidden;
+  background-image: url('./../../../../src/assets/homecardbackground.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-/* ✅ Responsive Design Adjustments */
+/* Overlay */
+.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(124, 123, 123, 0.6);
+  z-index: 0;
+  pointer-events: none;
+}
 
-/* Tablet View */
+/* Heading */
+.heading {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+  color: #ffff;
+  font-size: 2.2rem;
+}
+
+/* Timeline wrapper */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Vertical line */
+.verticalLine {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* Card container */
+.cardContainer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  position: relative;
+  margin: 30px 0;
+}
+
+/* Left & Right Card Containers */
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+/* Circle indicator */
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fafcff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  z-index: 2;
+}
+
+/* Card styling */
+.card {
+  width: 45%; /* fixed width */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+/* Push card near timeline */
+.left .card {
+  margin-right: 20px; /* gap between card and timeline */
+}
+
+.right .card {
+  margin-left: 0px; /* gap between timeline and card */
+}
+
+/* Card text */
+.cardTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #0d1b2a;
+  font-size: 1.5rem;
+}
+
+.cardDescription {
+  color: #555;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ================= Responsive ================= */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .cardContainer {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .card {
-    max-width: 90%;
-    text-align: center;
+    width: 70%;
+    margin: 15px 0;
+  }
+
+  .left .card,
+  .right .card {
+    margin: 15px 0;
   }
 }
 
-/* Mobile View */
+/* Mobile */
 @media (max-width: 768px) {
   .verticalLine {
-    left: 10px; /* Moves the timeline to the left */
+    left: 20px;
     transform: none;
     display: none;
   }
 
   .circle {
-    left: 10px;
+    left: 20px;
     transform: none;
   }
 
   .cardContainer {
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-left: 60px;
   }
 
   .card {
-    max-width: 100%;
-    text-align: left;
-    
+    width: calc(100% - 80px);
+    margin: 10px 0;
   }
 }
 
-/* Small Mobile View */
+/* Small Mobile */
 @media (max-width: 480px) {
   .card {
+    /* width: calc(100% - 80px); */
+    width: 90%;
     padding: 15px;
   }
 
@@ -125,5 +181,17 @@
 
   .cardDescription {
     font-size: 14px;
+  }
+
+  .cardContainer {
+    margin-left: 40px;
+  }
+
+  .verticalLine {
+    left: 10px;
+  }
+
+  .circle {
+    left: 10px;
   }
 }

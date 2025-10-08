@@ -3,7 +3,7 @@ import AboutHero from '../component/about/abouthero/AboutHero'
 import AboutCard from '../component/about/aboutcard/AboutCard'
 import VisionMissionValue from '../component/about/visionmisionvalue/VisionMissionValue'
 import Counter from '../component/about/counter/Counter'
-import Content from '../component/about/content/Content'
+// import Content from '../component/about/content/Content'
 
 function AboutPage() {
   return (
@@ -13,7 +13,7 @@ function AboutPage() {
         <AboutCard/>
         <VisionMissionValue/>
         <Counter/>
-        <Content/>
+        {/* <Content/> */}
     </div>
   )
 }

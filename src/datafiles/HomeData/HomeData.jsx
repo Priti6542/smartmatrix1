@@ -74,7 +74,7 @@ const HomeData = {
         "Devcons Software Solutions Pvt. Ltd. offers technical support and maintenance services to ensure that software applications run smoothly and are updated regularly. We track performance metrics, security vulnerabilities, and user behavior, providing insights to ensure smooth sailing. Beyond bug fixes and updates, our comprehensive technical support and maintenance services proactively safeguard the software investments, keeping them future-proof and performing at their peak. We ensure that the systems run smoothly, securely, and always ready for what's next.",
       images: 'https://devconsoftware.com/assets/img/features-1.svg',
       backgroundImage:
-        'https://i.pinimg.com/736x/cd/6f/a9/cd6fa98b64ed44a096fb555fbc065b28.jpg',
+        'https://images.pexels.com/photos/1181341/pexels-photo-1181341.jpeg',
     },
     {
       title: 'Big data analytics',
@@ -82,7 +82,7 @@ const HomeData = {
         'Devcons Software Solutions Pvt. Ltd. specializes in big data analytics to help businesses make better decisions by analyzing large volumes of data. We dive deep into the vast stores of information, employing sophisticated algorithms and data visualization tools to unearth hidden patterns, predict trends, and optimize decision-making across all levels of your organization. We transcend mere data crunching to empower businesses through our big data analytics expertise. Our data scientists translate complex analytics into tangible business results.',
       images: 'https://i.pinimg.com/736x/f3/ed/e7/f3ede74360be860ab11d1c4b1e898189.jpg',
       backgroundImage:
-        'https://i.pinimg.com/736x/35/9b/74/359b74ab254bc1cd59a661c4a2e258f3.jpg',
+        'https://media.istockphoto.com/id/2225606890/photo/rfp-request-for-proposal-businessperson-using-laptop-with-rfp-icons-representing-procurement.jpg?s=2048x2048&w=is&k=20&c=wHwx2rwJJVr9IUmuLBJBn55pEPSVio3-LjQBMMJP3Sc=',
     },
     {
       title: 'Artificial intelligence and machine learning',

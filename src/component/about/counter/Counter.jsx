@@ -19,6 +19,7 @@ function Counter() {
                 textAlign: "center",
                 marginLeft:"9rem",
                 marginRight:"9rem",
+                marginBottom:"4rem",
             }}
         >
             {/* Clients */}
