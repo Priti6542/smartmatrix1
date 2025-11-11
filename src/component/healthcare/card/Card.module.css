@@ -1,3 +1,4 @@
+/* Container background and spacing */
 .container {
   display: flex;
   justify-content: center;
@@ -6,12 +7,12 @@
   padding: 20px;
   padding-top: 100px;
   position: relative;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  flex-wrap: wrap;
   padding-left: 9rem;
   padding-right: 9rem;
 }
 
-/* Circle Animation */
+/* Circle with orange-blue gradient */
 .circle {
   width: 250px;
   height: 200px;
@@ -19,63 +20,55 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #11559e, #42bdd6);
+  background: linear-gradient(135deg, #ff6b35, #f7931e); /* warm orange gradient */
   color: white;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 122, 255, 0.5);
+  box-shadow: 0 0 10px rgba(255, 107, 53, 0.7); /* orange glow */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.5s ease-in-out;
   position: relative;
   animation: pulseEffect 2s infinite alternate ease-in-out;
 }
 
-/* Hover Effect - Gradient Color Transition */
+/* Hover effect switching to deeper blue */
 .circle:hover {
-  background: linear-gradient(135deg, #00d4ff, #007bff);
-  box-shadow: 0 0 20px rgba(0, 212, 255, 1);
+  background: linear-gradient(135deg, #ff6b35, #f7931e); /* blue gradient */
+  box-shadow: 0 0 20px rgb(246, 51, 7); /* blue glow */
 }
 
-/* Connecting Line */
-/* --- Connecting Line (Hide on Mobile) --- */
+/* Connecting line */
 .circle::after {
   content: "";
   position: absolute;
-  width: 100px;  /* Increased width */
-  height: 8px;   /* Increased height */
+  width: 100px;
+  height: 8px;
   border-radius: 20px;
   top: 50%;
   left: 100%;
   transform: translateY(-50%) translateX(70%);
-  background: linear-gradient(90deg, #007bff, #063c47);
+  background: linear-gradient(90deg, #ff6b35, #f7931e); /* orange-yellow gradient */
   animation: swipeEffect 2.5s infinite alternate ease-in-out;
 }
 
-
-/* Remove the connecting line for the last circle */
+/* Remove connecting line for last circle */
 .container .cardWrapper:last-child .circle::after {
   display: none !important;
 }
 
-
-
-
-
-/* Swipe Animation on Connecting Line */
+/* Swipe animation on line */
 @keyframes swipeEffect {
   0% {
     width: 0;
-    background: linear-gradient(90deg, transparent, #00d4ff);
+    background: linear-gradient(90deg, transparent, #ff6b35);
   }
   50% {
-    width: 80px; /* Adjusted to match the new connecting line size */
-    background: linear-gradient(90deg, #007bff, #00d4ff);
+    width: 80px;
+    background: linear-gradient(90deg, #f7931e, #ff6b35);
   }
   100% {
-    width: 100px; /* Final width */
-    background: linear-gradient(90deg, transparent, #007bff);
+    width: 100px;
+    background: linear-gradient(90deg, transparent, #f7931e);
   }
 }
-
-
 
 /* Icon and Description Section */
 .circle-container {
@@ -86,28 +79,23 @@
   width: 200px;
 }
 
-/* .icon {
-  width: 50px;
-  height: 50px;
-  margin-top: 10px;
-} */
-
+/* Description box with light orange-blue tinted background */
 .details {
   font-size: 17px;
   color: #333;
   margin-top: 40px;
   max-width: 380px;
   height: 450px;
-  background-color: #bff1fb;
-  box-shadow: 0 0 10px rgba(20, 56, 94, 0.5);
+  background-color: #ffe9d6; /* light warm orange */
+  box-shadow: 0 0 10px rgba(255, 138, 62, 0.5); /* soft orange light */
   line-height: 50px;
   padding: 15px;
   border-radius: 10px;
   position: relative;
-  overflow: hidden; /* Prevents shine effect overflow */
+  overflow: hidden;
 }
 
-/* Shine Effect Animation */
+/* Shine Animation - soft white glowing highlight */
 .details::before {
   content: "";
   position: absolute;
@@ -118,13 +106,14 @@
   background: linear-gradient(
     120deg,
     transparent 30%,
-    rgba(248, 248, 248, 0.6) 50%,
+    rgba(255, 255, 255, 0.6) 50%,
     transparent 70%
   );
   transform: skewX(-30deg);
   animation: shineEffect 3s infinite linear;
 }
 
+/* Shine keyframe */
 @keyframes shineEffect {
   0% {
     left: -100%;
@@ -134,33 +123,37 @@
   }
 }
 
-.heading{
+/* Heading styles */
+.heading {
   text-align: center;
   margin-top: -50px;
   margin-bottom: 30px;
   font-weight: bold;
   font-size: 25px;
+  color: #ff6b35; /* warm orange accent */
 }
 
+/* Description item */
 .descriptionItem {
   display: flex;
-  align-items: center;  /* Align icon and text in a row */
-  gap: 10px;  
+  align-items: center;
+  gap: 10px;
   font-size: 16px;
   color: #333;
 }
 
-
-/* Style the list properly */
+/* Description list */
 .descriptionList {
-  list-style:none;
+  list-style: none;
   padding: 10px;
 }
-.doneicon{
- text-align: center;
+
+/* Done icon container */
+.doneicon {
+  text-align: center;
 }
 
-/* --------- RESPONSIVE DESIGN --------- */
+/* Responsive Adjustments */
 
 @media (max-width: 1200px) {
   .container {
@@ -176,7 +169,7 @@
 
 @media (max-width: 992px) {
   .container {
-    flex-direction: column; /* Stack items on smaller screens */
+    flex-direction: column;
     padding-left: 2rem;
     padding-right: 2rem;
   }

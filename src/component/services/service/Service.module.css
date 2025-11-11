@@ -2,21 +2,24 @@
 .ServicesDataContainer {
     position: relative;
     width: 100%;
-    height: 90vh !important; /* Full screen height */
+    height: 100vh;         /* Full viewport height */
     display: flex;
-    
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     backdrop-filter: blur(5px);
-    overflow: hidden;
-    /* margin-top: -240px; */
-    
 }
-
+.ServicesDataContainer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    filter: blur(10px);
+    z-index: -1;
+}
 
 .ServicesDataContainer::before {
     content: "";
@@ -25,7 +28,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: inherit; /* Uses the same background image */
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     background-size: cover;
     background-position: center;
     filter: blur(10px); /* Adjust blur intensity */
@@ -37,7 +40,7 @@
     position: absolute;
     width: 170px;
     height: 170px;
-    background: linear-gradient(135deg, #007bff, #00d4ff);
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
     color: white;
     font-size: 24px;
     font-weight: bold;
@@ -46,7 +49,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    box-shadow: 0 0 30px rgba(12, 28, 31, 0.5);
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
     z-index: 3;
     transition: transform 0.5s ease-in-out;
 }
@@ -59,7 +62,7 @@
     height: 180px;
     border-radius: 50%;
     border: 4px solid transparent;
-    background: linear-gradient(135deg, rgba(41, 73, 106, 0.8), rgba(0, 212, 255, 0.8));
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.8), rgba(255, 217, 61, 0.8));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
@@ -122,7 +125,7 @@
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
     animation: fadeIn 1s ease-in-out;
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -132,9 +135,17 @@
 
 .serviceItem:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.7);
-    background: rgba(0, 123, 255, 0.8);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.7);
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
     color: white;
+}
+
+.serviceItem p {
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0 10px;
 }
 
 /* Icon inside service item */
@@ -327,6 +338,8 @@
 .icon {
     font-size: 30px;
     margin-top: -10px;
+    color: #ffd93d;
+    filter: drop-shadow(0 0 8px rgba(255, 217, 61, 0.6));
 }
 
 /* 🔻 Responsive for Extra Small Mobile (320px) */

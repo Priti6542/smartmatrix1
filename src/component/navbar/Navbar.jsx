@@ -14,20 +14,30 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import NavbarData from "../../datafiles/NavbarData";
+import smart_logo from "../../assets/smart_logo.webp";
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  // Handle scroll for AppBar background
+  // Handle scroll event
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const isScrolled = window.scrollY > 50;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
     };
+
+    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+
+    // Cleanup function to remove event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -35,16 +45,31 @@ function Navbar() {
 
   return (
     <>
-      <AppBar
+      {/* <AppBar
         position="sticky"
-        // sx={{
-        //   px: { xs: 1, sm: 2 },
-        //   background: scrolled
-        //     ? "linear-gradient(90deg, #1CB5E0, #000851)"
-        //     : "transparent",
-        //   boxShadow: scrolled ? "0 4px 12px rgba(0,0,0,0.3)" : "none",
-        //   transition: "0.5s",
-        // }}
+        sx={{
+          background: scrolled
+            ? "linear-gradient(135deg, #280d57ff 0%, #61608aff 100%)"
+            : "transparent",
+          boxShadow: scrolled ? "0 4px 12px rgba(0, 0, 0, 0.15)" : "none",
+          px: { xs: 1, sm: 2 },
+          zIndex: 1200,
+          transition: "all 0.3s ease",
+        }}
+      > */}
+      <AppBar
+        position="fixed"
+        color="transparent"
+        // elevation={0}
+        sx={{
+          background: scrolled
+            ? "linear-gradient(135deg, #280d57ff 0%, #61608aff 100%)"
+            : "transparent",
+          boxShadow: scrolled ? "0 4px 12px rgba(0, 0, 0, 0.15)" : "none",
+          px: { xs: 1, sm: 2 },
+          zIndex: 1200,
+          transition: "all 0.3s ease",
+        }}
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           {/* Logo */}
@@ -56,7 +81,7 @@ function Navbar() {
             aria-label="go to home"
           >
             <img
-              src="https://smartmatrixds.com/assets/img/smds-logo.jpeg"
+              src={smart_logo}
               alt="Logo"
               style={{
                 height: "45px",
@@ -84,16 +109,38 @@ function Navbar() {
                 color="inherit"
                 sx={{
                   textTransform: "none",
-                  fontWeight:
-                    location.pathname === item.path ? "bold" : "500",
-                  borderBottom:
+                  fontSize: "16px",
+                  fontWeight: location.pathname === item.path ? "700" : "500",
+                  color: "#fff",
+                  position: "relative",
+                  overflow: "hidden",
+                  px: 2,
+                  py: 1,
+                  borderRadius: 2,
+                  transition: "all 0.3s ease",
+                  background:
                     location.pathname === item.path
-                      ? "2px solid #FFD700"
-                      : "none",
-                  transition: "0.3s",
+                      ? "rgba(255, 255, 255, 0.15)"
+                      : "transparent",
                   "&:hover": {
-                    bgcolor: "rgba(255,255,255,0.1)",
-                    borderRadius: 2,
+                    background: "rgba(255, 255, 255, 0.25)",
+                    transform: "translateY(-2px)",
+                    boxShadow: "0 4px 12px rgba(255, 107, 53, 0.3)",
+                  },
+                  "&::after": {
+                    content: '""',
+                    position: "absolute",
+                    bottom: 0,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    width: location.pathname === item.path ? "80%" : "0%",
+                    height: "3px",
+                    background: "linear-gradient(90deg, #ff6b35, #ffd93d)",
+                    borderRadius: "2px 2px 0 0",
+                    transition: "width 0.3s ease",
+                  },
+                  "&:hover::after": {
+                    width: "80%",
                   },
                 }}
               >
@@ -122,11 +169,12 @@ function Navbar() {
         onClose={handleDrawerToggle}
         PaperProps={{
           sx: {
-            width: 250,
-            background: "linear-gradient(180deg, #1CB5E0, #000851)",
+            width: 280,
+            background: "linear-gradient(135deg, #280d57ff 0%, #61608aff 100%)",
             color: "#fff",
             position: "relative",
             transition: "0.5s ease",
+            boxShadow: "-8px 0 32px rgba(255, 107, 53, 0.4)",
           },
         }}
       >
@@ -149,15 +197,34 @@ function Navbar() {
               onClick={handleDrawerToggle}
               sx={{
                 borderRadius: 2,
-                mb: 1,
-                fontWeight:
-                  location.pathname === item.path ? "bold" : "500",
+                mb: 1.5,
+                mx: 1,
+                px: 2,
+                py: 1.5,
+                fontWeight: location.pathname === item.path ? "700" : "500",
+                background:
+                  location.pathname === item.path
+                    ? "rgba(255,255,255,0.25)"
+                    : "transparent",
+                borderLeft:
+                  location.pathname === item.path
+                    ? "4px solid #fff"
+                    : "4px solid transparent",
+                transition: "all 0.3s ease",
                 "&:hover": {
                   bgcolor: "rgba(255,255,255,0.2)",
+                  transform: "translateX(4px)",
+                  borderLeft: "4px solid #fff",
                 },
               }}
             >
-              <ListItemText primary={item.title} />
+              <ListItemText
+                primary={item.title}
+                primaryTypographyProps={{
+                  fontSize: "16px",
+                  fontWeight: location.pathname === item.path ? "700" : "500",
+                }}
+              />
             </ListItem>
           ))}
         </List>

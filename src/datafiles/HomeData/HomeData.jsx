@@ -4,6 +4,10 @@ import WebIcon from '@mui/icons-material/Web';
 import PendingActionsIcon from '@mui/icons-material/PendingActions';
 import StorageIcon from '@mui/icons-material/Storage';
 
+import FeatureSection1 from '../../assets/FeatureSection1.jpeg'
+import FeatureSection2 from '../../assets/FeatureSection2.jpg'
+import FeatureSection3 from '../../assets/FeatureSection3.jpg'
+
 const HomeData = {
   HeroData: [
     {
@@ -71,26 +75,23 @@ const HomeData = {
     {
       title: 'Technical support and maintenance',
       content:
-        "Devcons Software Solutions Pvt. Ltd. offers technical support and maintenance services to ensure that software applications run smoothly and are updated regularly. We track performance metrics, security vulnerabilities, and user behavior, providing insights to ensure smooth sailing. Beyond bug fixes and updates, our comprehensive technical support and maintenance services proactively safeguard the software investments, keeping them future-proof and performing at their peak. We ensure that the systems run smoothly, securely, and always ready for what's next.",
-      images: 'https://devconsoftware.com/assets/img/features-1.svg',
-      backgroundImage:
-        'https://images.pexels.com/photos/1181341/pexels-photo-1181341.jpeg',
+        "Smart Software Services Pvt. Ltd. offers technical support and maintenance services to ensure that software applications run smoothly and are updated regularly. We track performance metrics, security vulnerabilities, and user behavior, providing insights to ensure smooth sailing. Beyond bug fixes and updates, our comprehensive technical support and maintenance services proactively safeguard the software investments, keeping them future-proof and performing at their peak. We ensure that the systems run smoothly, securely, and always ready for what's next.",
+      // images: 'https://devconsoftware.com/assets/img/features-1.svg',
+      backgroundImage:FeatureSection1,
     },
     {
       title: 'Big data analytics',
       content:
-        'Devcons Software Solutions Pvt. Ltd. specializes in big data analytics to help businesses make better decisions by analyzing large volumes of data. We dive deep into the vast stores of information, employing sophisticated algorithms and data visualization tools to unearth hidden patterns, predict trends, and optimize decision-making across all levels of your organization. We transcend mere data crunching to empower businesses through our big data analytics expertise. Our data scientists translate complex analytics into tangible business results.',
-      images: 'https://i.pinimg.com/736x/f3/ed/e7/f3ede74360be860ab11d1c4b1e898189.jpg',
-      backgroundImage:
-        'https://media.istockphoto.com/id/2225606890/photo/rfp-request-for-proposal-businessperson-using-laptop-with-rfp-icons-representing-procurement.jpg?s=2048x2048&w=is&k=20&c=wHwx2rwJJVr9IUmuLBJBn55pEPSVio3-LjQBMMJP3Sc=',
+        'Smart Software Services Pvt. Ltd. specializes in big data analytics to help businesses make better decisions by analyzing large volumes of data. We dive deep into the vast stores of information, employing sophisticated algorithms and data visualization tools to unearth hidden patterns, predict trends, and optimize decision-making across all levels of your organization. We transcend mere data crunching to empower businesses through our big data analytics expertise. Our data scientists translate complex analytics into tangible business results.',
+      // images: 'https://i.pinimg.com/736x/f3/ed/e7/f3ede74360be860ab11d1c4b1e898189.jpg',
+      backgroundImage:FeatureSection2,
     },
     {
       title: 'Artificial intelligence and machine learning',
       content:
-        "Devcons Software Solutions Pvt. Ltd. offers AI and machine learning services to help businesses leverage these emerging technologies to improve their operations and stay competitive. We unlock the true potential of these transformative technologies, propelling the business towards greater efficiency and innovation. We unleash the alchemy of AI, fusing intelligent algorithms with your existing data and workflows. We're not just about algorithms and code; we're your trusted partner in harnessing the power of AI to solve your unique business challenges.",
-      images: 'https://devconsoftware.com/assets/img/features-1.svg',
-      backgroundImage:
-        'https://i.pinimg.com/736x/0f/44/ca/0f44ca9c78bbd43218fb05622774eb9b.jpg',
+        "Smart Software Services Pvt. Ltd. offers AI and machine learning services to help businesses leverage these emerging technologies to improve their operations and stay competitive. We unlock the true potential of these transformative technologies, propelling the business towards greater efficiency and innovation. We unleash the alchemy of AI, fusing intelligent algorithms with your existing data and workflows. We're not just about algorithms and code; we're your trusted partner in harnessing the power of AI to solve your unique business challenges.",
+      // images: 'https://devconsoftware.com/assets/img/features-1.svg',
+      backgroundImage:FeatureSection3,
     },
   ],
 };

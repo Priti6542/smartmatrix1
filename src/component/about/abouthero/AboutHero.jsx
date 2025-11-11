@@ -29,11 +29,12 @@ const AboutHero = () => {
   };
 
   return (
-    <motion.div
+     <motion.div
       variants={containerVariants}
       initial="hidden"
       animate="visible"
       exit={{ opacity: 0, transition: { duration: 0.5 } }}
+      // style={{ marginTop: "-70px" }} 
     >
       <Box
         sx={{
@@ -57,6 +58,7 @@ const AboutHero = () => {
             height: "100%",
             backgroundColor: "rgba(0, 0, 0, 0.6)", // Dark overlay
             zIndex: 1,
+            // marginTop: "0px",
           },
         }}
       >

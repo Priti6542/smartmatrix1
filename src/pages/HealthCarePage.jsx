@@ -2,7 +2,7 @@ import React from 'react'
 import Hero from '../component/healthcare/hero/Hero'
 import Card from '../component/healthcare/card/Card'
 import ARMedicalBilling from '../component/healthcare/ARMedicalBilling/ARMedicalBilling'
-import Trusted from '../component/healthcare/trusted/Trusted'
+// import Trusted from '../component/healthcare/trusted/Trusted'
 
 
 function HealthCarePage() {
@@ -11,7 +11,7 @@ function HealthCarePage() {
       <Hero/>
       <Card/>
       <ARMedicalBilling/>
-      <Trusted/>      
+      {/* <Trusted/>       */}
     </div>
   )
 }

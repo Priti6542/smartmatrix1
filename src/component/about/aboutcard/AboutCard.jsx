@@ -16,7 +16,7 @@ const AboutCard = () => {
         className={styles.cardContainer}
       >
         {/* Video Background */}
-        <div className={styles.videoSection}>
+        {/* <div className={styles.videoSection}>
           <div className={styles.videoOverlay}></div>
           <video
             src={item.video}
@@ -25,7 +25,16 @@ const AboutCard = () => {
             muted
             className={styles.video}
           />
-        </div>
+        </div> */}
+        <div className={styles.videoSection}>
+  <div className={styles.videoOverlay}></div>
+  <img
+    src={item.image}           // your imported image URL here
+    alt="background"
+    className={styles.image}  // add this style class for image styling
+  />
+</div>
+
 
         {/* Text Content */}
         <div className={styles.contentSection}>

@@ -4,11 +4,39 @@
     align-items: center;
     gap: 20px;
     padding-top: 40px;
-    background: linear-gradient(135deg, #e3f2fd, #f9f9f9);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     min-height: 100vh;
     padding-left: 9rem;
     padding-right: 9rem;
-    
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Mesh Gradient Blobs */
+  .container::before,
+  .container::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.2;
+    z-index: 0;
+  }
+
+  .container::before {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #ff6b35 0%, transparent 70%);
+    top: -200px;
+    right: -100px;
+  }
+
+  .container::after {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #f7931e 0%, transparent 70%);
+    bottom: -150px;
+    left: -100px;
   }
   
   /* Category Button Wrapper */
@@ -23,7 +51,7 @@
   .line {
     width: 50px; /* Adjust width as needed */
     height: 3px; /* Thickness of the line */
-    background: linear-gradient(90deg, #007bff, #00d4ff); /* Gradient effect */
+    background: linear-gradient(90deg, #ff6b35, #f7931e); /* Gradient effect */
     display: inline-block;
     margin: 0 10px; /* Space between buttons */
     border-radius: 5px; /* Rounded edges */
@@ -34,19 +62,19 @@
   /* Glowing effect animation */
   @keyframes glowEffect {
     0% {
-      box-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
+      box-shadow: 0 0 5px rgba(255, 107, 53, 0.5);
     }
     100% {
-      box-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+      box-shadow: 0 0 15px rgba(255, 107, 53, 0.8);
     }
   }
   
   
   /* Buttons */
   .categoryButton {
-    background: white;
-    border: 2px solid #007bff;
-    color: #007bff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ff6b35;
+    color: #ffd93d;
     padding: 10px 15px;
     border-radius: 25px;
     cursor: pointer;
@@ -56,16 +84,34 @@
     gap: 8px;
     transition: 0.3s;
     position: relative;
+    backdrop-filter: blur(10px);
   }
   
   .categoryButton:hover {
-    background: #007bff;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
     color: white;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
   }
   
   .active {
-    background: #007bff;
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
     color: white;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
+  }
+
+  .subtitle{
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .description {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    line-height: 1.6;
   }
   
   
@@ -94,7 +140,7 @@
 
 /* Ensure all items within card have equal size */
 .item {
-  /* background: rgba(135, 235, 235, 0.15); */
+  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 12px;
   border-radius: 10px;
@@ -102,12 +148,15 @@
   transition: transform 0.3s ease-in-out, background 0.3s;
   width: 100%; /* Fix width issues */
   min-height: 250px; /* Prevent shrinking */
-  
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .item:hover {
   transform: scale(1.05);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 107, 53, 0.5);
+  box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
 }
 
 /* Ensure images inside cards are uniform */
@@ -123,7 +172,7 @@
 .Cardtitle {
   font-size: 22px;
   font-weight: bold;
-  color: #007bff;
+  color: #ffd93d;
   display: flex;
   align-items: center;
   gap: 8px;

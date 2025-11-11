@@ -38,7 +38,7 @@ const FeatureItem = ({ title, content, image, backgroundImage, speed, isReversed
         <p>{content}</p>
         
       </div>
-      <img src={image} alt={title} className={styles.featureImage} />
+      {/* <img src={image} alt={title} className={styles.featureImage} /> */}
     </div>
   );
 };

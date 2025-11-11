@@ -6,11 +6,15 @@ import WebStoriesIcon from '@mui/icons-material/WebStories';
 import BrandingWatermarkIcon from '@mui/icons-material/BrandingWatermark';
 import ScreenSearchDesktopIcon from '@mui/icons-material/ScreenSearchDesktop';
 import FilterDramaIcon from '@mui/icons-material/FilterDrama';
+import about_hero from "../../assets/about_hero.jpg";
+// import HomeVideo from "../../assets/HomeVideo.mp4";
+import about_card from "../../assets/about_card.jpg";
+
 
 const AboutData = {
     AboutHero: [
         {
-            backgroundImage: "https://i.pinimg.com/736x/0d/3b/77/0d3b77bcff2baf4ea75980261a4ac239.jpg",
+            backgroundImage: about_hero,
             title: "Welcome to Smart Matrix Software Solutions Pvt. Ltd.",
             description: "Welcome, and thank you for visiting Smart Matrix Software Solutions Pvt. Ltd. We're delighted to have you here as we share a glimpse into who we are, what we do, and why we're passionate about it. To know more about Healthcare services click below."
         }
@@ -20,7 +24,8 @@ const AboutData = {
         {
             Heading: "About Us",
             title: "At Smart Matrix Software Solutions Pvt. Ltd., we believe in the power of collaboration and the strength of our team. Each member brings a unique set of skills, expertise, and personality to our organization, contributing to our collective success.", 
-            video: "https://www.pexels.com/download/video/7534239/",
+            // video: HomeVideo,
+            image: about_card,
             description: "Smart Matrix Software Solutions Pvt Ltd is a software company that specializes in providing custom software development and IT consulting services. Based in India, the company has a team of skilled software developers, engineers, and designers who work together to create high-quality software products and services for clients."
         }
     ],
