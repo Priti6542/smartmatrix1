@@ -49,7 +49,7 @@ const servicesData = [
   {
     id: 5,
     
-    title: "IT Courses",
+    title: "Technology Stack",
     icon: <FaCogs />,
     // description: "Learn the latest tech skills and tools.",
     // subcategories: [
@@ -62,7 +62,7 @@ const servicesData = [
   {
     id: 5,
     
-    title: "Courses",
+    title: "Methodology",
     icon: <FaCogs />,
   }
 ];

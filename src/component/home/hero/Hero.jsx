@@ -141,7 +141,7 @@ const Hero = () => {
   // Extract "SmartMatrix" from the title to apply gradient
   const fullTitle = heroContent.HeroTitle; // "Welcome to SmartMatrix Digital Services Pvt. Ltd."
   const beforeText = 'Welcome to ';
-  const gradientText = 'SmartMatrix';
+  const gradientText = 'Smart Matrix';
   const afterText = ' Digital Services Pvt. Ltd.';
 
   // Function to add line break before "Digital"
@@ -252,7 +252,7 @@ const Hero = () => {
                   {char === ' ' ? '\u00A0' : char}
                 </motion.span>
               ))}
-              {gradientText.split('').map((char, index) => (
+              {gradientText.split(' ').map((char, index) => (
                 <motion.span
                   key={`gradient-${index}`}
                   variants={letterVariants}

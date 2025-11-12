@@ -45,6 +45,7 @@
     font-size: 24px;
     font-weight: bold;
     display: flex;
+    text-align: center;
     
     align-items: center;
     justify-content: center;
@@ -232,6 +233,7 @@
 /* Mobile Devices */
 @media (max-width: 768px) {
     .ServicesDataContainer {
+        margin-top: -130px;
         height: auto;
         flex-direction: column;
         padding: 40px 0;

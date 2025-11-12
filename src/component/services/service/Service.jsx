@@ -11,7 +11,7 @@ function Services() {
             <div
                 className={styles.ServicesDataContainer}
             >
-                <div className={styles.centerCircle}>Services</div>
+                <div className={styles.centerCircle}>Core Services</div>
                 <div className={styles.serviceItems}>
                     {servicesData.map((service, index) => (
                         <div
