@@ -1,7 +1,7 @@
 /* Container */
 .container {
   position: relative;
-  width: 100vw;
+  width: 99vw;
   min-height: 100vh;
   padding: 6rem 1rem;
   overflow: hidden;

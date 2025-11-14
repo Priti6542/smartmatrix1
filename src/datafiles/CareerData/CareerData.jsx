@@ -5,7 +5,7 @@ const CareerData = {
         {
             backgroundImage: careerhero,
             title: "Work with us",
-            description: "To embark on a fulfilling career journey with Smart Matrix and contribute to our mission of simplifying, enhancing, and making work life more productive, reach out to us via email at hr@smartmatrix.com."
+            description: "To embark on a fulfilling career journey with Smart Matrix and contribute to our mission of simplifying, enhancing, and making work life more productive, reach out to us via email at contact@smartmatrixds.com"
         }
     ],
 

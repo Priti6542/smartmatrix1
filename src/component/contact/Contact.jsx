@@ -71,7 +71,7 @@ const Contact = () => {
                   <Email />
                 </IconButton>
                 <Typography variant="body1">
-                  hr@smartsoftwareservice.com
+                  contact@smartmatrixds.com
                 </Typography>
               </Box>
             </Box>

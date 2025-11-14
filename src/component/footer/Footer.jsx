@@ -344,7 +344,7 @@ const Footer = () => {
                       <FaEnvelope size={14} color="#1CB5E0" />
                     </Box>
                     <Box>
-                      <Typography
+                      {/* <Typography
                         variant="body2"
                         sx={{
                           color: 'rgba(255, 255, 255, 0.7)',
@@ -352,8 +352,7 @@ const Footer = () => {
                           mb: 0.5,
                         }}
                       >
-                        hr@smartmatrixds.com
-                      </Typography>
+                      </Typography> */}
                       <Typography
                         variant="body2"
                         sx={{

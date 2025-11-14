@@ -15,7 +15,7 @@ const AboutData = {
     AboutHero: [
         {
             backgroundImage: about_hero,
-            title: "Welcome to Smart Matrix Software Solutions Pvt. Ltd.",
+            title: "Welcome to Smart Matrix Digital Services Pvt. Ltd.",
             description: "Welcome, and thank you for visiting Smart Matrix Software Solutions Pvt. Ltd. We're delighted to have you here as we share a glimpse into who we are, what we do, and why we're passionate about it. To know more about Healthcare services click below."
         }
     ],
