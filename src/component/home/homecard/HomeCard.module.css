@@ -169,7 +169,7 @@
 }
 
 /* ===================== Arrow Button ===================== */
-.arrowButton {
+/* .arrowButton {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -183,7 +183,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
   z-index: 2;
   position: relative;
-}
+} */
 
 .cardItem:hover .arrowButton {
   transform: translateX(8px) rotate(15deg);

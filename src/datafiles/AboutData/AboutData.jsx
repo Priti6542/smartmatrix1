@@ -15,18 +15,18 @@ const AboutData = {
     AboutHero: [
         {
             backgroundImage: about_hero,
-            title: "Welcome to Smart Matrix Digital Services Pvt. Ltd.",
-            description: "Welcome, and thank you for visiting Smart Matrix Digital Services Pvt. Ltd. We're delighted to have you here as we share a glimpse into who we are, what we do, and why we're passionate about it. To know more about Healthcare services click below."
+            title: "Welcome to SmartMatrix Digital Services Pvt. Ltd.",
+            description: "Welcome, and thank you for visiting SmartMatrix Digital Services Pvt. Ltd. We're delighted to have you here as we share a glimpse into who we are, what we do, and why we're passionate about it. To know more about Healthcare services click below."
         }
     ],
 
     AboutCard: [  
         {
             Heading: "About Us",
-            title: "At  Smart Matrix Digital Services Pvt. Ltd., we believe in the power of collaboration and the strength of our team. Each member brings a unique set of skills, expertise, and personality to our organization, contributing to our collective success.", 
+            title: "At  SmartMatrix Digital Services Pvt. Ltd., we believe in the power of collaboration and the strength of our team. Each member brings a unique set of skills, expertise, and personality to our organization, contributing to our collective success.", 
             // video: HomeVideo,
             image: about_card,
-            description: "Smart Matrix Digital Services Pvt Ltd is a software company that specializes in providing custom software development and IT consulting services. Based in India, the company has a team of skilled software developers, engineers, and designers who work together to create high-quality software products and services for clients."
+            description: "SmartMatrix Digital Services Pvt Ltd is a software company that specializes in providing custom software development and IT consulting services. Based in India, the company has a team of skilled software developers, engineers, and designers who work together to create high-quality software products and services for clients."
         }
     ],
 
@@ -42,7 +42,7 @@ const AboutData = {
         },
         {
           title: "Our Values",
-          description: "Our Values Devcons Software Solutions Pvt. Ltd. is driven by a commitment to innovation, integrity, customer satisfaction, collaboration, and excellence while embracing adaptability and social responsibility as core values.",
+          description: "Our Values  SmartMatrix Digital Services Pvt. Ltd. is driven by a commitment to innovation, integrity, customer satisfaction, collaboration, and excellence while embracing adaptability and social responsibility as core values.",
         },
     ],
 

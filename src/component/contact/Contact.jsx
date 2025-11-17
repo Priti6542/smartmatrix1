@@ -5,18 +5,21 @@ import {
   Button,
   Box,
   Typography,
-  Grid,
   Paper,
-  IconButton,
+  Grid
 } from "@mui/material";
 import { Phone, Email, LocationOn } from "@mui/icons-material";
+
+const infoGradient =
+  "linear-gradient(135deg, #49008f 0%, #a047d3 100%)";
+const formGradient =
+  "linear-gradient(135deg, #0e183d 0%, #2859A9 100%)";
 
 const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_4adpxcj",
@@ -38,168 +41,226 @@ const Contact = () => {
   return (
     <Box
       sx={{
-        p: { xs: 1.5, sm: 3, md: 4 },
-        background: "#FFF1E6",
         minHeight: "100vh",
-        maxWidth: 500,
-        mx: "auto",
+        background: "#f8f7f1",
+        py: { xs: 2, md: 6 },
+        px: { xs: 0, md: 2 },
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "flex-start"
       }}
     >
-      {/* Contact Info */}
-      <Paper
-        elevation={4}
-        sx={{
-          mb: 2,
-          p: { xs: 2, sm: 3 },
-          borderRadius: "16px",
-          background: "#fff",
-          borderTop: "6px solid #FF7A00",
-        }}
-      >
-        <Typography
-          variant="h6"
-          fontWeight="bold"
-          sx={{ color: "#FF7A00", mb: 1 }}
+      <Box sx={{ width: "100%", maxWidth: 1200 }}>
+        <Grid
+          container
+          spacing={{ xs: 2, md: 4 }}
+          alignItems="stretch"
+          justifyContent="center"
         >
-          Contact Information
-        </Typography>
-        <Box display="flex" alignItems="center" gap={1} mb={1}>
-          <IconButton sx={{ color: "#FF7A00", p: 0 }}>
-            <LocationOn fontSize="small" />
-          </IconButton>
-          <Typography sx={{ fontSize: "0.95rem" }}>
-            Office No. 102-B, First Floor, Ganesham Commercial -A, Survey No.
-            21/18-21/24, BRTS Road, Pimple Saudagar, Pune-411027
-          </Typography>
-        </Box>
-        <Box display="flex" alignItems="center" gap={1} mb={1}>
-          <IconButton sx={{ color: "#FF7A00", p: 0 }}>
-            <Phone fontSize="small" />
-          </IconButton>
-          <Typography sx={{ fontSize: "0.95rem" }}>+91 7066511234</Typography>
-        </Box>
-        <Box display="flex" alignItems="center" gap={1}>
-          <IconButton sx={{ color: "#FF7A00", p: 0 }}>
-            <Email fontSize="small" />
-          </IconButton>
-          <Typography sx={{ fontSize: "0.95rem" }}>contact@smartmatrixds.com</Typography>
-        </Box>
-      </Paper>
-
-      {/* Contact Form */}
-      <Paper
-        elevation={4}
-        sx={{
-          mb: 2,
-          p: { xs: 2, sm: 3 },
-          borderRadius: "16px",
-          background: "#fff",
-          borderTop: "6px solid #FF7A00",
-        }}
-      >
-        <Typography
-          variant="h6"
-          fontWeight="bold"
-          gutterBottom
-          sx={{ color: "#FF7A00", mb: 1 }}
-        >
-          Contact Us
-        </Typography>
-
-        <form ref={form} onSubmit={sendEmail}>
-          <Grid container spacing={1.5}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                name="first_name"
-                label="First Name"
-                fullWidth
-                required
-                size="small"
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                name="last_name"
-                label="Last Name"
-                fullWidth
-                required
-                size="small"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                name="email"
-                label="Email"
-                type="email"
-                fullWidth
-                required
-                size="small"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                name="phone"
-                label="Phone Number"
-                fullWidth
-                size="small"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                multiline
-                rows={4}
-                name="message"
-                label="Your Message"
-                fullWidth
-                required
-                size="small"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Button
-                type="submit"
-                variant="contained"
-                fullWidth
+          {/* Contact Info Card */}
+          <Grid item xs={12} md={5} display="flex">
+            <Paper
+              elevation={5}
+              sx={{
+                width: "100%",
+                maxWidth: { xs: 390, sm: 500, md: "100%" },
+                mx: "auto",
+                borderRadius: { xs: "18px", sm: "32px" },
+                overflow: "hidden",
+                background: infoGradient,
+                color: "#fff",
+                p: { xs: 2, sm: 3, md: 4 },
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                height: "100%"
+              }}
+            >
+              <Box
                 sx={{
-                  fontWeight: "bold",
-                  background: "#FF7A00",
-                  "&:hover": { background: "#E56700" },
+                  background: "rgba(40,0,100,0.25)",
+                  borderRadius: { xs: "14px", sm: "28px" },
+                  p: { xs: 2, sm: 3 },
+                  mb: { xs: 2, sm: 4 }
                 }}
               >
-                SEND MESSAGE
-              </Button>
-            </Grid>
+                <LocationOn sx={{ fontSize: 28, mb: 0.5 }} />
+                <Typography variant="h6" fontWeight="bold">
+                  Address
+                </Typography>
+                <Typography sx={{ fontSize: { xs: "0.97rem", sm: "1rem" }, fontWeight: 400, lineHeight: 1.5, mt: 1 }}>
+                 Office No. 102-B, First Floor, Ganesham Commercial -A, Survey No. 21/18-21/24, BRTS Road, Pimple Saudagar, Pune- 411027
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  background: "rgba(40,0,100,0.25)",
+                  borderRadius: { xs: "14px", sm: "28px" },
+                  p: { xs: 2, sm: 3 },
+                  mb: { xs: 2, sm: 4 }
+                }}
+              >
+                <Email sx={{ fontSize: 28, mb: 0.5 }} />
+                <Typography variant="h6" fontWeight="bold">
+                  Email Us
+                </Typography>
+                <Typography sx={{ fontSize: "1rem", mt: 1 }}>
+                  hr@smartmatrixds.com
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  background: "rgba(40,0,100,0.25)",
+                  borderRadius: { xs: "14px", sm: "28px" },
+                  p: { xs: 2, sm: 3 }
+                }}
+              >
+                <Phone sx={{ fontSize: 28, mb: 0.5 }} />
+                <Typography variant="h6" fontWeight="bold">
+                  Call Us
+                </Typography>
+                <Typography sx={{ fontSize: "1rem", mt: 1 }}>
+                 +91 9112108484
+                </Typography>
+              </Box>
+            </Paper>
           </Grid>
-        </form>
-      </Paper>
 
-      {/* MAP */}
-      <Box
-        sx={{
-          position: "relative",
-          width: "100%",
-          pb: "56.25%",
-          borderRadius: "16px",
-          overflow: "hidden",
-          mt: 2,
-        }}
-      >
-        <iframe
-          title="Google Map"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7562.952626834423!2d73.805661!3d18.597634!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9c6f5fc3061%3A0xd8b8f3fdf9d8fde5!2sGanesham%20A!5e0!3m2!1sen!2sin!4v1763372096573!5m2!1sen!2sin"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            border: 0,
-            borderRadius: "16px"
-          }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        />
+          {/* Contact Form Card */}
+          <Grid item xs={12} md={7} display="flex">
+            <Paper
+              elevation={5}
+              sx={{
+                width: "100%",
+                maxWidth: { xs: 390, sm: 500, md: "100%" },
+                mx: "auto",
+                borderRadius: { xs: "18px", sm: "32px" },
+                overflow: "hidden",
+                background: formGradient,
+                color: "#fff",
+                p: { xs: 2, sm: 3, md: 4 },
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                height: "100%"
+              }}
+            >
+              <Typography
+                variant="h5"
+                align="center"
+                fontWeight="bold"
+                sx={{ mb: 3, letterSpacing: 1, color: "#fff" }}
+              >
+                Contact Us
+              </Typography>
+              <form ref={form} onSubmit={sendEmail}>
+                <TextField
+                  name="first_name"
+                  label="First Name *"
+                  fullWidth
+                  required
+                  size="small"
+                  sx={{
+                    mb: 1.3,
+                    input: {
+                      bgcolor: "#e4e5ef",
+                      borderRadius: "21px"
+                    }
+                  }}
+                  InputProps={{
+                    style: { borderRadius: "21px", background: "#e4e5ef" }
+                  }}
+                />
+                <TextField
+                  name="last_name"
+                  label="Last Name *"
+                  fullWidth
+                  required
+                  size="small"
+                  sx={{
+                    mb: 1.3,
+                    input: {
+                      bgcolor: "#e4e5ef",
+                      borderRadius: "21px"
+                    }
+                  }}
+                  InputProps={{
+                    style: { borderRadius: "21px", background: "#e4e5ef" }
+                  }}
+                />
+                <TextField
+                  name="email"
+                  label="Email *"
+                  type="email"
+                  fullWidth
+                  required
+                  size="small"
+                  sx={{
+                    mb: 1.3,
+                    input: {
+                      bgcolor: "#e4e5ef",
+                      borderRadius: "21px"
+                    }
+                  }}
+                  InputProps={{
+                    style: { borderRadius: "21px", background: "#e4e5ef" }
+                  }}
+                />
+                <TextField
+                  name="phone"
+                  label="Phone Number"
+                  fullWidth
+                  size="small"
+                  sx={{
+                    mb: 1.3,
+                    input: {
+                      bgcolor: "#e4e5ef",
+                      borderRadius: "21px"
+                    }
+                  }}
+                  InputProps={{
+                    style: { borderRadius: "21px", background: "#e4e5ef" }
+                  }}
+                />
+                <TextField
+                  multiline
+                  rows={4}
+                  name="message"
+                  label="Your Message *"
+                  fullWidth
+                  required
+                  size="small"
+                  sx={{
+                    mb: 2,
+                    textarea: {
+                      bgcolor: "#e4e5ef",
+                      borderRadius: "21px"
+                    }
+                  }}
+                  InputProps={{
+                    style: { borderRadius: "21px", background: "#e4e5ef" }
+                  }}
+                />
+                <Button
+                  type="submit"
+                  variant="contained"
+                  fullWidth
+                  sx={{
+                    fontWeight: "bold",
+                    letterSpacing: 1,
+                    background: "#ff7a00",
+                    borderRadius: "21px",
+                    py: 1.3,
+                    fontSize: "1.07rem",
+                    "&:hover": { background: "#e56700" }
+                  }}
+                >
+                  SEND MESSAGE
+                </Button>
+              </form>
+            </Paper>
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );
