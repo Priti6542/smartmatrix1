@@ -22,8 +22,8 @@ const CareerData = {
         },
         {
             icon: "",
-            title: "Connected",
-            description: "We come together wherever we are across time zones, regions, offices and screens.",
+            title: "Flexible",
+            description: "We believe in your freedom to work when and how you work best, to help us all thrive.",
         }
     ],
 
