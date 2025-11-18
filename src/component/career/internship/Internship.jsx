@@ -35,7 +35,7 @@ const Internship = () => {
   return (
     <div ref={sectionRef} className={styles.internshipSection}>
       <h2 className={`${styles.heading} ${styles.fadeInDown}`}>
-        🚀 Internship Opportunities
+         Internship Opportunities
       </h2>
       <p className={`${styles.subHeading} ${styles.fadeInUp}`}>
         Gain real-world experience and accelerate your career with us!
@@ -57,12 +57,12 @@ const Internship = () => {
               <p className={styles.description}>{item.description}</p>
 
               <h4>
-                <b>🎓 Qualifications:</b>
+                <b> Qualifications:</b>
               </h4>
               <p className={styles.qualification}>{item.qualification}</p>
 
               <h4>
-                <b>🎯 Benefits:</b>
+                <b> Benefits:</b>
               </h4>
               <p className={styles.benefits}>{item.benefits}</p>
 

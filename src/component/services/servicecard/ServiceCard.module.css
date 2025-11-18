@@ -1,142 +1,192 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding-top: 40px;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    min-height: 100vh;
-    padding-left: 9rem;
-    padding-right: 9rem;
-    position: relative;
-    overflow: hidden;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 40px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  min-height: 100vh;
+  padding-left: 9rem;
+  padding-right: 9rem;
+  position: relative;
+  overflow: hidden;
+}
 
-  /* Mesh Gradient Blobs */
-  .container::before,
-  .container::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.2;
-    z-index: 0;
-  }
+/* Mesh Gradient Blobs */
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.2;
+  z-index: 0;
+}
 
-  .container::before {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, #ff6b35 0%, transparent 70%);
-    top: -200px;
-    right: -100px;
-  }
+.container::before {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #ff6b35 0%, transparent 70%);
+  top: -200px;
+  right: -100px;
+}
 
-  .container::after {
+/* .container::after {
     width: 500px;
     height: 500px;
     background: radial-gradient(circle, #f7931e 0%, transparent 70%);
     bottom: -150px;
     left: -100px;
-  }
-  
-  /* Category Button Wrapper */
-  .buttonWrapper {
+  } */
+
+/* Category Button Wrapper */
+/* .buttonWrapper {
     display: flex;
     align-items: center;
     position: relative;
     padding-bottom: 20px;
     justify-content: center;
     gap: 20px;
-  }
-  .line {
-    width: 50px; /* Adjust width as needed */
-    height: 3px; /* Thickness of the line */
-    background: linear-gradient(90deg, #ff6b35, #f7931e); /* Gradient effect */
-    display: inline-block;
-    margin: 0 10px; /* Space between buttons */
-    border-radius: 5px; /* Rounded edges */
-    position: relative;
-    animation: glowEffect 1.5s infinite alternate; /* Glowing effect */
-  }
-  
-  /* Glowing effect animation */
-  @keyframes glowEffect {
-    0% {
-      box-shadow: 0 0 5px rgba(255, 107, 53, 0.5);
-    }
-    100% {
-      box-shadow: 0 0 15px rgba(255, 107, 53, 0.8);
-    }
-  }
-  
-  
-  /* Buttons */
-  .categoryButton {
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #ff6b35;
-    color: #ffd93d;
-    padding: 10px 15px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s;
-    position: relative;
-    backdrop-filter: blur(10px);
-  }
-  
-  .categoryButton:hover {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
-    color: white;
-    box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
-  }
-  
-  .active {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
-    color: white;
-    box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
+  } */
+/* Outer wrapper to contain scrolling content */
+.scrollWrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Inner container holding the buttons, duplicated for seamless scroll */
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: scrollLeft 12s linear infinite;
+  gap: 20px;
+}
+
+/* Pause on hover */
+.scrollWrapper:hover .buttonWrapper {
+  animation-play-state: paused;
+}
+
+/* Scroll animation */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
   }
 
-  .subtitle{
-    font-size: 18px;
-    color: #ffffff;
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight: 600;
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Make sure buttons don’t shrink */
+.categoryButton {
+  flex-shrink: 0;
+  /* your existing styles */
+}
+
+
+.line {
+  width: 50px;
+  /* Adjust width as needed */
+  height: 3px;
+  /* Thickness of the line */
+  background: linear-gradient(90deg, #ff6b35, #f7931e);
+  /* Gradient effect */
+  display: inline-block;
+  margin: 0 10px;
+  /* Space between buttons */
+  border-radius: 5px;
+  /* Rounded edges */
+  position: relative;
+  animation: glowEffect 1.5s infinite alternate;
+  /* Glowing effect */
+}
+
+/* Glowing effect animation */
+@keyframes glowEffect {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 107, 53, 0.5);
   }
 
-  .description {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.9);
-    text-align: center;
-    line-height: 1.6;
+  100% {
+    box-shadow: 0 0 15px rgba(255, 107, 53, 0.8);
   }
-  
-  
+}
+
+
+/* Buttons */
+.categoryButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ff6b35;
+  color: #ffd93d;
+  padding: 10px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.categoryButton:hover {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
+}
+
+.active {
+  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  line-height: 1.6;
+}
+
+
 /* Service Details Card */
 .card {
   /* display: flex; */
   /* flex-direction: row; Ensure items are stacked properly */
- display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 equal columns */
   gap: 20px;
   width: 100%;
-  padding: 20px;  /* background: rgba(255, 255, 255, 0.2); */
+  padding: 20px;
+  /* background: rgba(255, 255, 255, 0.2); */
   /* backdrop-filter: blur(12px); */
   border-radius: 15px;
   padding: 20px;
-  width: 100%; /* Ensure all cards take full width */
-  max-height:auto;
-  min-width: 300px; /* Prevent shrinking */
+  width: 100%;
+  /* Ensure all cards take full width */
+  max-height: auto;
+  min-width: 300px;
+  /* Prevent shrinking */
   text-align: center;
   transition: transform 0.3s ease-in-out;
-  flex-grow: 1; /* Ensures equal expansion */
+  flex-grow: 1;
+  /* Ensures equal expansion */
   gap: 20px;
   /* background-color: #d1f0f8; */
-  
-  
+
+
 }
 
 
@@ -149,8 +199,10 @@
   border-radius: 10px;
   margin-top: 10px;
   transition: transform 0.3s ease-in-out, background 0.3s;
-  width: 100%; /* Fix width issues */
-  min-height: 250px; /* Prevent shrinking */
+  width: 100%;
+  /* Fix width issues */
+  min-height: 250px;
+  /* Prevent shrinking */
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -182,17 +234,17 @@
   justify-content: center;
 }
 
-  
+
 
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {
   .container {
-      padding: 40px 3%; /* Less padding for medium screens */
+    padding: 40px 3%;
+    /* Less padding for medium screens */
   }
 
   .card {
-    display: flex
-;
+    display: flex;
     flex-direction: row;
 
     border-radius: 15px;
@@ -204,33 +256,34 @@
     /* transition: transform 0.3sease-in-out; */
     flex-grow: 1;
     /* gap: 20px; */
-   
+
   }
 
   .item {
-      max-width: 90%; /* Makes sure it takes appropriate width */
+    max-width: 90%;
+    /* Makes sure it takes appropriate width */
   }
 
   .container {
     padding: 40px 3%;
-}
+  }
 
-/* .card {
+  /* .card {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 } */
 
-.item {
+  .item {
     max-width: 45%;
-}
+  }
 
-.image {
+  .image {
     max-height: 150px;
-}
+  }
 
 
-  
+
 
   .image {
     width: 100%;
@@ -239,29 +292,36 @@
     border-radius: 10px;
     margin-bottom: 10px;
   }
-  
+
 }
 
 @media screen and (max-width: 768px) {
   .buttonWrapper {
-      flex-direction: column;
-      gap: 15px;
-  }
-
+  display: flex;            /* enable flex layout */
+  flex-wrap: wrap;          /* allow buttons to wrap to next line */
+  justify-content: center;  /* center horizontally */
+  text-align: center;
+  gap: 15px;                /* spacing between buttons */
+  animation: none !important;
+  overflow-x: visible !important;
+  white-space: normal !important;
+}
   .categoryButton {
-      width: 80%;
-      text-align: center;
+    width: 80%;
+    text-align: center; 
+    justify-content: center;  /* center horizontally */
   }
 
   .card {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .item {
-      width: 100%;
-      max-width: 90%;
+    width: 100%;
+    max-width: 90%;
+
   }
 
- 
+
 }

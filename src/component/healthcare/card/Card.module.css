@@ -3,49 +3,54 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   padding: 20px;
   padding-top: 100px;
   position: relative;
   flex-wrap: wrap;
-  padding-left: 9rem;
-  padding-right: 9rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 /* Circle with orange-blue gradient */
 .circle {
-  width: 250px;
-  height: 200px;
+  width: 220px;
+  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #ff6b35, #f7931e); /* warm orange gradient */
+  background: linear-gradient(135deg, #e65100, #f57c00); /* darker orange gradient */
   color: white;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(255, 107, 53, 0.7); /* orange glow */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.5s ease-in-out;
+  box-shadow: 0 0 15px rgba(230, 81, 0, 0.5); /* softer orange glow */
+  transition: all 0.4s ease-in-out;
   position: relative;
   animation: pulseEffect 2s infinite alternate ease-in-out;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Hover effect switching to deeper blue */
+/* Hover effect with enhanced glow */
 .circle:hover {
-  background: linear-gradient(135deg, #ff6b35, #f7931e); /* blue gradient */
-  box-shadow: 0 0 20px rgb(246, 51, 7); /* blue glow */
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(230, 81, 0, 0.7);
+  background: linear-gradient(135deg, #e65100, #ff9800); /* orange to lighter orange gradient */
 }
 
 /* Connecting line */
 .circle::after {
   content: "";
   position: absolute;
-  width: 100px;
+  width: 80px;
   height: 8px;
   border-radius: 20px;
   top: 50%;
   left: 100%;
-  transform: translateY(-50%) translateX(70%);
-  background: linear-gradient(90deg, #ff6b35, #f7931e); /* orange-yellow gradient */
+  transform: translateY(-50%) translateX(60%);
+  background: linear-gradient(90deg, #e65100, #f57c00); /* darker orange-yellow gradient */
   animation: swipeEffect 2.5s infinite alternate ease-in-out;
 }
 
@@ -58,15 +63,25 @@
 @keyframes swipeEffect {
   0% {
     width: 0;
-    background: linear-gradient(90deg, transparent, #ff6b35);
+    background: linear-gradient(90deg, transparent, #e65100);
   }
   50% {
-    width: 80px;
-    background: linear-gradient(90deg, #f7931e, #ff6b35);
+    width: 60px;
+    background: linear-gradient(90deg, #f57c00, #e65100);
   }
   100% {
-    width: 100px;
-    background: linear-gradient(90deg, transparent, #f7931e);
+    width: 80px;
+    background: linear-gradient(90deg, transparent, #f57c00);
+  }
+}
+
+/* Pulse animation for circles */
+@keyframes pulseEffect {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
   }
 }
 
@@ -79,20 +94,27 @@
   width: 200px;
 }
 
-/* Description box with light orange-blue tinted background */
+/* Description box with enhanced styling */
 .details {
-  font-size: 17px;
+  font-size: 16px;
   color: #333;
-  margin-top: 40px;
-  max-width: 380px;
-  height: 450px;
-  background-color: #ffe9d6; /* light warm orange */
-  box-shadow: 0 0 10px rgba(255, 138, 62, 0.5); /* soft orange light */
-  line-height: 50px;
-  padding: 15px;
-  border-radius: 10px;
+  margin-top: 30px;
+  max-width: 350px;
+  min-height: 400px;
+  background: linear-gradient(135deg, #fff3e0 0%, #fafafa 100%); /* softer warm background */
+  box-shadow: 0 8px 20px rgba(230, 81, 0, 0.15);
+  line-height: 1.6;
+  padding: 20px;
+  border-radius: 15px;
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(230, 81, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.details:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(230, 81, 0, 0.2);
 }
 
 /* Shine Animation - soft white glowing highlight */
@@ -126,44 +148,112 @@
 /* Heading styles */
 .heading {
   text-align: center;
-  margin-top: -50px;
-  margin-bottom: 30px;
+  margin-top: -20px;
+  margin-bottom: 25px;
   font-weight: bold;
-  font-size: 25px;
-  color: #ff6b35; /* warm orange accent */
+  font-size: 22px;
+  color: #e65100; /* darker orange accent */
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #e65100, #f57c00);
+  border-radius: 3px;
 }
 
 /* Description item */
 .descriptionItem {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
-  font-size: 16px;
-  color: #333;
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 12px;
+  line-height: 1.5;
 }
 
 /* Description list */
 .descriptionList {
   list-style: none;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 /* Done icon container */
 .doneicon {
-  text-align: center;
+  color: #e65100;
+  min-width: 18px;
+  margin-top: 3px;
+}
+
+/* Icon styling */
+.icon {
+  display: block;
+  margin: 0 auto 15px;
+  color: #e65100 !important;
+  font-size: 40px !important;
 }
 
 /* Responsive Adjustments */
 
+/* Specific adjustment for smaller desktop screens (1201px - 1400px) */
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    gap: 25px;
+  }
+  
+  .circle {
+    width: 200px;
+    height: 160px;
+    font-size: 18px;
+  }
+  
+  .circle::after {
+    width: 70px;
+    transform: translateY(-50%) translateX(55%);
+  }
+  
+  .details {
+    max-width: 320px;
+    min-height: 380px;
+    padding: 18px;
+    font-size: 15px;
+  }
+  
+  .heading {
+    font-size: 20px;
+  }
+  
+  .descriptionItem {
+    font-size: 14px;
+    gap: 8px;
+  }
+}
+
 @media (max-width: 1200px) {
   .container {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     gap: 20px;
   }
   .circle {
-    width: 200px;
-    height: 180px;
+    width: 190px;
+    height: 150px;
+    font-size: 18px;
+  }
+  
+  .details {
+    max-width: 300px;
+    min-height: 350px;
   }
 }
 
@@ -177,43 +267,57 @@
     width: 180px;
     height: 160px;
   }
+  .circle::after {
+    display: none;
+  }
   .details {
     max-width: 90%;
+    height: auto;
+    min-height: 350px;
   }
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 20px 1rem;
+    gap: 30px;
+  }
   .circle {
-    width: 150px;
+    width: 160px;
     height: 140px;
+    font-size: 18px;
   }
   .details {
     max-width: 100%;
-    padding: 10px;
+    padding: 20px;
+    min-height: 300px;
   }
   .descriptionItem {
     font-size: 14px;
-  }
-  .circle::after {
-    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .container {
     flex-direction: column;
-    padding: 10px;
+    padding: 15px 0.5rem;
+    gap: 25px;
   }
   .circle {
-    width: 130px;
+    width: 140px;
     height: 120px;
-    font-size: 14px;
+    font-size: 16px;
   }
   .details {
-    padding: 8px;
+    padding: 15px;
     font-size: 14px;
+    min-height: 280px;
   }
   .descriptionItem {
-    font-size: 12px;
+    font-size: 13px;
+    gap: 10px;
+  }
+  .heading {
+    font-size: 22px;
   }
 }

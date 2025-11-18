@@ -4,6 +4,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaPhoneAlt, FaEnvelo
 import { useNavigate } from "react-router-dom";
 import NavbarData from "../../datafiles/NavbarData";
 import { motion } from 'framer-motion';
+import smart_logo from '../../assets/smart_logo.webp';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -85,7 +86,7 @@ const Footer = () => {
               <motion.div variants={itemVariants}>
                 <Box
                   component="img"
-                  src="https://smartmatrixds.com/assets/img/smds-logo.jpeg"
+                  src={smart_logo}
                   alt="SmartMatrix Logo"
                   sx={{
                     height: 60,
@@ -111,11 +112,11 @@ const Footer = () => {
                 >
                   Transforming ideas into intelligent solutions. Building tomorrow's technology, today.
                 </Typography>
-                <Box sx={{ display: 'flex', gap: 1.5 }}>
+                {/* <Box sx={{ display: 'flex', gap: 1.5 }}>
                   {[
                     { Icon: FaFacebookF, link: 'https://facebook.com' },
                     { Icon: FaTwitter, link: 'https://twitter.com' },
-                    { Icon: FaLinkedinIn, link: 'https://linkedin.com' },
+                    { Icon: FaLinkedinIn, link: 'https://www.linkedin.com/company/smartmatrix-digital-services-pvt-ltd/' },
                     { Icon: FaInstagram, link: 'https://instagram.com' },
                   ].map((social, index) => (
                     <IconButton
@@ -139,6 +140,41 @@ const Footer = () => {
                       href={social.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                    >
+                      <social.Icon size={16} />
+                    </IconButton>
+                  ))}
+                </Box> */}
+
+                <Box sx={{ display: 'flex', gap: 1.5 }}>
+                  {[
+                    { Icon: FaFacebookF, link: 'https://facebook.com' },
+                    { Icon: FaTwitter, link: 'https://twitter.com' },
+                    { Icon: FaLinkedinIn, link: 'https://www.linkedin.com/company/smartmatrix-digital-services-pvt-ltd/' },
+                    { Icon: FaInstagram, link: 'https://instagram.com' },
+                  ].map((social, index) => (
+                    <IconButton
+                      key={index}
+                      component="a"
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      // component={motion.div}
+                      whileHover={{ scale: 1.2, rotate: 5 }}
+                      whileTap={{ scale: 0.9 }}
+                      sx={{
+                        width: 40,
+                        height: 40,
+                        background: 'rgba(28, 181, 224, 0.1)',
+                        border: '1px solid rgba(28, 181, 224, 0.3)',
+                        color: '#1CB5E0',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          background: 'linear-gradient(135deg, #1CB5E0, #000851)',
+                          color: '#fff',
+                          borderColor: '#1CB5E0',
+                        },
+                      }}
                     >
                       <social.Icon size={16} />
                     </IconButton>
@@ -360,7 +396,7 @@ const Footer = () => {
                           fontSize: '0.85rem',
                         }}
                       >
-                        contact@smartmatrixds.com
+                        hr@smartmatrixds.com
                       </Typography>
                     </Box>
                   </Box>

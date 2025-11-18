@@ -49,7 +49,7 @@ const SevicesCardData = {
       "Plan, organize, and manage resources to successfully complete projects on time, within scope, and budget, ensuring quality and stakeholder satisfaction.",
   },
 ],
-  digitalMarketing: [
+  DigitalMarketing: [
     {
       id: "dm1",
       src: digital_marketing,
@@ -73,7 +73,7 @@ const SevicesCardData = {
     },
   ],
 
-  development: [
+  Development: [
   {
     id: "d1",
     src: web_development,
