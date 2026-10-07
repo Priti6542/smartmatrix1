@@ -10,7 +10,7 @@ import {
 import { ChevronDown, Menu, X } from "lucide-react";
 import type { MouseEvent as ReactMouseEvent } from "react";
 import { useEffect, useRef, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import logo from "../../assets/icons/smart_logo.webp";
 import { CAPABILITIES } from "../../constants/capabilities";
@@ -36,7 +36,6 @@ function Navbar() {
   const servicesRef = useRef<HTMLLIElement | null>(null);
 
   const { pathname } = useLocation();
-  const navigate = useNavigate();
 
   const isActive = (path: string): boolean =>
     path === ROUTES.HOME
@@ -98,10 +97,6 @@ function Navbar() {
 
   const handleDrawerToggle = () => {
     setMobileOpen((open) => !open);
-  };
-
-  const handleStartProject = () => {
-    void navigate(ROUTES.CONTACT);
   };
 
   const navLinkClass = (active: boolean) =>
@@ -291,10 +286,6 @@ function Navbar() {
               })}
             </ul>
           </nav>
-
-          {/* =====================================================
-              DESKTOP CTA
-
 
           {/* MOBILE MENU */}
           <IconButton
