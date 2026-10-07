@@ -1,0 +1,633 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+/* =========================================================
+   CUSTOM RESPONSIVE VARIANTS
+   ========================================================= */
+
+@custom-variant upto-1400 (@media (max-width: 1400px));
+@custom-variant upto-1200 (@media (max-width: 1200px));
+@custom-variant upto-1024 (@media (max-width: 1024px));
+@custom-variant upto-992 (@media (max-width: 992px));
+@custom-variant upto-768 (@media (max-width: 768px));
+@custom-variant upto-576 (@media (max-width: 576px));
+@custom-variant upto-480 (@media (max-width: 480px));
+@custom-variant upto-375 (@media (max-width: 375px));
+@custom-variant upto-320 (@media (max-width: 320px));
+
+@custom-variant from-1200 (@media (min-width: 1200px));
+@custom-variant from-1400 (@media (min-width: 1400px));
+
+@custom-variant wide-desktop (
+  @media (min-width: 1201px) and (max-width: 1400px)
+);
+
+@custom-variant landscape-short (
+  @media (max-height: 500px) and (orientation: landscape)
+);
+
+
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+
+@theme {
+  /* -------------------------------------------------------
+     CONTAINER
+     ------------------------------------------------------- */
+
+  --container-site: 1320px;
+  --container-copy: 720px;
+
+
+  /* -------------------------------------------------------
+     SECTION SPACING
+     ------------------------------------------------------- */
+
+  --spacing-section: 3rem;
+  --spacing-section-md: 4.5rem;
+  --spacing-section-lg: 6rem;
+
+  --spacing-heading: 2rem;
+  --spacing-heading-lg: 3rem;
+
+  --spacing-copy-gap: 1rem;
+
+  --spacing-card: 1.5rem;
+  --spacing-card-lg: 2rem;
+
+  --spacing-gap: 1.5rem;
+  --spacing-gap-lg: 2rem;
+
+
+  /* -------------------------------------------------------
+     ANIMATIONS
+     ------------------------------------------------------- */
+
+  --animate-fade-up: fade-in-rise 0.8s ease forwards;
+  --animate-slide-in-right: slide-in-right 1s forwards;
+  --animate-grid-move: grid-move 20s linear infinite;
+  --animate-gradient-shine: gradient-shine 3s ease-in-out infinite;
+  --animate-fade-in-zoom: fade-in-zoom 1s ease-in-out;
+  --animate-rotate-border: rotate-border 5s linear infinite;
+  --animate-scroll-left: scroll-left 12s linear infinite;
+  --animate-glow-effect: glow-effect 1.5s infinite alternate;
+  --animate-fade-in-zoom-out: fade-in-zoom-out 1.5s ease-in-out;
+  --animate-fade-in-overlay: fade-in-overlay 1.2s ease forwards;
+  --animate-slide-up-far: slide-up-far 1.2s ease-out forwards;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-pulse-effect: pulse-effect 2s infinite alternate ease-in-out;
+  --animate-swipe-effect: swipe-effect 2.5s infinite alternate;
+  --animate-shine-effect: shine-effect 3s infinite linear;
+  --animate-fade-in-slow: fade-in 1.5s ease-in;
+  --animate-fade-in-rise: fade-in-rise 1s ease-in-out forwards;
+  --animate-slide-in-up: slide-in-up 1s ease-in-out forwards;
+  --animate-slide-up-fade: slide-up-fade 1.2s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --animate-fade-in-scale-1: fade-in-scale 1s ease-out 0.3s both;
+  --animate-fade-in-scale-2: fade-in-scale 1s ease-out 0.5s both;
+  --animate-fade-in-down: fade-in-down 0.8s ease-out forwards;
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+  --animate-fade-in-card: fade-in-card 0.6s ease-out forwards;
+  --animate-pulse-soft: pulse-soft 1.5s ease infinite;
+  --animate-shine-move: shine-move 1.5s infinite linear;
+  --animate-shine-move-slow: shine-move 2.5s infinite linear;
+  --animate-ken-burns: ken-burns 20s ease-in-out infinite alternate;
+  --animate-ken-burns-tablet: ken-burns-tablet 20s ease-in-out infinite alternate;
+  --animate-ken-burns-mobile: ken-burns-mobile 25s ease-in-out infinite alternate;
+
+
+  /* -------------------------------------------------------
+     KEYFRAMES
+     ------------------------------------------------------- */
+
+  @keyframes fade-in-rise {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-up {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up-fade {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-scale {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in-card {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes shine-move {
+    0% {
+      left: -150%;
+    }
+
+    100% {
+      left: 150%;
+    }
+  }
+
+  @keyframes ken-burns {
+    0% {
+      transform: scale(1) translate(0, 0);
+      filter: brightness(0.95);
+    }
+
+    100% {
+      transform: scale(1.08) translate(-2%, -1.5%);
+      filter: brightness(1.02);
+    }
+  }
+
+  @keyframes ken-burns-tablet {
+    0% {
+      transform: scale(1) translate(0, 0);
+      filter: brightness(0.95);
+    }
+
+    100% {
+      transform: scale(1.05) translate(-1.5%, -1%);
+      filter: brightness(1.02);
+    }
+  }
+
+  @keyframes ken-burns-mobile {
+    0% {
+      transform: scale(1) translate(0, 0);
+      filter: brightness(0.95);
+    }
+
+    100% {
+      transform: scale(1.03) translate(-1%, -1%);
+      filter: brightness(1.01);
+    }
+  }
+
+  @keyframes fade-in-zoom-out {
+    from {
+      opacity: 0;
+      transform: scale(1.02);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fade-in-overlay {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up-far {
+    from {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-effect {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.03);
+    }
+  }
+
+  @keyframes swipe-effect {
+    0% {
+      width: 0;
+    }
+
+    50% {
+      width: 60px;
+    }
+
+    100% {
+      width: 80px;
+    }
+  }
+
+  @keyframes shine-effect {
+    0% {
+      left: -100%;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+
+  @keyframes fade-in-zoom {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes rotate-border {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes glow-effect {
+    0% {
+      box-shadow: 0 0 5px rgba(255, 107, 53, 0.25);
+    }
+
+    100% {
+      box-shadow: 0 0 15px rgba(255, 107, 53, 0.45);
+    }
+  }
+
+  @keyframes grid-move {
+    from {
+      transform: translate(0, 0);
+    }
+
+    to {
+      transform: translate(50px, 50px);
+    }
+  }
+
+  @keyframes gradient-shine {
+    0%,
+    100% {
+      filter: brightness(1);
+    }
+
+    50% {
+      filter: brightness(1.15);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+
+/* =========================================================
+   GLOBAL BASE
+   ========================================================= */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    font-family:
+      "Plus Jakarta Sans",
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+
+    background: #ffffff;
+    color: #242424;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  img,
+  svg,
+  video,
+  canvas {
+    max-width: 100%;
+  }
+
+  img {
+    display: block;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  section,
+  header,
+  footer,
+  main {
+    box-sizing: border-box;
+  }
+}
+
+
+/* =========================================================
+   GLOBAL HORIZONTAL GRID
+   ========================================================= */
+
+:root {
+  --page-padding-x: 40px;
+  --section-padding-y: 96px;
+}
+
+
+/* =========================================================
+   MAIN SITE CONTAINER
+   ========================================================= */
+
+.page-container {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: var(--page-padding-x);
+}
+
+
+/*
+ * Use this class for every major homepage section.
+ *
+ * Example:
+ *
+ * <section className="home-section">
+ *   <div className="page-container">
+ *     ...
+ *   </div>
+ * </section>
+ */
+
+.home-section {
+  width: 100%;
+  padding-block: var(--section-padding-y);
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1401px) {
+  :root {
+    --page-padding-x: 32px;
+    --section-padding-y: 104px;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+  :root {
+    --page-padding-x: 32px;
+    --section-padding-y: 88px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  :root {
+    --page-padding-x: 28px;
+    --section-padding-y: 72px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+  :root {
+    --page-padding-x: 20px;
+    --section-padding-y: 60px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+  :root {
+    --page-padding-x: 18px;
+    --section-padding-y: 52px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  :root {
+    --page-padding-x: 16px;
+    --section-padding-y: 48px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 375px) {
+  :root {
+    --page-padding-x: 14px;
+    --section-padding-y: 44px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
