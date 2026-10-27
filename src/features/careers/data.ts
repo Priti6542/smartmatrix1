@@ -3,16 +3,18 @@ import careersHeroImage from "../../assets/images/careers/careerhero.jpg";
 import { CONTACT_DETAILS } from "../../constants/site";
 import { ROUTES } from "../../constants/routes";
 import type { RoutePath } from "../../constants/routes";
-import type { HeroContent, InfoItem } from "../../types/common";
+import type { InfoItem } from "../../types/common";
 import type {
   ApplicationStep,
   CareerHighlight,
   InternshipRole,
 } from "../../types/career";
 
-export const CAREERS_HERO: HeroContent = {
+export const CAREERS_HERO = {
   backgroundImage: careersHeroImage,
-  title: "Build your career. Build meaningful digital products.",
+  headingPrefix: "Build your ",
+  headingHighlight: "career",
+  headingSuffix: ". Build meaningful digital products.",
   description:
     "At Smart Matrix Digital Services, we build software that simplifies how businesses work, strengthens how people operate, and makes everyday work more productive — and we're looking for people who want to help build it.",
 };
@@ -135,14 +137,6 @@ export const CULTURE_JOURNEY: InfoItem[] = [
     description: "We build tools people actually want to use every day.",
   },
 ];
-
-/* ------------------------------------------------------------------ */
-/* Life at Smart Matrix                                                 */
-/* ------------------------------------------------------------------ */
-
-export const LIFE_HEADING = "Life at Smart Matrix";
-export const LIFE_DESCRIPTION =
-  "The work happens in the details — in code reviews, in design critiques, and in the conversations that shape a product before it ships.";
 
 /* ------------------------------------------------------------------ */
 /* Growth & Learning                                                    */

@@ -14,7 +14,7 @@ export const NAVIGATION: NavigationItem[] = [
   { label: "Home", path: ROUTES.HOME },
   { label: "About", path: ROUTES.ABOUT },
   { label: "Services", path: ROUTES.SERVICES },
-  { label: "Industries", path: ROUTES.INDUSTRIES },
+  { label: "US Healthcare", path: ROUTES.HEALTHCARE },
   { label: "Careers", path: ROUTES.CAREERS },
   { label: "Contact", path: ROUTES.CONTACT },
 ];

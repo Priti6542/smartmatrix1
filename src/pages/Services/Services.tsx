@@ -9,8 +9,12 @@ import ServicesOverview from "../../features/services/components/ServicesOvervie
 import ServicesPrinciples from "../../features/services/components/ServicesPrinciples";
 import ServicesProcess from "../../features/services/components/ServicesProcess";
 import ServicesTechnology from "../../features/services/components/ServicesTechnology";
+import { SITE } from "../../constants/site";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 const Services = () => {
+  useDocumentTitle(`Services | ${SITE.shortName}`);
+
   return (
     <div>
       <ServicesHero />

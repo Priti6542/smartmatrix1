@@ -22,7 +22,7 @@ const AboutBeliefs = () => {
           <div key={principle.index} className="relative overflow-hidden p-8 lg:p-10">
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute -top-3 right-4 text-7xl font-extrabold text-[#F7941E]/10 lg:text-8xl"
+              className="pointer-events-none absolute -top-3 right-4 text-7xl font-extrabold text-[#F47C20]/10 lg:text-8xl"
             >
               {principle.index}
             </span>

@@ -1,22 +1,17 @@
-import ContactFinalCta from "../../features/contact/components/ContactFinalCta";
-import ContactHero from "../../features/contact/components/ContactHero";
-import ContactInformation from "../../features/contact/components/ContactInformation";
-import SimpleContactProcess from "../../features/contact/components/SimpleContactProcess";
-import StartAConversation from "../../features/contact/components/StartAConversation";
-import WhatCanWeHelpWith from "../../features/contact/components/WhatCanWeHelpWith";
+import ContactBrandPanel from "../../features/contact/components/ContactBrandPanel";
+import ContactFormPanel from "../../features/contact/components/ContactFormPanel";
 import { useContactForm } from "../../features/contact/hooks/useContactForm";
+import { SITE } from "../../constants/site";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 const Contact = () => {
-  const { formRef, status, sendEmail, scrollToForm, prefillMessage } = useContactForm();
+  const { formRef, status, sendEmail, prefillMessage } = useContactForm();
+  useDocumentTitle(`Contact | ${SITE.shortName}`);
 
   return (
-    <div>
-      <ContactHero onScrollToForm={scrollToForm} />
-      <StartAConversation formRef={formRef} status={status} onSubmit={sendEmail} />
-      <ContactInformation />
-      <WhatCanWeHelpWith onSelectService={prefillMessage} />
-      <SimpleContactProcess />
-      <ContactFinalCta onScrollToForm={scrollToForm} />
+    <div className="lg:grid lg:min-h-screen lg:grid-cols-2">
+      <ContactBrandPanel onSelectService={prefillMessage} />
+      <ContactFormPanel formRef={formRef} status={status} onSubmit={sendEmail} />
     </div>
   );
 };

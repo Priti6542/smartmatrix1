@@ -39,7 +39,7 @@ const CoreServiceItem = ({
       }}
       className={cx(
         "group relative w-full border-b border-[#3D3D3D]/10 px-1 py-5 text-left transition-all duration-300",
-        isActive && "border-[#F7941E]/30",
+        isActive && "border-[#F47C20]/30",
       )}
     >
       {/* Active indicator */}
@@ -50,7 +50,7 @@ const CoreServiceItem = ({
           opacity: isActive ? 1 : 0,
         }}
         transition={{ duration: 0.25 }}
-        className="absolute left-0 top-0 h-full w-[3px] origin-top rounded-full bg-[#F7941E]"
+        className="absolute left-0 top-0 h-full w-[3px] origin-top rounded-full bg-[#F47C20]"
       />
 
       <div className="flex items-center gap-4 pl-4">
@@ -59,7 +59,7 @@ const CoreServiceItem = ({
           className={cx(
             "w-7 text-xs font-bold tracking-wider transition-colors duration-300",
             isActive
-              ? "text-[#F7941E]"
+              ? "text-[#F47C20]"
               : "text-[#3D3D3D]/25 group-hover:text-[#3D3D3D]/50",
           )}
         >
@@ -71,8 +71,8 @@ const CoreServiceItem = ({
           className={cx(
             "flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-all duration-300",
             isActive
-              ? "bg-[#F7941E] text-white shadow-[0_8px_25px_rgba(247,148,30,0.2)]"
-              : "bg-[#FFF8F0] text-[#F7941E] group-hover:bg-[#F7941E] group-hover:text-white",
+              ? "bg-[#F47C20] text-white shadow-[0_8px_25px_rgba(247,148,30,0.2)]"
+              : "bg-[#FFF8F0] text-[#F47C20] group-hover:bg-[#F47C20] group-hover:text-white",
           )}
         >
           <Icon size={18} />
@@ -95,7 +95,7 @@ const CoreServiceItem = ({
             className={cx(
               "mt-0.5 block text-[10px] font-semibold uppercase tracking-[0.12em] transition-colors duration-300",
               isActive
-                ? "text-[#E8750A]"
+                ? "text-[#d8690f]"
                 : "text-[#3D3D3D]/35 group-hover:text-[#3D3D3D]/50",
             )}
           >
@@ -113,7 +113,7 @@ const CoreServiceItem = ({
         >
           <ArrowUpRight
             size={15}
-            className={isActive ? "text-[#F7941E]" : "text-[#3D3D3D]/40"}
+            className={isActive ? "text-[#F47C20]" : "text-[#3D3D3D]/40"}
           />
         </motion.span>
       </div>
@@ -142,7 +142,7 @@ const ActiveService = ({ service }: ActiveServiceProps) => {
         <div className="flex flex-col justify-between p-7 sm:p-9 lg:p-10">
           <div>
             <div className="flex items-center justify-between">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#F7941E]/20 bg-white px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#E8750A]">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#F47C20]/20 bg-white px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#d8690f]">
                 <Sparkles size={12} />
                 {service.category}
               </span>
@@ -172,7 +172,7 @@ const ActiveService = ({ service }: ActiveServiceProps) => {
                   }}
                   className="flex items-center gap-3"
                 >
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#FFF1E3] text-[#F7941E]">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#FFF1E3] text-[#F47C20]">
                     <Check size={13} strokeWidth={2.5} />
                   </span>
 
@@ -186,7 +186,7 @@ const ActiveService = ({ service }: ActiveServiceProps) => {
 
           <Link
             to={getServiceDetailPath(service.slug)}
-            className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-[#262626] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#F7941E]"
+            className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-[#262626] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#F47C20]"
           >
             Explore Service
             <ArrowUpRight size={16} />
@@ -230,7 +230,7 @@ const ActiveService = ({ service }: ActiveServiceProps) => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="pointer-events-none absolute bottom-[5%] left-[-5%] h-36 w-36 rounded-full bg-[#F7941E]/10 blur-3xl"
+            className="pointer-events-none absolute bottom-[5%] left-[-5%] h-36 w-36 rounded-full bg-[#F47C20]/10 blur-3xl"
           />
 
           {/* Service visual */}
@@ -271,14 +271,14 @@ const ServicesCoreList = () => {
       {/* Header */}
       <div className="mb-10 flex flex-col gap-6 lg:mb-14 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-2xl">
-          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#E8750A]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#F7941E]" />
+          <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#d8690f]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#F47C20]" />
             Core Services
           </span>
 
           <h2 className="mt-4 text-[2rem] font-extrabold leading-[1.08] tracking-[-0.035em] text-[#262626] sm:text-[2.75rem] lg:text-[3.2rem]">
             Eight ways we help you{" "}
-            <span className="text-[#F7941E]">build.</span>
+            <span className="text-[#F47C20]">build.</span>
           </h2>
 
           <p className="mt-5 max-w-xl text-sm leading-7 text-[#3D3D3D]/65 sm:text-base">
@@ -307,7 +307,7 @@ const ServicesCoreList = () => {
               Our capabilities
             </span>
 
-            <span className="text-[10px] font-bold text-[#F7941E]">
+            <span className="text-[10px] font-bold text-[#F47C20]">
               {String(activeIndex + 1).padStart(2, "0")} /{" "}
               {String(CORE_SERVICES.length).padStart(2, "0")}
             </span>
@@ -340,7 +340,7 @@ const ServicesCoreList = () => {
         </p>
 
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#3D3D3D]/40">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#F7941E]" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#F47C20]" />
           Strategy
           <span>•</span>
           Design

@@ -19,7 +19,7 @@ const STEP_ICONS = [Code2, BrainCircuit, Cloud, Rocket];
 
 const STEP_COLORS = [
   {
-    accent: "#F7941E",
+    accent: "#F47C20",
     soft: "rgba(247,148,30,0.10)",
     border: "rgba(247,148,30,0.22)",
   },
@@ -29,12 +29,12 @@ const STEP_COLORS = [
     border: "rgba(253,185,19,0.22)",
   },
   {
-    accent: "#F7941E",
+    accent: "#F47C20",
     soft: "rgba(247,148,30,0.08)",
     border: "rgba(247,148,30,0.20)",
   },
   {
-    accent: "#E8750A",
+    accent: "#d8690f",
     soft: "rgba(232,117,10,0.10)",
     border: "rgba(232,117,10,0.22)",
   },
@@ -107,7 +107,7 @@ const AnimatedHeroVisual = () => {
           ============================================================ */}
 
       <motion.div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[390px] w-[390px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#F7941E]/10"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[390px] w-[390px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#F47C20]/10"
         animate={{ rotate: 360 }}
         transition={{
           duration: 24,
@@ -131,7 +131,7 @@ const AnimatedHeroVisual = () => {
           ============================================================ */}
 
       <motion.span
-        className="absolute left-[11%] top-[25%] h-2 w-2 rounded-full bg-[#F7941E]"
+        className="absolute left-[11%] top-[25%] h-2 w-2 rounded-full bg-[#F47C20]"
         animate={{
           y: [0, -10, 0],
           opacity: [0.45, 1, 0.45],
@@ -158,7 +158,7 @@ const AnimatedHeroVisual = () => {
       />
 
       <motion.span
-        className="absolute bottom-[22%] left-[17%] h-1.5 w-1.5 rounded-full bg-[#E8750A]"
+        className="absolute bottom-[22%] left-[17%] h-1.5 w-1.5 rounded-full bg-[#d8690f]"
         animate={{
           x: [0, 8, 0],
           opacity: [0.3, 0.8, 0.3],
@@ -301,7 +301,7 @@ const AnimatedHeroVisual = () => {
                   <div className="relative flex min-h-[270px] flex-col items-center justify-center py-8 text-center">
                     {/* Rings */}
                     <motion.div
-                      className="absolute h-[210px] w-[210px] rounded-full border border-[#F7941E]/10"
+                      className="absolute h-[210px] w-[210px] rounded-full border border-[#F47C20]/10"
                       animate={{
                         scale: [0.94, 1.04, 0.94],
                         opacity: [0.35, 0.7, 0.35],
@@ -480,7 +480,7 @@ const AnimatedHeroVisual = () => {
 
                 {/* Small spark */}
                 <motion.div
-                  className="relative mx-auto mb-7 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#F7941E]/20 bg-white/80 shadow-[0_15px_35px_rgba(61,61,61,0.08)]"
+                  className="relative mx-auto mb-7 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#F47C20]/20 bg-white/80 shadow-[0_15px_35px_rgba(61,61,61,0.08)]"
                   initial={{
                     opacity: 0,
                     scale: 0.5,
@@ -499,7 +499,7 @@ const AnimatedHeroVisual = () => {
                   <Sparkles
                     size={24}
                     strokeWidth={1.6}
-                    className="text-[#F7941E]"
+                    className="text-[#F47C20]"
                   />
 
                   <motion.span
@@ -596,7 +596,7 @@ const AnimatedHeroVisual = () => {
 
                       {index <
                         HOME_HERO.brandReveal.services.length - 1 && (
-                        <span className="h-1 w-1 rounded-full bg-[#F7941E]" />
+                        <span className="h-1 w-1 rounded-full bg-[#F47C20]" />
                       )}
                     </div>
                   ))}
@@ -604,7 +604,7 @@ const AnimatedHeroVisual = () => {
 
                 {/* Bottom brand line */}
                 <motion.div
-                  className="mx-auto mt-8 h-px w-24 bg-gradient-to-r from-transparent via-[#F7941E] to-transparent"
+                  className="mx-auto mt-8 h-px w-24 bg-gradient-to-r from-transparent via-[#F47C20] to-transparent"
                   initial={{
                     width: 0,
                     opacity: 0,

@@ -22,7 +22,7 @@ const AboutIndustriesList = () => {
       <ul className="divide-y divide-[#3D3D3D]/10 rounded-2xl border border-[#3D3D3D]/10">
         {ABOUT_INDUSTRIES.map((industry, index) => (
           <li key={industry.id}>
-            <div className="group flex cursor-default flex-col gap-2 border-l-2 border-transparent px-6 py-5 transition-all duration-300 hover:border-[#F7941E] hover:bg-[#FFF8F0] sm:flex-row sm:items-center sm:gap-5 sm:px-8">
+            <div className="group flex cursor-default flex-col gap-2 border-l-2 border-transparent px-6 py-5 transition-all duration-300 hover:border-[#F47C20] hover:bg-[#FFF8F0] sm:flex-row sm:items-center sm:gap-5 sm:px-8">
               <div className="flex items-center gap-4 sm:w-44 sm:shrink-0">
                 <span className="text-sm font-semibold text-[#3D3D3D]/35">
                   {String(index + 1).padStart(2, "0")}
@@ -37,7 +37,7 @@ const AboutIndustriesList = () => {
 
                 <ArrowRight
                   size={18}
-                  className="shrink-0 text-[#3D3D3D]/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#F7941E]"
+                  className="shrink-0 text-[#3D3D3D]/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#F47C20]"
                 />
               </div>
             </div>

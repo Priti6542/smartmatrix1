@@ -12,7 +12,7 @@ import { ABOUT_IMPACT_FLOW } from "../data";
 const ImpactVisual = () => {
   return (
     <div className="relative mx-auto w-full max-w-[420px]">
-      <div className="pointer-events-none absolute -inset-6 rounded-[32px] bg-[#F7941E]/8 blur-3xl" />
+      <div className="pointer-events-none absolute -inset-6 rounded-[32px] bg-[#F47C20]/8 blur-3xl" />
 
       <motion.div
         initial={{ opacity: 0, y: 16 }}
@@ -29,14 +29,14 @@ const ImpactVisual = () => {
               <div
                 className={
                   isLast
-                    ? "flex items-center gap-3 rounded-xl border border-[#F7941E]/30 bg-[#FFF8F0] px-5 py-4"
+                    ? "flex items-center gap-3 rounded-xl border border-[#F47C20]/30 bg-[#FFF8F0] px-5 py-4"
                     : "flex items-center gap-3 rounded-xl border border-[#3D3D3D]/10 bg-white px-5 py-4"
                 }
               >
                 <span
                   className={
                     isLast
-                      ? "h-2.5 w-2.5 shrink-0 rounded-[3px] bg-[#F7941E]"
+                      ? "h-2.5 w-2.5 shrink-0 rounded-[3px] bg-[#F47C20]"
                       : "h-2.5 w-2.5 shrink-0 rounded-[3px] border border-[#3D3D3D]/30"
                   }
                 />

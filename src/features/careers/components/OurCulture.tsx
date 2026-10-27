@@ -50,23 +50,27 @@ const JourneyStep = ({ step, isLast }: JourneyStepProps) => {
 
 const OurCulture = () => {
   return (
-    <Section className="bg-[#FFFCF7] text-[#262626]">
+    <Section spacing="none" className="bg-[#FFFCF7] pt-14 pb-0 text-[#262626] sm:pt-18 lg:pt-24">
       <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-        <div className="relative overflow-hidden rounded-[28px] bg-[#262626] p-9 text-white sm:p-11 lg:min-h-[360px]">
-          <div className="pointer-events-none absolute -top-16 -right-16 h-56 w-56 rounded-full bg-[#F47C20]/15 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-16 -left-10 h-48 w-48 rounded-full bg-[#FDB913]/10 blur-3xl" />
+        <div className="relative overflow-hidden rounded-2xl border border-[#3D3D3D]/10 bg-white p-9 sm:p-11 lg:min-h-[360px]">
+          <div className="pointer-events-none absolute -top-16 -right-16 h-56 w-56 rounded-full bg-[#F47C20]/10 blur-3xl" />
 
-          <p className="relative text-2xl font-extrabold leading-snug tracking-[-0.01em] sm:text-3xl">
+          <span className="relative inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#d8690f]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#F47C20]" />
+            Our Mission
+          </span>
+
+          <p className="relative mt-5 text-2xl font-extrabold leading-snug tracking-[-0.01em] text-[#262626] sm:text-3xl">
             Simplifying. Enhancing. Making work{" "}
             <span className="text-[#F47C20]">more productive.</span>
           </p>
-          <p className="relative mt-5 text-sm leading-6 text-white/55">
+          <p className="relative mt-5 text-sm leading-6 text-[#3D3D3D]/60">
             The mission behind every project we take on.
           </p>
         </div>
 
         <div>
-          <h2 className="text-[1.75rem] font-extrabold leading-tight tracking-[-0.01em] text-[#262626] sm:text-[2.25rem]">
+          <h2 className="text-[1.75rem] font-extrabold leading-tight tracking-[-0.01em] sm:text-[2.25rem]">
             {OUR_CULTURE_HEADING}
           </h2>
 

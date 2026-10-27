@@ -31,7 +31,7 @@ const HomeHero = () => {
           h-[520px]
           w-[520px]
           rounded-full
-          bg-[#F7941E]/10
+          bg-[#F47C20]/10
           blur-[100px]
         "
       />
@@ -61,7 +61,7 @@ const HomeHero = () => {
           h-[260px]
           w-[260px]
           rounded-full
-          bg-[#F7941E]/5
+          bg-[#F47C20]/5
           blur-[80px]
         "
       />
@@ -94,7 +94,7 @@ const HomeHero = () => {
           h-3
           w-3
           rounded-full
-          bg-[#F7941E]
+          bg-[#F47C20]
           opacity-70
           shadow-[0_0_20px_rgba(247,148,30,0.5)]
         "
@@ -123,7 +123,7 @@ const HomeHero = () => {
           h-2
           w-2
           rounded-full
-          bg-[#F7941E]
+          bg-[#F47C20]
           opacity-50
         "
       />
@@ -156,7 +156,7 @@ const HomeHero = () => {
                 gap-2
                 rounded-full
                 border
-                border-[#F7941E]/20
+                border-[#F47C20]/20
                 bg-white/70
                 px-4
                 py-2
@@ -169,7 +169,7 @@ const HomeHero = () => {
                   h-2
                   w-2
                   rounded-full
-                  bg-[#F7941E]
+                  bg-[#F47C20]
                   shadow-[0_0_10px_rgba(247,148,30,0.5)]
                 "
               />
@@ -180,7 +180,7 @@ const HomeHero = () => {
                   font-semibold
                   uppercase
                   tracking-[0.18em]
-                  text-[#E8750A]
+                  text-[#d8690f]
                   sm:text-xs
                 "
               >
@@ -205,7 +205,7 @@ const HomeHero = () => {
             >
               {HOME_HERO.headingPrefix}
 
-              <span className="text-[#F7941E]">
+              <span className="text-[#F47C20]">
                 {HOME_HERO.headingHighlight}
               </span>
 
@@ -239,7 +239,7 @@ const HomeHero = () => {
                   justify-center
                   gap-2
                   rounded-full
-                  bg-[#F7941E]
+                  bg-[#F47C20]
                   px-7
                   text-sm
                   font-semibold
@@ -248,7 +248,7 @@ const HomeHero = () => {
                   transition-all
                   duration-300
                   hover:-translate-y-0.5
-                  hover:bg-[#E8750A]
+                  hover:bg-[#d8690f]
                   hover:shadow-[0_14px_35px_rgba(247,148,30,0.3)]
                 "
               >
@@ -283,9 +283,9 @@ const HomeHero = () => {
                   transition-all
                   duration-300
                   hover:-translate-y-0.5
-                  hover:border-[#F7941E]/40
+                  hover:border-[#F47C20]/40
                   hover:bg-[#FFF8F0]
-                  hover:text-[#E8750A]
+                  hover:text-[#d8690f]
                 "
               >
                 {HOME_HERO.secondaryCta.label}
@@ -305,7 +305,7 @@ const HomeHero = () => {
                 absolute
                 inset-[10%]
                 rounded-full
-                bg-[#F7941E]/5
+                bg-[#F47C20]/5
                 blur-[70px]
               "
             />

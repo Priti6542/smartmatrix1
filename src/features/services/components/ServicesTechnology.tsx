@@ -19,7 +19,7 @@ const ServicesTechnology = () => {
         transition={{ duration: 0.6 }}
         className="mb-12 max-w-3xl lg:mb-16"
       >
-        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#E8750A]">
+        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#d8690f]">
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#FFF1E3]">
             <Sparkles size={13} />
           </span>
@@ -57,7 +57,7 @@ const ServicesTechnology = () => {
           </div>
 
           <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#3D3D3D]/40">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#F7941E]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#F47C20]" />
             Business first
           </div>
         </div>
@@ -87,17 +87,17 @@ const ServicesTechnology = () => {
               <div className="relative grid gap-6 lg:grid-cols-[0.34fr_1fr] lg:items-center lg:gap-12">
                 {/* Technology group */}
                 <div className="flex items-center gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FFF4E8] text-[#F7941E] transition-all duration-300 group-hover:bg-[#F7941E] group-hover:text-white group-hover:shadow-[0_8px_24px_rgba(247,148,30,0.2)]">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FFF4E8] text-[#F47C20] transition-all duration-300 group-hover:bg-[#F47C20] group-hover:text-white group-hover:shadow-[0_8px_24px_rgba(247,148,30,0.2)]">
                     <Code2 size={19} />
                   </span>
 
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-bold tracking-[0.16em] text-[#F7941E]/70">
+                      <span className="text-[10px] font-bold tracking-[0.16em] text-[#F47C20]/70">
                         {String(groupIndex + 1).padStart(2, "0")}
                       </span>
 
-                      <span className="h-px w-5 bg-[#F7941E]/30" />
+                      <span className="h-px w-5 bg-[#F47C20]/30" />
                     </div>
 
                     <h3 className="mt-1 text-base font-extrabold text-[#262626] sm:text-lg">
@@ -125,16 +125,16 @@ const ServicesTechnology = () => {
                           y: -3,
                           scale: 1.02,
                         }}
-                        className="group/item flex cursor-default items-center gap-2 rounded-full border border-[#3D3D3D]/10 bg-white px-4 py-2.5 text-sm font-semibold text-[#3D3D3D]/75 shadow-[0_2px_8px_rgba(38,38,38,0.03)] transition-all duration-300 hover:border-[#F7941E]/30 hover:text-[#262626] hover:shadow-[0_8px_20px_rgba(247,148,30,0.08)]"
+                        className="group/item flex cursor-default items-center gap-2 rounded-full border border-[#3D3D3D]/10 bg-white px-4 py-2.5 text-sm font-semibold text-[#3D3D3D]/75 shadow-[0_2px_8px_rgba(38,38,38,0.03)] transition-all duration-300 hover:border-[#F47C20]/30 hover:text-[#262626] hover:shadow-[0_8px_20px_rgba(247,148,30,0.08)]"
                       >
-                        <span className="h-1.5 w-1.5 rounded-full bg-[#F7941E]/60 transition-all duration-300 group-hover/item:bg-[#F7941E]" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#F47C20]/60 transition-all duration-300 group-hover/item:bg-[#F47C20]" />
 
                         {technology}
                       </motion.div>
                     ),
                   )}
 
-                  <span className="ml-auto hidden h-9 w-9 items-center justify-center rounded-full border border-[#3D3D3D]/10 text-[#3D3D3D]/25 transition-all duration-300 group-hover:border-[#F7941E]/30 group-hover:text-[#F7941E] sm:flex">
+                  <span className="ml-auto hidden h-9 w-9 items-center justify-center rounded-full border border-[#3D3D3D]/10 text-[#3D3D3D]/25 transition-all duration-300 group-hover:border-[#F47C20]/30 group-hover:text-[#F47C20] sm:flex">
                     <ArrowUpRight size={15} />
                   </span>
                 </div>
@@ -158,7 +158,7 @@ const ServicesTechnology = () => {
         </p>
 
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#3D3D3D]/40">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#F7941E]" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#F47C20]" />
 
           Right technology
 

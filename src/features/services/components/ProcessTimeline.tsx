@@ -11,7 +11,7 @@ interface StepTileProps {
 
 /** Filled square tile — distinct from About's outlined circle marker. */
 const StepTile = ({ index }: StepTileProps) => (
-  <span className="relative z-[1] flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#F7941E] text-sm font-bold text-white shadow-[0_8px_20px_rgba(247,148,30,0.3)]">
+  <span className="relative z-[1] flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#F47C20] text-sm font-bold text-white shadow-[0_8px_20px_rgba(247,148,30,0.3)]">
     {index}
   </span>
 );
@@ -93,7 +93,7 @@ const DesktopTimeline = ({ steps }: { steps: ProcessStep[] }) => {
         initial={{ width: "0%" }}
         animate={{ width: isVisible ? "100%" : "0%" }}
         transition={{ duration: 1.1, ease: "easeInOut" }}
-        className="pointer-events-none absolute top-1/2 left-6 h-px -translate-y-1/2 bg-[#F7941E]/50"
+        className="pointer-events-none absolute top-1/2 left-6 h-px -translate-y-1/2 bg-[#F47C20]/50"
       />
 
       {steps.map((step, index) => (

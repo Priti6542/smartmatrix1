@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 
 import PageHero from "../../components/sections/PageHero";
 import { ROUTES } from "../../constants/routes";
+import { SITE } from "../../constants/site";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 const NotFound = () => {
+  useDocumentTitle(`Page Not Found | ${SITE.shortName}`);
+
   return (
     <PageHero
       title="404 — Page not found"
@@ -11,16 +15,7 @@ const NotFound = () => {
     >
       <Link
         to={ROUTES.HOME}
-        style={{
-          display: "inline-block",
-          marginTop: "28px",
-          padding: "12px 28px",
-          borderRadius: "999px",
-          background: "linear-gradient(135deg, #ff6b35, #ffd93d)",
-          color: "#0a0e27",
-          fontWeight: 700,
-          textDecoration: "none",
-        }}
+        className="mt-7 inline-flex h-12 items-center justify-center rounded-full bg-[#F47C20] px-8 text-sm font-semibold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#d8690f]"
       >
         Back to home
       </Link>

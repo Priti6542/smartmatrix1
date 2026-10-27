@@ -13,13 +13,13 @@ const ServiceDetailBreadcrumb = ({ title }: ServiceDetailBreadcrumbProps) => (
     aria-label="Breadcrumb"
     className="flex items-center gap-1.5 text-xs text-[#3D3D3D]/50"
   >
-    <Link to={ROUTES.HOME} className="transition-colors hover:text-[#F7941E]">
+    <Link to={ROUTES.HOME} className="transition-colors hover:text-[#F47C20]">
       Home
     </Link>
     <ChevronRight size={12} />
     <Link
       to={ROUTES.SERVICES}
-      className="transition-colors hover:text-[#F7941E]"
+      className="transition-colors hover:text-[#F47C20]"
     >
       Services
     </Link>

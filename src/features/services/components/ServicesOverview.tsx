@@ -8,7 +8,7 @@ const ServicesOverview = () => {
     <Section className="bg-[#FFFCF7] text-[#262626]">
       <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <Reveal>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E8750A]">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#d8690f]">
             {SERVICES_OVERVIEW.label}
           </span>
           <h2 className="mt-4 text-[1.75rem] font-extrabold leading-tight tracking-[-0.01em] sm:text-[2.25rem] lg:text-[2.5rem]">

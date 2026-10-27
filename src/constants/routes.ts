@@ -3,8 +3,7 @@ export const ROUTES = {
   ABOUT: "/about",
   SERVICES: "/services",
   SERVICE_DETAIL: "/services/:slug",
-  INDUSTRIES: "/industries",
-  HEALTHCARE: "/industries/healthcare",
+  HEALTHCARE: "/ushealthcare",
   CAREERS: "/careers",
   CONTACT: "/contact",
 } as const;
@@ -23,7 +22,8 @@ export const LEGACY_ROUTE_REDIRECTS: ReadonlyArray<{
   from: string;
   to: RoutePath;
 }> = [
-  { from: "/ushealthcare", to: ROUTES.HEALTHCARE },
   { from: "/us-healthcare", to: ROUTES.HEALTHCARE },
+  { from: "/industries/healthcare", to: ROUTES.HEALTHCARE },
+  { from: "/industries", to: ROUTES.HEALTHCARE },
   { from: "/career", to: ROUTES.CAREERS },
 ];

@@ -12,7 +12,7 @@ interface StepCircleProps {
 }
 
 const StepCircle = ({ index }: StepCircleProps) => (
-  <span className="relative z-[1] flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[#F7941E] bg-white text-sm font-bold text-[#F7941E]">
+  <span className="relative z-[1] flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[#F47C20] bg-white text-sm font-bold text-[#F47C20]">
     {index}
   </span>
 );

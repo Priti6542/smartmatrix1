@@ -18,8 +18,8 @@ export default {
       },
       colors: {
         brand: {
-          orange: "#F7941E",
-          "orange-deep": "#E8750A",
+          orange: "#F47C20",
+          "orange-deep": "#d8690f",
           gold: "#FDB913",
           charcoal: "#3D3D3D",
           "charcoal-deep": "#262626",

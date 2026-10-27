@@ -12,7 +12,7 @@ const ServiceDetailProcess = ({ service }: ServiceDetailProcessProps) => {
   const steps = service.detail.processOverride ?? SERVICE_DETAIL_PROCESS;
 
   return (
-    <Section className="bg-[#FFFCF7] text-[#262626]">
+    <Section spacing="none" className="bg-[#FFFCF7] pt-14 pb-0 text-[#262626] sm:pt-18 lg:pt-24">
       <header className="mb-heading max-w-2xl lg:mb-heading-lg">
         <h2 className="text-[1.75rem] font-extrabold leading-tight tracking-[-0.01em] sm:text-[2.25rem] lg:text-[2.5rem]">
           {SERVICE_DETAIL_PROCESS_HEADING}

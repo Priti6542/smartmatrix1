@@ -7,14 +7,22 @@ import healthcareHeroImage from "../../assets/images/healthcare/healthcareback.j
 import medicalBillingImage from "../../assets/images/healthcare/medical_billing.jpg";
 import medicalCodingImage from "../../assets/images/healthcare/medical_coding.jpg";
 
-import type { FeatureRow, HeroContent } from "../../types/common";
+import { ROUTES } from "../../constants/routes";
+import type { RoutePath } from "../../constants/routes";
+import type { FeatureRow, HeroContent, MuiIconComponent } from "../../types/common";
 import type { HealthcareService } from "../../types/industry";
 
 export const HEALTHCARE_HERO: HeroContent = {
   backgroundImage: healthcareHeroImage,
-  title: "US HealthCare",
-  description: "We provide Health care services",
+  title: "US Healthcare",
+  description:
+    "AR calling, medical coding, and medical billing — revenue cycle management delivered by HIPAA-compliant teams.",
 };
+
+export const HEALTHCARE_HERO_EYEBROW = "Revenue Cycle Management";
+
+/** Anchor id the hero's primary CTA scrolls to. */
+export const HEALTHCARE_SERVICES_SECTION_ID = "healthcare-services";
 
 /** Every service shares this checklist in the source content. */
 const SHARED_HIGHLIGHTS: string[] = [
@@ -48,26 +56,57 @@ export const HEALTHCARE_SERVICES: HealthcareService[] = [
   },
 ];
 
-export const HEALTHCARE_FEATURES: FeatureRow[] = [
+export interface HealthcareFeatureRow extends FeatureRow {
+  icon: MuiIconComponent;
+}
+
+export const HEALTHCARE_FEATURES: HealthcareFeatureRow[] = [
   {
     title: "AR Caller",
+    icon: SupportAgentIcon,
     content:
       "Accounts Receivable (AR) calling is a critical component in the financial ecosystem of healthcare organizations. As a fundamental part of Revenue Cycle Management (RCM), AR calling involves reaching out to payers, insurance companies, or patients to ensure timely and accurate payment for the services rendered. Trained professionals in AR calling navigate through the complexities of claims processing, payment disputes, and reimbursement delays. Their expertise lies in effective communication, negotiation, and resolution of outstanding accounts. In an environment where timely cash flow is paramount, AR calling serves as the frontline defense against revenue interruptions",
     image: arCallingImage,
   },
   {
     title: "Medical Coding",
+    icon: MedicationLiquidIcon,
     content:
       "Medical Coding Services is a specialized function in the Revenue Cycle Management which involves healthcare providers, patients, payers and Physician administrative staff. Medical Coders work in tandem with billers to process accurate revenue codes on the basis of the clinical documentation maintained by the healthcare provider. The expertise of a certified and experienced Medical Coder is to ensure quick and denial-free reimbursement to the providers. Medical Coders play a crucial role in translating complex healthcare information into standardized codes,which are essential for billing processes effective communication among healthcare providers, payers, and administrative staff.",
     image: medicalCodingImage,
   },
   {
     title: "Medical Billing",
+    icon: ReceiptLongIcon,
     content:
       "As healthcare reforms reshape the industry, medical billing services have become indispensable for practitioners. Facing challenges like increased denials and operating costs, reduced reimbursements, and complex coding requirements, these services act as vital allies. With impending reforms such as the Affordable Care Organization Concept, ICD-10 transition, and HIPAA 5010 compliance, experienced billing services ensure practitioners navigate the evolving landscape seamlessly. By handling intricate coding, compliance, and reimbursement optimization, these services empower healthcare providers to concentrate on industry transformations and their mission to provide excellent patient care.",
     image: medicalBillingImage,
   },
 ];
+
+/* ------------------------------------------------------------------ */
+/* Final CTA                                                            */
+/* ------------------------------------------------------------------ */
+
+interface HealthcareCta {
+  label: string;
+  path: RoutePath;
+}
+
+export interface HealthcareFinalCtaContent {
+  heading: string;
+  description: string;
+  primaryCta: HealthcareCta;
+  secondaryCta: HealthcareCta;
+}
+
+export const HEALTHCARE_FINAL_CTA: HealthcareFinalCtaContent = {
+  heading: "Let's streamline your revenue cycle.",
+  description:
+    "Partner with a HIPAA-compliant team for AR calling, medical coding, and medical billing — built to keep claims moving and cash flow steady.",
+  primaryCta: { label: "Partner With Us", path: ROUTES.CONTACT },
+  secondaryCta: { label: "View All Services", path: ROUTES.SERVICES },
+};
 
 /**
  * Partner logos rendered by `TrustedPartners`. That section is not currently

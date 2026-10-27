@@ -25,13 +25,13 @@ const PathCard = ({ path }: PathCardProps) => {
       ref={ref}
       to={ROUTES.CONTACT}
       className={cx(
-        "group relative flex flex-col overflow-hidden rounded-2xl border border-[#3D3D3D]/10 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#F7941E]/40 hover:shadow-[0_16px_40px_rgba(61,61,61,0.08)]",
+        "group relative flex flex-col overflow-hidden rounded-2xl border border-[#3D3D3D]/10 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#F47C20]/40 hover:shadow-[0_16px_40px_rgba(61,61,61,0.08)]",
         isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0",
       )}
     >
-      <span className="absolute top-0 left-0 h-0.5 w-0 bg-[#F7941E] transition-all duration-300 group-hover:w-full" />
+      <span className="absolute top-0 left-0 h-0.5 w-0 bg-[#F47C20] transition-all duration-300 group-hover:w-full" />
 
-      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F7941E]">
+      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
         <Icon size={21} />
       </span>
 
@@ -42,7 +42,7 @@ const PathCard = ({ path }: PathCardProps) => {
         {path.description}
       </p>
 
-      <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#F7941E]">
+      <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#F47C20]">
         Get started
         <ArrowRight
           size={15}

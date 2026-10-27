@@ -20,9 +20,9 @@ export const CONTACT_DETAILS: ContactDetails = {
  */
 export const BRAND = {
   /** Primary — sun rays, "SMARTMATRIX" wordmark. Buttons, links, accents. */
-  orange: "#F7941E",
+  orange: "#F47C20",
   /** Darker orange — hover states, gradient ends. */
-  orangeDeep: "#E8750A",
+  orangeDeep: "#d8690f",
   /** Centre of the sun gradient. Secondary accent, sparingly. */
   gold: "#FDB913",
   /** The "SMDS" lettermark's neutral. Dark text, dark sections. */

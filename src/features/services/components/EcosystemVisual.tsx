@@ -31,12 +31,12 @@ const EcosystemVisual = () => {
       <motion.div
         animate={pulse}
         transition={PULSE_TRANSITION}
-        className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F7941E] text-sm font-bold text-white shadow-[0_12px_30px_rgba(247,148,30,0.35)]"
+        className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F47C20] text-sm font-bold text-white shadow-[0_12px_30px_rgba(247,148,30,0.35)]"
       >
         SM
       </motion.div>
 
-      <div className="h-10 w-px bg-gradient-to-b from-[#F7941E]/60 to-[#3D3D3D]/15" />
+      <div className="h-10 w-px bg-gradient-to-b from-[#F47C20]/60 to-[#3D3D3D]/15" />
 
       <div className="relative w-full">
         <div className="absolute top-0 right-[12.5%] left-[12.5%] h-px bg-[#3D3D3D]/15" />
@@ -57,7 +57,7 @@ const EcosystemVisual = () => {
                 transition={{ ...PULSE_TRANSITION, delay: column * 0.3 }}
                 className={`flex h-14 w-14 items-center justify-center rounded-xl border text-center text-[11px] font-semibold transition-colors duration-300 sm:h-16 sm:w-16 sm:text-xs ${
                   activeColumn === column
-                    ? "border-[#F7941E] bg-[#FFF8F0] text-[#F7941E]"
+                    ? "border-[#F47C20] bg-[#FFF8F0] text-[#F47C20]"
                     : "border-[#3D3D3D]/10 bg-white text-[#3D3D3D] shadow-sm"
                 }`}
               >
@@ -66,13 +66,13 @@ const EcosystemVisual = () => {
 
               <div
                 className={`h-6 w-px transition-colors duration-300 ${
-                  activeColumn === column ? "bg-[#F7941E]/50" : "bg-[#3D3D3D]/15"
+                  activeColumn === column ? "bg-[#F47C20]/50" : "bg-[#3D3D3D]/15"
                 }`}
               />
               <div
                 className={`flex h-12 w-12 items-center justify-center rounded-lg border text-center text-[10px] font-medium transition-colors duration-300 sm:h-14 sm:w-14 sm:text-[11px] ${
                   activeColumn === column
-                    ? "border-[#F7941E]/40 bg-[#FFF8F0] text-[#E8750A]"
+                    ? "border-[#F47C20]/40 bg-[#FFF8F0] text-[#d8690f]"
                     : "border-[#3D3D3D]/10 bg-[#FFFCF7] text-[#3D3D3D]/70"
                 }`}
               >

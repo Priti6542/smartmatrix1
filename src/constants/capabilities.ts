@@ -25,6 +25,14 @@ export interface Capability {
   title: string;
   description: string;
   icon: LucideIcon;
+  /**
+   * The matching `CoreService.slug` in `features/services/data.ts`, for
+   * deep-linking the Navbar mega-menu and Footer to that service's own
+   * `/services/<slug>` page. Omitted where no clean match exists (the
+   * Navbar/Footer fall back to the generic `/services` listing in that case)
+   * rather than linking to a page about something else.
+   */
+  serviceSlug?: string;
 }
 
 export const CAPABILITIES: Capability[] = [
@@ -36,6 +44,7 @@ export const CAPABILITIES: Capability[] = [
     description:
       "Fast, accessible, production-grade websites and web applications built to scale.",
     icon: Code2,
+    serviceSlug: "web-development",
   },
   {
     id: "custom-software",
@@ -45,6 +54,7 @@ export const CAPABILITIES: Capability[] = [
     description:
       "Purpose-built systems designed around how your business actually operates.",
     icon: Terminal,
+    serviceSlug: "custom-software",
   },
   {
     id: "mobile-applications",
@@ -54,6 +64,7 @@ export const CAPABILITIES: Capability[] = [
     description:
       "Native-feel iOS and Android apps, from first prototype to app-store release.",
     icon: Smartphone,
+    serviceSlug: "mobile-apps",
   },
   {
     id: "product-development",
@@ -63,6 +74,7 @@ export const CAPABILITIES: Capability[] = [
     description:
       "End-to-end product teams that take an idea from discovery through to launch.",
     icon: Boxes,
+    serviceSlug: "product-development",
   },
   {
     id: "ui-ux-design",
@@ -72,6 +84,7 @@ export const CAPABILITIES: Capability[] = [
     description:
       "Interfaces designed for clarity first — research, flows, and polished UI.",
     icon: PenTool,
+    serviceSlug: "ui-ux-design",
   },
   {
     id: "ai-ml",
@@ -81,6 +94,7 @@ export const CAPABILITIES: Capability[] = [
     description:
       "Practical machine learning and automation built into real workflows.",
     icon: BrainCircuit,
+    serviceSlug: "ai-solutions",
   },
   {
     id: "cloud-devops",
@@ -90,6 +104,7 @@ export const CAPABILITIES: Capability[] = [
     description:
       "Cloud infrastructure, CI/CD, and deployment pipelines that stay reliable at scale.",
     icon: Cloud,
+    serviceSlug: "cloud-solutions",
   },
   {
     id: "digital-solutions-support",

@@ -25,7 +25,7 @@ const PageHero = ({
   return (
     <section
       className="relative flex min-h-[70vh] items-center justify-center overflow-hidden
-                 bg-[linear-gradient(135deg,#000851_0%,#0a0e27_100%)] bg-cover bg-center bg-no-repeat
+                 bg-[linear-gradient(135deg,#262626_0%,#3D3D3D_100%)] bg-cover bg-center bg-no-repeat
                  pt-[120px] pb-section text-center text-white
                  upto-768:min-h-[60vh] upto-768:pt-[110px]"
       style={
@@ -34,11 +34,11 @@ const PageHero = ({
           : undefined
       }
     >
-      <div className="absolute inset-0 bg-[rgba(4,8,40,0.68)]" />
+      <div className="absolute inset-0 bg-[#262626]/70" />
       <div className={CONTAINER_CLASS}>
         <div className="relative mx-auto max-w-copy">
           <h1
-            className="mb-copy-gap bg-[linear-gradient(135deg,#1cb5e0,#ffd93d)] bg-clip-text
+            className="mb-copy-gap bg-[linear-gradient(135deg,#F47C20,#FDB913)] bg-clip-text
                        text-[clamp(2.1rem,5vw,3.4rem)] font-extrabold leading-[1.15] text-transparent"
           >
             {title}

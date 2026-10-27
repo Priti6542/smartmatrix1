@@ -5,8 +5,12 @@ import HomeIndustries from "../../features/home/components/HomeIndustries";
 import HomeServices from "../../features/home/components/HomeServices";
 import HomeStats from "../../features/home/components/HomeStats";
 import HomeWhyChooseUs from "../../features/home/components/HomeWhyChooseUs";
+import { SITE } from "../../constants/site";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 const Home = () => {
+  useDocumentTitle(`${SITE.shortName} — ${SITE.tagline}`);
+
   return (
     <div>
       <HomeHero />

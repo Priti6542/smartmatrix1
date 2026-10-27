@@ -21,8 +21,8 @@ interface PrincipleCardProps {
  */
 const PrincipleCard = ({ principle, icon: Icon, delay }: PrincipleCardProps) => (
   <Reveal delay={delay}>
-    <div className="h-full rounded-2xl border border-[#3D3D3D]/10 border-l-4 border-l-[#F7941E] bg-white p-8 transition-colors duration-300 hover:border-[#3D3D3D]/20 lg:p-10">
-      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F7941E]">
+    <div className="h-full rounded-2xl border border-[#3D3D3D]/10 border-l-4 border-l-[#F47C20] bg-white p-8 transition-colors duration-300 hover:border-[#3D3D3D]/20 lg:p-10">
+      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
         <Icon size={20} />
       </span>
       <h3 className="mt-5 text-lg font-bold text-[#262626]">

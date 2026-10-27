@@ -77,7 +77,7 @@ const AboutHero = () => {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 to={ABOUT_HERO.primaryCta.path}
-                className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#F47C20] px-7 text-sm font-bold text-white shadow-[0_10px_30px_rgba(244,124,32,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E8750A]"
+                className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#F47C20] px-7 text-sm font-bold text-white shadow-[0_10px_30px_rgba(244,124,32,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#d8690f]"
               >
                 {ABOUT_HERO.primaryCta.label}
 

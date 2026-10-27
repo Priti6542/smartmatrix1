@@ -99,7 +99,7 @@ const ServicesHero = () => {
             ease: "easeInOut",
             delay: 1,
           }}
-          className="absolute -left-40 bottom-0 h-80 w-80 rounded-full bg-[#F7941E]/8 blur-3xl"
+          className="absolute -left-40 bottom-0 h-80 w-80 rounded-full bg-[#F47C20]/8 blur-3xl"
         />
 
         <div
@@ -131,7 +131,7 @@ const ServicesHero = () => {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="h-2 w-2 rounded-full bg-[#F7941E]"
+              className="h-2 w-2 rounded-full bg-[#F47C20]"
             />
 
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#3D3D3D]/60">
@@ -159,7 +159,7 @@ const ServicesHero = () => {
             >
               {SERVICES_HERO.headingPrefix}
 
-              <span className="text-[#F7941E]">
+              <span className="text-[#F47C20]">
                 {SERVICES_HERO.headingHighlight}
               </span>
 
@@ -189,7 +189,7 @@ const ServicesHero = () => {
             >
               <Link
                 to={SERVICES_HERO.primaryCta.path}
-                className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#F7941E] px-7 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(247,148,30,0.2)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E8750A]"
+                className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#F47C20] px-7 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(247,148,30,0.2)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#d8690f]"
               >
                 {SERVICES_HERO.primaryCta.label}
 
@@ -201,7 +201,7 @@ const ServicesHero = () => {
 
               <Link
                 to={SERVICES_HERO.secondaryCta.path}
-                className="inline-flex h-12 items-center justify-center rounded-full border border-[#3D3D3D]/15 bg-white/60 px-7 text-sm font-semibold text-[#3D3D3D] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F7941E]/40 hover:bg-white"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-[#3D3D3D]/15 bg-white/60 px-7 text-sm font-semibold text-[#3D3D3D] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F47C20]/40 hover:bg-white"
               >
                 {SERVICES_HERO.secondaryCta.label}
               </Link>
@@ -217,7 +217,7 @@ const ServicesHero = () => {
               }}
               className="mt-9 flex items-center gap-3"
             >
-              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#FFF2E4] text-[#F7941E]">
+              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#FFF2E4] text-[#F47C20]">
                 <Check size={14} strokeWidth={2.5} />
               </div>
 
@@ -257,7 +257,7 @@ const ServicesHero = () => {
                   </p>
                 </div>
 
-                <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#F7941E]">
+                <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#F47C20]">
                   01 — 05
                 </span>
               </div>
@@ -281,7 +281,7 @@ const ServicesHero = () => {
                     delay: 0.7,
                     ease: "easeInOut",
                   }}
-                  className="absolute left-[19px] top-8 w-px origin-top bg-gradient-to-b from-[#F7941E] via-[#FDB913] to-[#F7941E]"
+                  className="absolute left-[19px] top-8 w-px origin-top bg-gradient-to-b from-[#F47C20] via-[#FDB913] to-[#F47C20]"
                 />
 
                 {SERVICE_JOURNEY.map((item, index) => (
@@ -307,7 +307,7 @@ const ServicesHero = () => {
                         repeatDelay: 2,
                         ease: "easeInOut",
                       }}
-                      className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#F7941E]/30 bg-[#FFFCF7] text-[10px] font-bold text-[#F7941E]"
+                      className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#F47C20]/30 bg-[#FFFCF7] text-[10px] font-bold text-[#F47C20]"
                     >
                       {item.number}
                     </motion.div>
@@ -315,13 +315,13 @@ const ServicesHero = () => {
                     {/* Content */}
                     <div className="min-w-0 flex-1 pb-3">
                       <div className="flex items-center gap-2">
-                        <h3 className="text-sm font-bold text-[#262626] transition-colors duration-300 group-hover:text-[#E8750A] sm:text-base">
+                        <h3 className="text-sm font-bold text-[#262626] transition-colors duration-300 group-hover:text-[#d8690f] sm:text-base">
                           {item.title}
                         </h3>
 
                         <ArrowUpRight
                           size={14}
-                          className="text-[#3D3D3D]/20 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#F7941E]"
+                          className="text-[#3D3D3D]/20 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#F47C20]"
                         />
                       </div>
 
@@ -362,7 +362,7 @@ const ServicesHero = () => {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F7941E] text-white"
+                  className="flex h-8 w-8 items-center justify-center rounded-full bg-[#F47C20] text-white"
                 >
                   <ArrowUpRight size={15} />
                 </motion.div>
@@ -390,7 +390,7 @@ const ServicesHero = () => {
               results.
             </p>
 
-            <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#F7941E]">
+            <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[#F47C20]">
               Smart Software Services
             </span>
           </div>

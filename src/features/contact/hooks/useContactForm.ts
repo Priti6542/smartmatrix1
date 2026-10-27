@@ -8,12 +8,11 @@ import { CONTACT_FORM_SECTION_ID } from "../data";
 
 /**
  * Owns the contact form's submission state so it can be shared between the
- * form itself and other sections on the page (the hero and final CTA
- * scroll to the form; the service pills prefill its message field).
+ * form panel and the brand panel (service chips prefill the message field).
  *
  * The EmailJS call shape and field `name`s this depends on are unchanged
  * from the pre-redesign implementation — see `getEmailJsConfig` and the
- * `name="first_name"`/etc. attributes rendered by `StartAConversation`.
+ * `name="first_name"`/etc. attributes rendered by `ContactFormPanel`.
  */
 export const useContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);

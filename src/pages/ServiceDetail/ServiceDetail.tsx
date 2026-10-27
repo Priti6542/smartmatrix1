@@ -4,17 +4,21 @@ import { ROUTES } from "../../constants/routes";
 import ServiceDetailCapabilities from "../../features/services/components/ServiceDetailCapabilities";
 import ServiceDetailHero from "../../features/services/components/ServiceDetailHero";
 import ServiceDetailOutcomes from "../../features/services/components/ServiceDetailOutcomes";
-import ServiceDetailProblems from "../../features/services/components/ServiceDetailProblems";
 import ServiceDetailProcess from "../../features/services/components/ServiceDetailProcess";
 import ServiceDetailRelated from "../../features/services/components/ServiceDetailRelated";
-import ServiceDetailTechnology from "../../features/services/components/ServiceDetailTechnology";
 import ServiceDetailWhatWeBuild from "../../features/services/components/ServiceDetailWhatWeBuild";
 import ServicesFinalCta from "../../features/services/components/ServicesFinalCta";
+import { SITE } from "../../constants/site";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 import { getServiceBySlug } from "../../features/services/data";
 
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? getServiceBySlug(slug) : undefined;
+
+  useDocumentTitle(
+    service ? `${service.title} | ${SITE.shortName}` : SITE.shortName,
+  );
 
   if (!service) {
     return <Navigate to={ROUTES.SERVICES} replace />;
@@ -24,10 +28,8 @@ const ServiceDetail = () => {
     <div>
       <ServiceDetailHero service={service} />
       <ServiceDetailWhatWeBuild service={service} />
-      <ServiceDetailProblems service={service} />
       <ServiceDetailCapabilities service={service} />
       <ServiceDetailProcess service={service} />
-      <ServiceDetailTechnology service={service} />
       <ServiceDetailOutcomes service={service} />
       <ServiceDetailRelated service={service} />
       <ServicesFinalCta />

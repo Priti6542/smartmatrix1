@@ -4,9 +4,8 @@ import { Link as RouterLink } from "react-router-dom";
 
 import logo from "../../assets/icons/smart_logo.webp";
 import { CAPABILITIES } from "../../constants/capabilities";
-import { INDUSTRIES } from "../../constants/industries";
 import { NAVIGATION, SOCIAL_LINKS } from "../../constants/navigation";
-import { ROUTES } from "../../constants/routes";
+import { getServiceDetailPath, ROUTES } from "../../constants/routes";
 import { BRAND, CONTACT_DETAILS, SITE } from "../../constants/site";
 import { cx } from "../../utils/helpers";
 
@@ -62,7 +61,7 @@ const Footer = () => {
             {/* Company */}
             <motion.div
               variants={itemVariants}
-              className="col-span-2 lg:col-span-4"
+              className="col-span-2 lg:col-span-3"
             >
               <RouterLink to={ROUTES.HOME} aria-label="Go to home">
                 <img
@@ -94,7 +93,7 @@ const Footer = () => {
             </motion.div>
 
             {/* Navigation */}
-            <div className="col-span-2 sm:col-span-1 lg:col-span-2">
+            <div className="col-span-2 sm:col-span-1 lg:col-span-3">
               <FooterColumn heading="Navigation">
                 {NAVIGATION.map((item) => (
                   <RouterLink
@@ -109,12 +108,16 @@ const Footer = () => {
             </div>
 
             {/* Services */}
-            <div className="col-span-2 sm:col-span-1 lg:col-span-2">
+            <div className="col-span-2 sm:col-span-1 lg:col-span-3">
               <FooterColumn heading="Services">
                 {CAPABILITIES.slice(0, 6).map((capability) => (
                   <RouterLink
                     key={capability.id}
-                    to={ROUTES.SERVICES}
+                    to={
+                      capability.serviceSlug
+                        ? getServiceDetailPath(capability.serviceSlug)
+                        : ROUTES.SERVICES
+                    }
                     className={LINK_CLASS}
                   >
                     {capability.shortLabel}
@@ -123,23 +126,8 @@ const Footer = () => {
               </FooterColumn>
             </div>
 
-            {/* Industries */}
-            <div className="col-span-2 sm:col-span-1 lg:col-span-2">
-              <FooterColumn heading="Industries">
-                {INDUSTRIES.map((industry) => (
-                  <RouterLink
-                    key={industry.id}
-                    to={industry.path ?? ROUTES.INDUSTRIES}
-                    className={LINK_CLASS}
-                  >
-                    {industry.title}
-                  </RouterLink>
-                ))}
-              </FooterColumn>
-            </div>
-
             {/* Contact */}
-            <div className="col-span-2 sm:col-span-1 lg:col-span-2">
+            <div className="col-span-2 sm:col-span-1 lg:col-span-3">
               <FooterColumn heading="Contact">
                 <p className="text-sm leading-6 text-white/55">
                   {CONTACT_DETAILS.address}
@@ -164,10 +152,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-6">
               {["Privacy Policy", "Terms of Service"].map((item) => (
-                <span
-                  key={item}
-                  className="text-xs text-white/40 transition-colors duration-200 hover:text-white/70"
-                >
+                <span key={item} className="text-xs text-white/40">
                   {item}
                 </span>
               ))}

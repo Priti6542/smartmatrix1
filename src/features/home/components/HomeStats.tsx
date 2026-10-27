@@ -12,7 +12,7 @@ const StatFigure = ({ value, suffix, label }: HomeStat) => {
 
   return (
     <div ref={ref} className="px-4 text-center first:pl-0 last:pr-0 sm:text-left">
-      <p className="text-3xl font-extrabold text-[#F7941E] sm:text-4xl">
+      <p className="text-3xl font-extrabold text-[#F47C20] sm:text-4xl">
         {isVisible ? (
           <CountUp start={0} end={value} suffix={suffix} duration={2.2} />
         ) : (

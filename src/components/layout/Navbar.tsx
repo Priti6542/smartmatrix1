@@ -15,7 +15,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/icons/smart_logo.webp";
 import { CAPABILITIES } from "../../constants/capabilities";
 import { NAVIGATION } from "../../constants/navigation";
-import { ROUTES } from "../../constants/routes";
+import { getServiceDetailPath, ROUTES } from "../../constants/routes";
 import { BRAND, SITE } from "../../constants/site";
 import { cx } from "../../utils/helpers";
 
@@ -219,7 +219,11 @@ function Navbar() {
                               return (
                                 <Link
                                   key={capability.id}
-                                  to={ROUTES.SERVICES}
+                                  to={
+                                    capability.serviceSlug
+                                      ? getServiceDetailPath(capability.serviceSlug)
+                                      : ROUTES.SERVICES
+                                  }
                                   onClick={() => setServicesOpen(false)}
                                   className="
                                     group

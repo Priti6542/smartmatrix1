@@ -25,9 +25,9 @@ const NeedOptionCard = ({ option }: NeedOptionCardProps) => {
     <button
       type="button"
       onClick={() => scrollToService(option.targetSlug)}
-      className="group flex items-center gap-4 rounded-2xl border border-[#3D3D3D]/10 bg-white p-5 text-left transition-all duration-300 hover:border-[#F7941E] hover:bg-[#FFF8F0]"
+      className="group flex items-center gap-4 rounded-2xl border border-[#3D3D3D]/10 bg-white p-5 text-left transition-all duration-300 hover:border-[#F47C20] hover:bg-[#FFF8F0]"
     >
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F7941E] transition-transform duration-300 group-hover:scale-110">
+      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20] transition-transform duration-300 group-hover:scale-110">
         <Icon size={20} />
       </span>
       <span className="flex-1 text-sm font-semibold text-[#262626] sm:text-base">
@@ -35,7 +35,7 @@ const NeedOptionCard = ({ option }: NeedOptionCardProps) => {
       </span>
       <ArrowRight
         size={17}
-        className="shrink-0 text-[#3D3D3D]/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#F7941E]"
+        className="shrink-0 text-[#3D3D3D]/30 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#F47C20]"
       />
     </button>
   );

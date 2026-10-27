@@ -22,7 +22,7 @@ const ServicesFinalCta = () => {
       <motion.div
         animate={pulse}
         transition={GLOW_PULSE_TRANSITION}
-        className="pointer-events-none absolute -top-24 -left-24 h-[320px] w-[320px] rounded-full bg-[#F7941E]/15 blur-3xl"
+        className="pointer-events-none absolute -top-24 -left-24 h-[320px] w-[320px] rounded-full bg-[#F47C20]/15 blur-3xl"
       />
       <motion.div
         animate={pulse}
@@ -41,7 +41,7 @@ const ServicesFinalCta = () => {
         <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <Link
             to={SERVICES_FINAL_CTA.primaryCta.path}
-            className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#F7941E] px-8 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(247,148,30,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E8750A]"
+            className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#F47C20] px-8 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(247,148,30,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#d8690f]"
           >
             {SERVICES_FINAL_CTA.primaryCta.label}
             <ArrowRight

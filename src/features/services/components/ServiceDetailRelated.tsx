@@ -20,7 +20,7 @@ const ServiceDetailRelated = ({ service }: ServiceDetailRelatedProps) => {
   if (related.length === 0) return null;
 
   return (
-    <Section className="bg-white text-[#262626]">
+    <Section spacing="none" className="bg-white pt-14 pb-0 text-[#262626] sm:pt-18 lg:pt-24">
       <Reveal>
         <h2 className="mb-heading max-w-2xl text-[1.75rem] font-extrabold leading-tight tracking-[-0.01em] sm:text-[2.25rem] lg:mb-heading-lg lg:text-[2.5rem]">
           Related services.
@@ -34,15 +34,15 @@ const ServiceDetailRelated = ({ service }: ServiceDetailRelatedProps) => {
             <Reveal key={relatedService.slug} delay={(index % 3) * 0.08}>
               <Link
                 to={getServiceDetailPath(relatedService.slug)}
-                className="group flex h-full flex-col rounded-2xl border border-[#3D3D3D]/10 bg-[#FFFCF7] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#F7941E]/30"
+                className="group flex h-full flex-col rounded-2xl border border-[#3D3D3D]/10 bg-[#FFFCF7] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#F47C20]/30"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F7941E]">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
                   <Icon size={18} />
                 </span>
                 <h3 className="mt-5 text-base font-bold text-[#262626]">
                   {relatedService.title}
                 </h3>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#F7941E]">
+                <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#F47C20]">
                   Explore Service
                   <ArrowRight
                     size={14}

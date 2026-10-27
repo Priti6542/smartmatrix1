@@ -17,7 +17,7 @@ interface OutcomeBlockProps {
 
 const OutcomeBlock = ({ outcome, icon: Icon, delay }: OutcomeBlockProps) => (
   <Reveal delay={delay} className="flex items-start gap-4">
-    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F7941E]/10 text-[#F7941E]">
+    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F47C20]/10 text-[#F47C20]">
       <Icon size={20} />
     </span>
     <div>

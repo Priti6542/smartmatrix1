@@ -7,7 +7,6 @@ const Home = lazy(() => import("../pages/Home/Home"));
 const About = lazy(() => import("../pages/About/About"));
 const Services = lazy(() => import("../pages/Services/Services"));
 const ServiceDetail = lazy(() => import("../pages/ServiceDetail/ServiceDetail"));
-const Industries = lazy(() => import("../pages/Industries/Industries"));
 const Healthcare = lazy(() => import("../pages/Healthcare/Healthcare"));
 const Careers = lazy(() => import("../pages/Careers/Careers"));
 const Contact = lazy(() => import("../pages/Contact/Contact"));
@@ -20,7 +19,6 @@ const AppRoutes = () => {
       <Route path={ROUTES.ABOUT} element={<About />} />
       <Route path={ROUTES.SERVICES} element={<Services />} />
       <Route path={ROUTES.SERVICE_DETAIL} element={<ServiceDetail />} />
-      <Route path={ROUTES.INDUSTRIES} element={<Industries />} />
       <Route path={ROUTES.HEALTHCARE} element={<Healthcare />} />
       <Route path={ROUTES.CAREERS} element={<Careers />} />
       <Route path={ROUTES.CONTACT} element={<Contact />} />

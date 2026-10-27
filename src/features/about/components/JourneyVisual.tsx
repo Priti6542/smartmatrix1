@@ -45,8 +45,8 @@ const JourneyVisual = () => {
                 <span
                   className={
                     isLast
-                      ? "relative z-[1] flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F7941E]"
-                      : "relative z-[1] flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-[#F7941E] bg-white"
+                      ? "relative z-[1] flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#F47C20]"
+                      : "relative z-[1] flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-[#F47C20] bg-white"
                   }
                 >
                   {isLast && (

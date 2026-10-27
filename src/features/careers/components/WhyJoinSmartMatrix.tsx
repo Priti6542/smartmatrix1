@@ -1,44 +1,37 @@
-import { motion } from "framer-motion";
-
 import Section from "../../../components/layout/Section";
 import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
 import type { CareerHighlight } from "../../../types/career";
 import { CAREER_HIGHLIGHTS, CAREERS_SECTION_IDS, WHY_JOIN_HEADING, WHY_JOIN_STATEMENT } from "../data";
 
-interface PrincipleRowProps {
+interface PrincipleCardProps {
   highlight: CareerHighlight;
   index: number;
 }
 
-/** One staggered principle row — its own component so the scroll-reveal
- * hook runs at this component's top level rather than inside a `.map()`. */
-const PrincipleRow = ({ highlight, index }: PrincipleRowProps) => {
+/** Icon-free, left-accent-border card — the same treatment used for
+ * Services' principle cards, applied here to the real culture highlights. */
+const PrincipleCard = ({ highlight, index }: PrincipleCardProps) => {
   const { ref, isVisible } = useScrollAnimation<HTMLDivElement>({
     threshold: 0.3,
   });
 
   return (
-    <motion.div
+    <div
       ref={ref}
-      initial={{ opacity: 0, x: 20 }}
-      animate={isVisible ? { opacity: 1, x: 0 } : undefined}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      style={{ marginLeft: `${(index % 2) * 28}px` }}
-      className="group flex items-start gap-5 border-t border-[#3D3D3D]/10 py-6 transition-colors duration-300 first:border-t-0 first:pt-0"
+      className={`h-full rounded-2xl border border-[#3D3D3D]/10 border-l-4 border-l-[#F47C20] bg-white p-8 transition-all duration-500 lg:p-10 ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+      }`}
     >
-      <span className="text-sm font-bold text-[#3D3D3D]/30 transition-colors duration-300 group-hover:text-[#F47C20]">
+      <span className="text-sm font-bold text-[#F47C20]">
         {String(index + 1).padStart(2, "0")}
       </span>
-      <div>
-        <h3 className="text-base font-bold text-[#262626]">
-          {highlight.title}
-        </h3>
-        <p className="mt-2 max-w-sm text-sm leading-6 text-[#3D3D3D]/65">
-          {highlight.description}
-        </p>
-      </div>
-      <span className="ml-auto h-1.5 w-1.5 shrink-0 rounded-full bg-[#3D3D3D]/15 transition-colors duration-300 group-hover:bg-[#F47C20]" />
-    </motion.div>
+      <h3 className="mt-4 text-lg font-bold text-[#262626]">
+        {highlight.title}
+      </h3>
+      <p className="mt-3 max-w-[32ch] text-sm leading-6 text-[#3D3D3D]/70">
+        {highlight.description}
+      </p>
+    </div>
   );
 };
 
@@ -46,23 +39,23 @@ const WhyJoinSmartMatrix = () => {
   return (
     <Section
       id={CAREERS_SECTION_IDS.whyJoin}
-      className="bg-white text-[#262626]"
+      spacing="none"
+      className="bg-white pt-14 pb-0 text-[#262626] sm:pt-18 lg:pt-24"
     >
-      <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
-        <div>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#F47C20]">
-            {WHY_JOIN_HEADING}
-          </span>
-          <p className="mt-5 max-w-sm text-2xl font-extrabold leading-snug tracking-[-0.01em] text-[#262626] sm:text-3xl">
-            {WHY_JOIN_STATEMENT}
-          </p>
-        </div>
+      <header className="mb-heading max-w-2xl lg:mb-heading-lg">
+        <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#d8690f]">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#F47C20]" />
+          {WHY_JOIN_HEADING}
+        </span>
+        <p className="mt-4 max-w-xl text-2xl font-extrabold leading-snug tracking-[-0.01em] text-[#262626] sm:text-3xl">
+          {WHY_JOIN_STATEMENT}
+        </p>
+      </header>
 
-        <div>
-          {CAREER_HIGHLIGHTS.map((highlight, index) => (
-            <PrincipleRow key={highlight.title} highlight={highlight} index={index} />
-          ))}
-        </div>
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+        {CAREER_HIGHLIGHTS.map((highlight, index) => (
+          <PrincipleCard key={highlight.title} highlight={highlight} index={index} />
+        ))}
       </div>
     </Section>
   );

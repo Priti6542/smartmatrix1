@@ -22,7 +22,7 @@ const TechnologyGroupGrid = ({ groups }: TechnologyGroupGridProps) => (
           {group.technologies.map((tech) => (
             <span
               key={tech}
-              className="rounded-full border border-[#3D3D3D]/10 bg-white px-3.5 py-1.5 text-sm font-medium text-[#3D3D3D]/75 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F7941E]/40 hover:text-[#262626]"
+              className="rounded-full border border-[#3D3D3D]/10 bg-white px-3.5 py-1.5 text-sm font-medium text-[#3D3D3D]/75 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F47C20]/40 hover:text-[#262626]"
             >
               {tech}
             </span>

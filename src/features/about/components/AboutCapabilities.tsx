@@ -27,7 +27,7 @@ const AboutCapabilities = () => {
               className="rounded-2xl border border-[#3D3D3D]/10 bg-white p-7 shadow-[0_4px_20px_rgba(61,61,61,0.05)] transition-shadow duration-300 hover:shadow-[0_12px_32px_rgba(61,61,61,0.1)]"
             >
               <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F7941E]">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
                   <Icon size={20} strokeWidth={1.75} />
                 </span>
                 <span className="text-xs font-semibold text-[#3D3D3D]/40">

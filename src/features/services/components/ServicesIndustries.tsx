@@ -35,7 +35,7 @@ const ServicesIndustries = () => {
                 key={industry.id}
                 className="group flex items-center gap-3 bg-white px-6 py-4 transition-colors duration-300 hover:bg-[#FFF8F0]"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FFF8F0] text-[#F7941E] transition-transform duration-300 group-hover:scale-110">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FFF8F0] text-[#F47C20] transition-transform duration-300 group-hover:scale-110">
                   <Icon size={16} />
                 </span>
                 <span className="text-sm font-semibold text-[#262626]">

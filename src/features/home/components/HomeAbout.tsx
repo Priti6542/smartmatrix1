@@ -37,7 +37,7 @@ const HomeAbout = () => {
       description:
         "We help your technology evolve as your business grows and changes.",
       icon: Rocket,
-      accent: "#E8750A",
+      accent: "#d8690f",
     },
   ];
 
@@ -145,7 +145,7 @@ const HomeAbout = () => {
                   font-bold
                   uppercase
                   tracking-[0.2em]
-                  text-[#E8750A]
+                  text-[#d8690f]
                 "
               >
                 About SmartMatrix
@@ -248,7 +248,7 @@ const HomeAbout = () => {
                       justify-center
                       rounded-full
                       bg-[#FFF3E7]
-                      text-[#E8750A]
+                      text-[#d8690f]
                       transition-all
                       duration-300
                       group-hover:bg-[#F47C20]
@@ -398,7 +398,7 @@ const HomeAbout = () => {
                       font-bold
                       uppercase
                       tracking-[0.2em]
-                      text-[#E8750A]
+                      text-[#d8690f]
                     "
                   >
                     How we work

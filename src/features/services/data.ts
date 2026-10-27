@@ -104,15 +104,11 @@ export interface ServiceDetailContent {
   heroDescription: string;
   /** What we build / what we offer. */
   whatWeBuild: string[];
-  /** Short, punchy problem statements rendered as cards. */
-  problems: string[];
   /** Full capability grid — longer than the list's `points`. */
   capabilities: string[];
   outcomes: string[];
   /** Other `CoreService.slug`s to cross-link at the bottom of the page. */
   relatedSlugs: string[];
-  /** `TechnologyGroup.label`s relevant to this service. */
-  techGroupLabels: string[];
   /** Overrides the shared `SERVICE_DETAIL_PROCESS` when a service needs its own stages. */
   processOverride?: ProcessStep[];
 }
@@ -168,14 +164,6 @@ export const CORE_SERVICES: CoreService[] = [
         "E-commerce Experiences",
         "Custom Web Platforms",
       ],
-      problems: [
-        "Outdated websites",
-        "Poor user experience",
-        "Slow performance",
-        "Difficult content management",
-        "Poor mobile experience",
-        "Disconnected business systems",
-      ],
       capabilities: [
         "Responsive Web Development",
         "Frontend Development",
@@ -196,7 +184,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Better conversions",
       ],
       relatedSlugs: ["custom-software", "ui-ux-design", "cloud-solutions"],
-      techGroupLabels: ["Cloud & DevOps", "Methodology"],
     },
   },
   {
@@ -229,15 +216,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Industry-Specific Software",
         "Automation Platforms",
       ],
-      problems: [
-        "Manual processes",
-        "Spreadsheet dependency",
-        "Disconnected systems",
-        "Operational inefficiency",
-        "Poor data visibility",
-        "Legacy software",
-        "Scalability limitations",
-      ],
       capabilities: [
         "Requirement Analysis",
         "System Architecture",
@@ -260,7 +238,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Scalable systems",
       ],
       relatedSlugs: ["web-development", "data-analytics", "cloud-solutions"],
-      techGroupLabels: ["Enterprise Platforms", "Cloud & DevOps", "Methodology"],
     },
   },
   {
@@ -291,13 +268,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Internal Business Apps",
         "Utility Applications",
       ],
-      problems: [
-        "Clunky mobile experiences",
-        "Slow app performance",
-        "Limited offline support",
-        "Disconnected backend systems",
-        "Low user engagement",
-      ],
       capabilities: [
         "Mobile UI/UX",
         "Cross-Platform Development",
@@ -318,7 +288,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Streamlined operations",
       ],
       relatedSlugs: ["product-development", "ui-ux-design", "ai-solutions"],
-      techGroupLabels: ["Cloud & DevOps", "Methodology"],
       processOverride: [
         { index: "01", title: "Idea", description: "We clarify the problem the app needs to solve and who it's for." },
         { index: "02", title: "Design", description: "We design the flows and screens around real usage patterns." },
@@ -356,13 +325,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Marketplace Concepts",
         "Internal Products",
       ],
-      problems: [
-        "Unclear product direction",
-        "Scope that keeps expanding",
-        "No validated MVP",
-        "Difficulty prioritising features",
-        "Slow time to market",
-      ],
       capabilities: [
         "Product Discovery",
         "Requirement Definition",
@@ -383,7 +345,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Clear development roadmap",
       ],
       relatedSlugs: ["ui-ux-design", "web-development", "mobile-apps"],
-      techGroupLabels: ["Cloud & DevOps", "Methodology"],
     },
   },
   {
@@ -413,13 +374,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Dashboards",
         "Digital Platforms",
       ],
-      problems: [
-        "Confusing user flows",
-        "Inconsistent design language",
-        "Low usability on mobile",
-        "Low conversion rates",
-        "Disconnected design and development",
-      ],
       capabilities: [
         "Usability",
         "Accessibility",
@@ -435,7 +389,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Faster developer handoff",
       ],
       relatedSlugs: ["product-development", "web-development", "mobile-apps"],
-      techGroupLabels: ["Methodology"],
       processOverride: [
         { index: "01", title: "Research", description: "We learn how real users think, behave, and get stuck." },
         { index: "02", title: "User Flows", description: "We map the key journeys the product needs to support." },
@@ -479,13 +432,6 @@ export const CORE_SERVICES: CoreService[] = [
         "LLM Integrations",
         "Business Intelligence Automation",
       ],
-      problems: [
-        "Repetitive manual work",
-        "Slow response times",
-        "Hard-to-access information",
-        "Manual, disconnected operations",
-        "Limited use of available data",
-      ],
       capabilities: [
         "AI Integration",
         "LLM Integration",
@@ -505,7 +451,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Smarter workflows",
       ],
       relatedSlugs: ["data-analytics", "custom-software", "cloud-solutions"],
-      techGroupLabels: ["Data & Analytics", "Cloud & DevOps"],
     },
   },
   {
@@ -535,13 +480,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Database Infrastructure",
         "Application Monitoring",
       ],
-      problems: [
-        "Unreliable infrastructure",
-        "Manual deployments",
-        "Limited visibility into performance",
-        "Difficulty scaling under load",
-        "Infrastructure that wasn't designed to grow",
-      ],
       capabilities: [
         "Cloud Architecture",
         "Deployment Pipelines",
@@ -559,7 +497,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Infrastructure that scales with demand",
       ],
       relatedSlugs: ["custom-software", "data-analytics", "ai-solutions"],
-      techGroupLabels: ["Cloud & DevOps"],
     },
   },
   {
@@ -590,13 +527,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Performance Dashboards",
         "Data-Driven Business Tools",
       ],
-      problems: [
-        "Data spread across disconnected systems",
-        "Limited visibility into performance",
-        "Manual reporting processes",
-        "Difficulty tracking KPIs",
-        "Decisions made without reliable data",
-      ],
       capabilities: [
         "Data Integration",
         "Dashboard Development",
@@ -612,7 +542,6 @@ export const CORE_SERVICES: CoreService[] = [
         "Data-driven operations",
       ],
       relatedSlugs: ["custom-software", "ai-solutions", "cloud-solutions"],
-      techGroupLabels: ["Data & Analytics"],
     },
   },
 ];
