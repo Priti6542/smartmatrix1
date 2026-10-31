@@ -22,9 +22,9 @@ const HireStep = ({ step, index }: HireStepProps) => {
   return (
     <div
       ref={ref}
-      style={{ marginTop: `${(index % 2) * 24}px` }}
       className={cx(
         "flex-1 transition-all duration-500",
+        index % 2 === 1 && "lg:mt-6",
         isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0",
       )}
     >

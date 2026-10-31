@@ -37,16 +37,18 @@ const DesktopStep = ({ step, isAbove }: DesktopStepProps) => {
 
   return (
     <div ref={ref} className="flex flex-col items-center">
-      {isAbove && (
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : undefined}
-          transition={STEP_REVEAL_TRANSITION}
-          className="mb-6 text-center"
-        >
-          {copy}
-        </motion.div>
-      )}
+      <div className="flex min-h-[110px] w-full flex-col justify-end text-center">
+        {isAbove && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : undefined}
+            transition={STEP_REVEAL_TRANSITION}
+            className="mb-6"
+          >
+            {copy}
+          </motion.div>
+        )}
+      </div>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -56,22 +58,24 @@ const DesktopStep = ({ step, isAbove }: DesktopStepProps) => {
         <StepTile index={step.index} />
       </motion.div>
 
-      {!isAbove && (
-        <motion.div
-          initial={{ opacity: 0, y: -12 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : undefined}
-          transition={STEP_REVEAL_TRANSITION}
-          className="mt-6 text-center"
-        >
-          {copy}
-        </motion.div>
-      )}
+      <div className="flex min-h-[110px] w-full flex-col justify-start text-center">
+        {!isAbove && (
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : undefined}
+            transition={STEP_REVEAL_TRANSITION}
+            className="mt-6"
+          >
+            {copy}
+          </motion.div>
+        )}
+      </div>
     </div>
   );
 };
 
 /**
- * Desktop (lg+): horizontal zigzag along a connecting line that fills in
+ * Desktop: horizontal zigzag along a connecting line that fills in
  * with an orange progress overlay as the row scrolls into view. Column
  * count is driven by inline `gridTemplateColumns` rather than a Tailwind
  * `grid-cols-N` class, since this component is reused with step counts
@@ -86,7 +90,9 @@ const DesktopTimeline = ({ steps }: { steps: ProcessStep[] }) => {
     <div
       ref={ref}
       style={{ gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))` }}
-      className="relative hidden lg:grid lg:gap-6"
+      className={`relative ${
+        steps.length > 5 ? "hidden xl:grid xl:gap-6" : "hidden lg:grid lg:gap-6"
+      }`}
     >
       <div className="pointer-events-none absolute top-1/2 right-6 left-6 h-px -translate-y-1/2 bg-[#3D3D3D]/15" />
       <motion.div
@@ -127,9 +133,13 @@ const MobileStep = ({ step }: { step: ProcessStep }) => {
   );
 };
 
-/** Mobile/tablet (<lg): vertical timeline, one step per row. */
+/** Mobile/tablet (<lg or <xl if >5 steps): vertical timeline, one step per row. */
 const MobileTimeline = ({ steps }: { steps: ProcessStep[] }) => (
-  <div className="relative flex flex-col gap-10 lg:hidden">
+  <div
+    className={`relative flex flex-col gap-10 ${
+      steps.length > 5 ? "xl:hidden" : "lg:hidden"
+    }`}
+  >
     <div className="pointer-events-none absolute top-6 bottom-6 left-6 w-px bg-[#3D3D3D]/15" />
 
     {steps.map((step) => (

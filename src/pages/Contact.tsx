@@ -1,8 +1,8 @@
-import ContactBrandPanel from "../../features/contact/components/ContactBrandPanel";
-import ContactFormPanel from "../../features/contact/components/ContactFormPanel";
-import { useContactForm } from "../../features/contact/hooks/useContactForm";
-import { SITE } from "../../constants/site";
-import { useDocumentTitle } from "../../hooks/useDocumentTitle";
+import ContactBrandPanel from "../features/contact/components/ContactBrandPanel";
+import ContactFormPanel from "../features/contact/components/ContactFormPanel";
+import { useContactForm } from "../features/contact/hooks/useContactForm";
+import { SITE } from "../constants/site";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const Contact = () => {
   const { formRef, status, sendEmail, prefillMessage } = useContactForm();

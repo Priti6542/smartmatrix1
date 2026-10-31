@@ -11,7 +11,7 @@ const StatFigure = ({ value, suffix, label }: HomeStat) => {
   });
 
   return (
-    <div ref={ref} className="px-4 text-center first:pl-0 last:pr-0 sm:text-left">
+    <div ref={ref} className="px-4 text-center sm:px-6 sm:text-left sm:first:pl-0 sm:last:pr-0">
       <p className="text-3xl font-extrabold text-[#F47C20] sm:text-4xl">
         {isVisible ? (
           <CountUp start={0} end={value} suffix={suffix} duration={2.2} />
@@ -29,11 +29,15 @@ const HomeStats = () => {
     <Section
       className="border-y border-slate-100 bg-white"
       spacing="none"
-      containerClassName="grid grid-cols-2 divide-x divide-y divide-slate-100 py-10 sm:grid-cols-4 sm:divide-y-0 lg:py-12"
+      containerClassName="py-10 lg:py-12"
     >
-      {HOME_STATS.map((stat) => (
-        <StatFigure key={stat.label} {...stat} />
-      ))}
+      <div className="grid grid-cols-2 gap-px overflow-hidden bg-slate-100 sm:grid-cols-4 sm:bg-transparent sm:divide-x sm:divide-slate-100">
+        {HOME_STATS.map((stat) => (
+          <div key={stat.label} className="bg-white py-4 sm:bg-transparent sm:py-0">
+            <StatFigure {...stat} />
+          </div>
+        ))}
+      </div>
     </Section>
   );
 };

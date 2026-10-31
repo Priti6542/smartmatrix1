@@ -102,7 +102,7 @@ const HealthcareHero = () => {
             </div>
 
             {/* Trust card */}
-            <div className="absolute inset-x-5 -bottom-10 rounded-2xl border border-[#3D3D3D]/10 bg-white p-5 shadow-[0_20px_45px_rgba(38,38,38,0.14)] sm:-right-8 sm:-bottom-8 sm:inset-x-auto sm:w-64">
+            <div className="absolute inset-x-5 -bottom-10 rounded-2xl border border-[#3D3D3D]/10 bg-white p-5 shadow-[0_20px_45px_rgba(38,38,38,0.14)] sm:right-4 sm:-bottom-8 sm:inset-x-auto sm:w-64 lg:-right-8">
               <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#d8690f]">
                 Core RCM Services
               </p>

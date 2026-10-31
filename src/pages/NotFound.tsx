@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-import PageHero from "../../components/sections/PageHero";
-import { ROUTES } from "../../constants/routes";
-import { SITE } from "../../constants/site";
-import { useDocumentTitle } from "../../hooks/useDocumentTitle";
+import PageHero from "../components/sections/PageHero";
+import { ROUTES } from "../constants/routes";
+import { SITE } from "../constants/site";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 const NotFound = () => {
   useDocumentTitle(`Page Not Found | ${SITE.shortName}`);

@@ -31,6 +31,7 @@ const MENU_CLOSE_DELAY_MS = 150;
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [servicesOpen, setServicesOpen] = useState<boolean>(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState<boolean>(false);
 
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const servicesRef = useRef<HTMLLIElement | null>(null);
@@ -96,7 +97,10 @@ function Navbar() {
   }, []);
 
   const handleDrawerToggle = () => {
-    setMobileOpen((open) => !open);
+    setMobileOpen((open) => {
+      if (open) setMobileServicesOpen(false);
+      return !open;
+    });
   };
 
   const navLinkClass = (active: boolean) =>
@@ -347,6 +351,75 @@ function Navbar() {
         <List sx={{ px: 1.5 }}>
           {NAVIGATION.map((item) => {
             const active = isActive(item.path);
+
+            if (item.path === ROUTES.SERVICES) {
+              return (
+                <div key={item.path} className="mb-1">
+                  <div
+                    className={cx(
+                      "flex items-center justify-between rounded-lg px-3 py-2 transition-all",
+                      active
+                        ? "bg-[#F5A623]/15 text-white"
+                        : "text-white/90 hover:bg-white/5",
+                    )}
+                    style={{
+                      borderLeft: active
+                        ? "3px solid #F5A623"
+                        : "3px solid transparent",
+                    }}
+                  >
+                    <Link
+                      to={item.path}
+                      onClick={handleDrawerToggle}
+                      className="flex-1 text-[15px] font-semibold no-underline text-inherit"
+                    >
+                      {item.label}
+                    </Link>
+                    <IconButton
+                      size="small"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        setMobileServicesOpen((prev) => !prev);
+                      }}
+                      aria-label="Toggle services menu"
+                      sx={{ color: "inherit", p: 0.5 }}
+                    >
+                      <ChevronDown
+                        size={18}
+                        className={cx(
+                          "transition-transform duration-200",
+                          mobileServicesOpen && "rotate-180",
+                        )}
+                      />
+                    </IconButton>
+                  </div>
+
+                  {mobileServicesOpen && (
+                    <div className="my-1.5 ml-3 space-y-1 border-l border-white/15 pl-3">
+                      {CAPABILITIES.map((capability) => {
+                        const Icon = capability.icon;
+                        return (
+                          <Link
+                            key={capability.id}
+                            to={
+                              capability.serviceSlug
+                                ? getServiceDetailPath(capability.serviceSlug)
+                                : ROUTES.SERVICES
+                            }
+                            onClick={handleDrawerToggle}
+                            className="flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-xs text-white/80 no-underline transition-colors hover:bg-white/10 hover:text-[#F5A623]"
+                          >
+                            <Icon size={14} className="shrink-0 text-[#F5A623]" />
+                            <span className="truncate">{capability.shortLabel}</span>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              );
+            }
 
             return (
               <ListItem

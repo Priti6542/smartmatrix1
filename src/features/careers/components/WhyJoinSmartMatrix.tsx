@@ -52,7 +52,7 @@ const WhyJoinSmartMatrix = () => {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
         {CAREER_HIGHLIGHTS.map((highlight, index) => (
           <PrincipleCard key={highlight.title} highlight={highlight} index={index} />
         ))}

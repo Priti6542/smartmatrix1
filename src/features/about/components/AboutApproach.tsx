@@ -41,16 +41,18 @@ const DesktopStep = ({ step, isAbove }: DesktopStepProps) => {
 
   return (
     <div ref={ref} className="flex flex-col items-center">
-      {isAbove && (
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : undefined}
-          transition={STEP_REVEAL_TRANSITION}
-          className="mb-6 text-center"
-        >
-          {copy}
-        </motion.div>
-      )}
+      <div className="flex min-h-[110px] w-full flex-col justify-end text-center">
+        {isAbove && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : undefined}
+            transition={STEP_REVEAL_TRANSITION}
+            className="mb-6"
+          >
+            {copy}
+          </motion.div>
+        )}
+      </div>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -60,16 +62,18 @@ const DesktopStep = ({ step, isAbove }: DesktopStepProps) => {
         <StepCircle index={step.index} />
       </motion.div>
 
-      {!isAbove && (
-        <motion.div
-          initial={{ opacity: 0, y: -12 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : undefined}
-          transition={STEP_REVEAL_TRANSITION}
-          className="mt-6 text-center"
-        >
-          {copy}
-        </motion.div>
-      )}
+      <div className="flex min-h-[110px] w-full flex-col justify-start text-center">
+        {!isAbove && (
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : undefined}
+            transition={STEP_REVEAL_TRANSITION}
+            className="mt-6"
+          >
+            {copy}
+          </motion.div>
+        )}
+      </div>
     </div>
   );
 };

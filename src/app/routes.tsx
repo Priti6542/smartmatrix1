@@ -3,14 +3,14 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 import { LEGACY_ROUTE_REDIRECTS, ROUTES } from "../constants/routes";
 
-const Home = lazy(() => import("../pages/Home/Home"));
-const About = lazy(() => import("../pages/About/About"));
-const Services = lazy(() => import("../pages/Services/Services"));
+const Home = lazy(() => import("../pages/Home"));
+const About = lazy(() => import("../pages/About"));
+const Services = lazy(() => import("../pages/Services"));
 const ServiceDetail = lazy(() => import("../pages/ServiceDetail/ServiceDetail"));
-const Healthcare = lazy(() => import("../pages/Healthcare/Healthcare"));
-const Careers = lazy(() => import("../pages/Careers/Careers"));
-const Contact = lazy(() => import("../pages/Contact/Contact"));
-const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
+const Healthcare = lazy(() => import("../pages/Healthcare"));
+const Careers = lazy(() => import("../pages/Careers"));
+const Contact = lazy(() => import("../pages/Contact"));
+const NotFound = lazy(() => import("../pages/NotFound"));
 
 const AppRoutes = () => {
   return (

@@ -17,9 +17,9 @@ const AboutBeliefs = () => {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 divide-y divide-[#3D3D3D]/10 overflow-hidden rounded-2xl border border-[#3D3D3D]/10 bg-white sm:grid-cols-2 sm:divide-x">
+      <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-[#3D3D3D]/10 bg-[#3D3D3D]/10 sm:grid-cols-2">
         {ABOUT_BELIEFS.map((principle) => (
-          <div key={principle.index} className="relative overflow-hidden p-8 lg:p-10">
+          <div key={principle.index} className="relative overflow-hidden bg-white p-8 lg:p-10">
             <span
               aria-hidden="true"
               className="pointer-events-none absolute -top-3 right-4 text-7xl font-extrabold text-[#F47C20]/10 lg:text-8xl"

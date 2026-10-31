@@ -33,11 +33,17 @@
 
 @theme {
   /* -------------------------------------------------------
-     CONTAINER
+     CONTAINER & MAX-WIDTH
      ------------------------------------------------------- */
 
   --container-site: 1320px;
   --container-copy: 720px;
+
+  --max-width-site: 1320px;
+  --max-width-copy: 720px;
+
+  --width-site: 1320px;
+  --width-copy: 720px;
 
 
   /* -------------------------------------------------------
@@ -424,7 +430,7 @@
     min-height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: clip;
     scroll-behavior: smooth;
   }
 
@@ -433,7 +439,7 @@
     min-height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: clip;
 
     font-family:
       "Plus Jakarta Sans",

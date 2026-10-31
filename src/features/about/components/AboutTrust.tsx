@@ -11,15 +11,15 @@ const StatFigure = ({ value, suffix, label }: CompanyStat) => {
   });
 
   return (
-    <div ref={ref} className="px-8 text-center first:pl-0 last:pr-0">
-      <p className="text-4xl font-extrabold text-[#262626] sm:text-5xl">
+    <div ref={ref} className="px-4 text-center sm:px-6">
+      <p className="text-3xl font-extrabold text-[#262626] sm:text-4xl lg:text-5xl">
         {isVisible ? (
           <CountUp start={0} end={value} suffix={suffix} duration={2.2} />
         ) : (
           `0${suffix}`
         )}
       </p>
-      <p className="mt-3 text-sm font-medium tracking-[0.02em] text-[#3D3D3D]/55">
+      <p className="mt-2 text-xs font-medium tracking-[0.02em] text-[#3D3D3D]/55 sm:mt-3 sm:text-sm">
         {label}
       </p>
     </div>
@@ -29,9 +29,11 @@ const StatFigure = ({ value, suffix, label }: CompanyStat) => {
 const AboutTrust = () => {
   return (
     <Section className="bg-white text-[#262626]" spacing="default">
-      <div className="flex flex-wrap items-center justify-center divide-x divide-[#3D3D3D]/10">
+      <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-[#3D3D3D]/10 sm:grid-cols-4 sm:rounded-none sm:bg-transparent sm:divide-x sm:divide-[#3D3D3D]/10">
         {ABOUT_STATS.map((stat) => (
-          <StatFigure key={stat.label} {...stat} />
+          <div key={stat.label} className="bg-white py-6 sm:bg-transparent sm:py-0">
+            <StatFigure {...stat} />
+          </div>
         ))}
       </div>
     </Section>
