@@ -226,7 +226,7 @@ const HomeAbout = () => {
                     gap-3
                     rounded-2xl
                     border
-                    border-[#3D3D3D]/[0.07]
+                    border-[#3D3D3D]/10
                     bg-white
                     px-4
                     py-3.5
@@ -347,7 +347,7 @@ const HomeAbout = () => {
                 overflow-hidden
                 rounded-[32px]
                 border
-                border-[#3D3D3D]/[0.07]
+                border-[#3D3D3D]/10
                 bg-white
                 p-5
                 shadow-[0_25px_70px_rgba(61,61,61,0.08)]
@@ -606,7 +606,7 @@ const HomeAbout = () => {
                   mt-6
                   rounded-2xl
                   border
-                  border-[#3D3D3D]/[0.06]
+                  border-[#3D3D3D]/10
                   bg-[#FAFAF9]
                   p-4
                 "
@@ -677,7 +677,7 @@ const HomeAbout = () => {
                 hidden
                 rounded-2xl
                 border
-                border-[#3D3D3D]/[0.07]
+                border-[#3D3D3D]/10
                 bg-white
                 px-4
                 py-3

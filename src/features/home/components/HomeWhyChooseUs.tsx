@@ -96,7 +96,7 @@ const HomeWhyChooseUs = () => {
                 </div>
 
                 {/* Bottom */}
-                <div className="mt-7 flex items-center gap-2 border-t border-[#3D3D3D]/[0.08] pt-4">
+                <div className="mt-7 flex items-center gap-2 border-t border-[#3D3D3D]/10 pt-4">
                   <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#F47C20]/10">
                     <Check
                       className="h-3 w-3 text-[#F47C20]"
