@@ -59,7 +59,7 @@ export default function HeroSection() {
           {/* Left Text Content */}
           <div className="lg:col-span-7">
             {/* Top Pill */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#F47C20]/25 bg-[#FFF8F0] px-4 py-1.5 text-xs font-bold text-[#d8690f]">
+            <div className="inline-flex items-center gap-2 rounded-full border border-orange-200/60 bg-[#FFF8F0] px-4 py-1.5 text-xs font-bold text-[#d8690f]">
               <Sparkles size={14} className="text-[#F47C20]" />
               <span>Full-Lifecycle Software Engineering</span>
             </div>
@@ -105,7 +105,7 @@ export default function HeroSection() {
             </div>
 
             {/* Social proof rating */}
-            <div className="mt-10 flex items-center gap-4 border-t border-[#3D3D3D]/10 pt-6">
+            <div className="mt-10 flex items-center gap-4 border-t border-stone-200/80 pt-6">
               <div className="flex -space-x-2">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#F47C20] text-xs font-bold text-white ring-2 ring-white">
                   SS
@@ -135,11 +135,11 @@ export default function HeroSection() {
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               {/* Main Showcase Card */}
-              <div className="overflow-hidden rounded-3xl border border-[#3D3D3D]/10 bg-white shadow-xl shadow-[#3D3D3D]/5">
+              <div className="overflow-hidden rounded-3xl border border-stone-200/80 bg-white shadow-xl shadow-stone-900/5">
                 {/* Card Header */}
-                <div className="border-b border-[#3D3D3D]/10 bg-gradient-to-r from-[#FFFCF7] via-white to-[#FFF8F0] px-6 py-5 sm:px-7 sm:py-6">
+                <div className="border-b border-stone-100 bg-gradient-to-r from-[#FFFCF7] via-white to-[#FFF8F0] px-6 py-5 sm:px-7 sm:py-6">
                   <div className="flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 rounded-full border border-[#F47C20]/25 bg-[#FFF8F0] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#d8690f]">
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-orange-200/60 bg-[#FFF8F0] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#d8690f]">
                       <Sparkles size={12} className="text-[#F47C20]" />
                       Core Solutions
                     </span>
@@ -164,12 +164,12 @@ export default function HeroSection() {
                       return (
                         <div
                           key={idx}
-                          className={`group relative flex flex-col justify-between rounded-2xl border border-[#3D3D3D]/10 bg-[#FFFCF7]/60 p-3.5 sm:p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#F47C20]/40 hover:bg-white hover:shadow-md hover:shadow-[#F47C20]/5 ${
+                          className={`group relative flex flex-col justify-between rounded-2xl bg-[#FFFDF9] p-3.5 sm:p-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-lg hover:shadow-orange-500/5 border border-stone-100 hover:border-orange-200 ${
                             isFullWidth ? "sm:col-span-2" : ""
                           }`}
                         >
                           <div className={isFullWidth ? "flex items-start gap-3.5" : ""}>
-                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#F47C20]/20 bg-[#FFF8F0] text-[#F47C20] transition-colors duration-300 group-hover:bg-[#F47C20] group-hover:text-white">
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20] transition-colors duration-300 group-hover:bg-[#F47C20] group-hover:text-white">
                               <Icon size={20} strokeWidth={2} />
                             </div>
                             <div>
@@ -192,7 +192,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Subtle Card Footer */}
-                <div className="border-t border-[#3D3D3D]/10 bg-gradient-to-r from-[#FFFCF7] via-white to-[#FFF8F0] px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+                <div className="border-t border-stone-100 bg-gradient-to-r from-[#FFFCF7] via-white to-[#FFF8F0] px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
                   <div>
                     <span className="text-xs font-bold tracking-wide text-[#F47C20]">
                       Ideas. Innovation. Impact.

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUp, Mail, MapPin, Phone } from "lucide-react";
 import { COMPANY_INFO } from "../../data/company";
 import { FOOTER_LINKS } from "../../data/navigation";
+import smartLogo from "../../assets/logos/smart_logo.webp";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -10,7 +11,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-[#3D3D3D]/10 bg-[#262626] text-white">
+    <footer className="border-t border-white/10 bg-[#262626] text-white">
       {/* Main Footer Content */}
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
@@ -18,7 +19,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-3">
               <img
-                src="/src/assets/logos/smart_logo.webp"
+                src={smartLogo}
                 alt="Smart Matrix"
                 className="h-9 w-auto object-contain brightness-125"
               />

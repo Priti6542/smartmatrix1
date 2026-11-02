@@ -33,7 +33,7 @@ export default function NotFound() {
             </Button>
           </div>
 
-          <div className="mt-12 rounded-2xl border border-[#3D3D3D]/10 bg-white p-6 shadow-xs text-left">
+          <div className="mt-12 rounded-2xl border border-stone-200/80 bg-white p-6 shadow-xs text-left">
             <h3 className="text-xs font-bold uppercase tracking-wider text-[#262626]">
               Helpful Destinations
             </h3>

@@ -4,6 +4,7 @@ import Container from "../common/Container";
 import SectionHeading from "../common/SectionHeading";
 import Button from "../common/Button";
 import { CORE_VALUES } from "../../data/company";
+import aboutCardImg from "../../assets/images/about/about_card.jpg";
 
 const VALUE_ICONS = {
   ShieldCheck,
@@ -19,9 +20,9 @@ export default function AboutSection({ showCta = true, className = "" }) {
           {/* Left visual representation */}
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              <div className="overflow-hidden rounded-3xl border border-[#3D3D3D]/10 bg-white shadow-xl">
+              <div className="overflow-hidden rounded-3xl border border-stone-200/80 bg-white shadow-xl">
                 <img
-                  src="/src/assets/images/about/about_card.jpg"
+                  src={aboutCardImg}
                   alt="Smart Matrix Engineering Team"
                   loading="lazy"
                   className="h-80 w-full object-cover"
@@ -40,7 +41,7 @@ export default function AboutSection({ showCta = true, className = "" }) {
               </div>
 
               {/* Floating highlight */}
-              <div className="absolute -bottom-6 -right-4 rounded-2xl border border-[#3D3D3D]/10 bg-[#262626] p-5 text-white shadow-xl max-w-xs">
+              <div className="absolute -bottom-6 -right-4 rounded-2xl border border-white/10 bg-[#262626] p-5 text-white shadow-xl max-w-xs">
                 <span className="block text-2xl font-black text-[#F47C20]">100%</span>
                 <span className="text-xs font-medium text-white/80">
                   Direct code ownership with full CI/CD deployment pipelines delivered to you.
@@ -64,7 +65,7 @@ export default function AboutSection({ showCta = true, className = "" }) {
               {CORE_VALUES.slice(0, 4).map((val, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-[#3D3D3D]/10 bg-white p-5 shadow-2xs transition-all duration-200 hover:border-[#F47C20]/30 hover:shadow-xs"
+                  className="rounded-2xl border border-stone-200/80 bg-white p-5 shadow-2xs transition-all duration-200 hover:border-[#F47C20]/30 hover:shadow-xs"
                 >
                   <div className="flex items-center gap-2.5">
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#FFF8F0] text-[#F47C20]">

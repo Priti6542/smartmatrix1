@@ -41,7 +41,7 @@ export default function Careers() {
   return (
     <div>
       {/* Header */}
-      <section className="border-b border-[#3D3D3D]/10 bg-[#FFFCF7] pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16">
+      <section className="border-b border-stone-200/80 bg-[#FFFCF7] pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16">
         <Container>
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#F47C20]/20 bg-[#FFF8F0] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#d8690f]">
@@ -75,7 +75,7 @@ export default function Careers() {
               return (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-[#3D3D3D]/10 bg-[#FFFCF7] p-6 transition-all duration-200 hover:border-[#F47C20]/30 hover:shadow-xs"
+                  className="rounded-2xl border border-stone-200/80 bg-[#FFFCF7] p-6 transition-all duration-200 hover:border-[#F47C20]/30 hover:shadow-xs"
                 >
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
                     <Icon size={22} />
@@ -94,7 +94,7 @@ export default function Careers() {
       </section>
 
       {/* Open Positions List */}
-      <section className="py-16 sm:py-24 bg-[#FFFCF7] border-y border-[#3D3D3D]/10">
+      <section className="py-16 sm:py-24 bg-[#FFFCF7] border-y border-stone-200/80">
         <Container>
           <SectionHeading
             badge="Current Openings"
@@ -109,7 +109,7 @@ export default function Careers() {
               return (
                 <div
                   key={role.id}
-                  className="overflow-hidden rounded-2xl border border-[#3D3D3D]/10 bg-white shadow-2xs transition-colors"
+                  className="overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-2xs transition-colors"
                 >
                   {/* Collapsible Header */}
                   <div
@@ -146,7 +146,7 @@ export default function Careers() {
 
                   {/* Expanded Body */}
                   {isExpanded && (
-                    <div className="border-t border-[#3D3D3D]/10 bg-[#FFFCF7]/40 p-6 sm:p-7">
+                    <div className="border-t border-stone-200/80 bg-[#FFFCF7]/40 p-6 sm:p-7">
                       <p className="text-sm leading-relaxed text-[#3D3D3D]/80">
                         {role.description}
                       </p>
@@ -165,7 +165,7 @@ export default function Careers() {
                         </ul>
                       </div>
 
-                      <div className="mt-6 pt-4 border-t border-[#3D3D3D]/10 flex items-center justify-between">
+                      <div className="mt-6 pt-4 border-t border-stone-200/80 flex items-center justify-between">
                         <span className="text-xs text-[#3D3D3D]/60">
                           Department: {role.department}
                         </span>
@@ -199,7 +199,7 @@ export default function Careers() {
             {HIRING_STEPS.map((step, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl border border-[#3D3D3D]/10 bg-[#FFFCF7] p-6"
+                className="rounded-2xl border border-stone-200/80 bg-[#FFFCF7] p-6"
               >
                 <span className="text-2xl font-black text-[#F47C20]">
                   {step.step}
@@ -217,7 +217,7 @@ export default function Careers() {
       </section>
 
       {/* Application Form */}
-      <section ref={formRef} className="py-16 sm:py-24 bg-[#FFFCF7] border-t border-[#3D3D3D]/10">
+      <section ref={formRef} className="py-16 sm:py-24 bg-[#FFFCF7] border-t border-stone-200/80">
         <Container size="sm">
           <SectionHeading
             badge="Submit Application"

@@ -71,7 +71,7 @@ export default function CareerForm({ defaultRole = "", className = "" }) {
 
   return (
     <div
-      className={`rounded-2xl border border-[#3D3D3D]/10 bg-white p-6 sm:p-9 shadow-sm ${className}`}
+      className={`rounded-2xl border border-stone-200/80 bg-white p-6 sm:p-9 shadow-sm ${className}`}
     >
       <div className="mb-6">
         <h3 className="text-xl font-bold text-[#262626] sm:text-2xl">
@@ -113,7 +113,7 @@ export default function CareerForm({ defaultRole = "", className = "" }) {
               onChange={handleChange}
               placeholder="e.g. Priya Sharma"
               className={`mt-1.5 w-full rounded-xl border px-4 py-3 text-sm text-[#262626] transition-colors duration-200 placeholder:text-[#3D3D3D]/35 focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20 ${
-                errors.fullName ? "border-rose-400 bg-rose-50/20" : "border-[#3D3D3D]/15 bg-white focus:border-[#F47C20]"
+                errors.fullName ? "border-rose-400 bg-rose-50/20" : "border-stone-200 bg-white focus:border-[#F47C20]"
               }`}
             />
             {errors.fullName && (
@@ -136,7 +136,7 @@ export default function CareerForm({ defaultRole = "", className = "" }) {
               onChange={handleChange}
               placeholder="priya@example.com"
               className={`mt-1.5 w-full rounded-xl border px-4 py-3 text-sm text-[#262626] transition-colors duration-200 placeholder:text-[#3D3D3D]/35 focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20 ${
-                errors.email ? "border-rose-400 bg-rose-50/20" : "border-[#3D3D3D]/15 bg-white focus:border-[#F47C20]"
+                errors.email ? "border-rose-400 bg-rose-50/20" : "border-stone-200 bg-white focus:border-[#F47C20]"
               }`}
             />
             {errors.email && (
@@ -162,7 +162,7 @@ export default function CareerForm({ defaultRole = "", className = "" }) {
               onChange={handleChange}
               placeholder="+91 91121 00000"
               className={`mt-1.5 w-full rounded-xl border px-4 py-3 text-sm text-[#262626] transition-colors duration-200 placeholder:text-[#3D3D3D]/35 focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20 ${
-                errors.phone ? "border-rose-400 bg-rose-50/20" : "border-[#3D3D3D]/15 bg-white focus:border-[#F47C20]"
+                errors.phone ? "border-rose-400 bg-rose-50/20" : "border-stone-200 bg-white focus:border-[#F47C20]"
               }`}
             />
             {errors.phone && (
@@ -182,7 +182,7 @@ export default function CareerForm({ defaultRole = "", className = "" }) {
               name="role"
               value={formData.role}
               onChange={handleChange}
-              className="mt-1.5 w-full rounded-xl border border-[#3D3D3D]/15 bg-white px-4 py-3 text-sm text-[#262626] transition-colors duration-200 focus:border-[#F47C20] focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20"
+              className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-[#262626] transition-colors duration-200 focus:border-[#F47C20] focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20"
             >
               {ROLES_LIST.map((r, i) => (
                 <option key={i} value={r}>
@@ -204,7 +204,7 @@ export default function CareerForm({ defaultRole = "", className = "" }) {
               name="experience"
               value={formData.experience}
               onChange={handleChange}
-              className="mt-1.5 w-full rounded-xl border border-[#3D3D3D]/15 bg-white px-4 py-3 text-sm text-[#262626] transition-colors duration-200 focus:border-[#F47C20] focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20"
+              className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-[#262626] transition-colors duration-200 focus:border-[#F47C20] focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20"
             >
               {EXPERIENCE_LEVELS.map((lvl, i) => (
                 <option key={i} value={lvl}>
@@ -225,7 +225,7 @@ export default function CareerForm({ defaultRole = "", className = "" }) {
               value={formData.portfolioUrl}
               onChange={handleChange}
               placeholder="https://github.com/username"
-              className="mt-1.5 w-full rounded-xl border border-[#3D3D3D]/15 bg-white px-4 py-3 text-sm text-[#262626] transition-colors duration-200 placeholder:text-[#3D3D3D]/35 focus:border-[#F47C20] focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20"
+              className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-[#262626] transition-colors duration-200 placeholder:text-[#3D3D3D]/35 focus:border-[#F47C20] focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20"
             />
           </div>
         </div>
@@ -242,7 +242,7 @@ export default function CareerForm({ defaultRole = "", className = "" }) {
             value={formData.note}
             onChange={handleChange}
             placeholder="Tell us about your core technical interests, recent projects, or what you hope to achieve here..."
-            className="mt-1.5 w-full rounded-xl border border-[#3D3D3D]/15 bg-white px-4 py-3 text-sm text-[#262626] transition-colors duration-200 placeholder:text-[#3D3D3D]/35 focus:border-[#F47C20] focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20"
+            className="mt-1.5 w-full rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-[#262626] transition-colors duration-200 placeholder:text-[#3D3D3D]/35 focus:border-[#F47C20] focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20"
           />
         </div>
 

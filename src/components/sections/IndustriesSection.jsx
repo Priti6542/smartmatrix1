@@ -43,7 +43,7 @@ const INDUSTRIES = [
 
 export default function IndustriesSection({ className = "" }) {
   return (
-    <section className={`py-16 sm:py-24 bg-[#FFFCF7] border-y border-[#3D3D3D]/10 ${className}`}>
+    <section className={`py-16 sm:py-24 bg-[#FFFCF7] border-y border-stone-200/80 ${className}`}>
       <Container>
         <SectionHeading
           badge="Domain Expertise"
@@ -58,14 +58,14 @@ export default function IndustriesSection({ className = "" }) {
             return (
               <div
                 key={idx}
-                className="group flex flex-col justify-between rounded-2xl border border-[#3D3D3D]/10 bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#F47C20]/40 hover:shadow-lg hover:shadow-[#F47C20]/5"
+                className="group flex flex-col justify-between rounded-2xl border border-stone-200/80 bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#F47C20]/40 hover:shadow-lg hover:shadow-[#F47C20]/5"
               >
                 <div>
                   <div className="flex items-center justify-between">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20] transition-colors duration-300 group-hover:bg-[#F47C20] group-hover:text-white">
                       <Icon size={24} />
                     </div>
-                    <span className="rounded-full bg-[#FAFAF9] px-2.5 py-1 text-[11px] font-bold text-[#d8690f] border border-[#3D3D3D]/5">
+                    <span className="rounded-full bg-[#FAFAF9] px-2.5 py-1 text-[11px] font-bold text-[#d8690f] border border-stone-100">
                       {ind.highlight}
                     </span>
                   </div>

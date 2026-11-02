@@ -6,7 +6,7 @@ import { TESTIMONIALS } from "../../data/testimonials";
 
 export default function TestimonialsSection({ className = "" }) {
   return (
-    <section className={`py-16 sm:py-24 bg-[#FFFCF7] border-t border-[#3D3D3D]/10 ${className}`}>
+    <section className={`py-16 sm:py-24 bg-[#FFFCF7] border-t border-stone-200/80 ${className}`}>
       <Container>
         <SectionHeading
           badge="Client Endorsements"

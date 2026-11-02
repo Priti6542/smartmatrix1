@@ -6,9 +6,9 @@ const VARIANTS = {
   primary:
     "bg-[#F47C20] text-white hover:bg-[#d8690f] shadow-sm hover:shadow-md hover:shadow-[#F47C20]/20 border border-transparent",
   secondary:
-    "bg-[#FFFCF7] text-[#3D3D3D] hover:bg-[#FFF8F0] hover:text-[#F47C20] border border-[#3D3D3D]/10 hover:border-[#F47C20]/30 shadow-xs",
+    "bg-white text-[#262626] hover:bg-[#FFF8F0] hover:text-[#F47C20] border border-stone-200 hover:border-[#F47C20]/40 shadow-xs",
   outline:
-    "bg-transparent text-[#3D3D3D] border border-[#3D3D3D]/20 hover:border-[#F47C20] hover:text-[#F47C20] hover:bg-[#FFF8F0]/50",
+    "bg-transparent text-[#262626] border border-stone-300 hover:border-[#F47C20] hover:text-[#F47C20] hover:bg-[#FFF8F0]/50",
   outlineWhite:
     "bg-transparent text-white border border-white/30 hover:border-white hover:bg-white/10",
   dark:

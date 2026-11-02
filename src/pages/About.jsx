@@ -6,6 +6,7 @@ import StatisticsSection from "../components/sections/StatisticsSection";
 import CtaSection from "../components/sections/CtaSection";
 import { CORE_VALUES } from "../data/company";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
+import aboutHeroImg from "../assets/images/about/about_hero.jpg";
 
 const APPROACH_STEPS = [
   {
@@ -36,7 +37,7 @@ export default function About() {
   return (
     <div>
       {/* Page Header */}
-      <section className="border-b border-[#3D3D3D]/10 bg-[#FFFCF7] pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16">
+      <section className="border-b border-stone-200/80 bg-[#FFFCF7] pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16">
         <Container>
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#F47C20]/20 bg-[#FFF8F0] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#d8690f]">
@@ -77,9 +78,9 @@ export default function About() {
 
             <div className="lg:col-span-6">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                <div className="overflow-hidden rounded-3xl border border-[#3D3D3D]/10 bg-white shadow-xl">
+                <div className="overflow-hidden rounded-3xl border border-stone-200/80 bg-white shadow-xl">
                   <img
-                    src="/src/assets/images/about/about_hero.jpg"
+                    src={aboutHeroImg}
                     alt="Smart Matrix Collaborative Culture"
                     className="h-96 w-full object-cover"
                   />
@@ -107,7 +108,7 @@ export default function About() {
             {CORE_VALUES.map((val, idx) => (
               <div
                 key={idx}
-                className="flex flex-col justify-between rounded-2xl border border-[#3D3D3D]/10 bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#F47C20]/40 hover:shadow-lg hover:shadow-[#F47C20]/5"
+                className="flex flex-col justify-between rounded-2xl border border-stone-200/80 bg-white p-7 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#F47C20]/40 hover:shadow-lg hover:shadow-[#F47C20]/5"
               >
                 <div>
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
@@ -127,7 +128,7 @@ export default function About() {
       </section>
 
       {/* How We Work / Process */}
-      <section className="py-16 sm:py-24 bg-white border-t border-[#3D3D3D]/10">
+      <section className="py-16 sm:py-24 bg-white border-t border-stone-200/80">
         <Container>
           <SectionHeading
             badge="Our Methodology"
@@ -140,7 +141,7 @@ export default function About() {
             {APPROACH_STEPS.map((item, idx) => (
               <div
                 key={idx}
-                className="relative rounded-2xl border border-[#3D3D3D]/10 bg-[#FFFCF7] p-6"
+                className="relative rounded-2xl border border-stone-200/80 bg-[#FFFCF7] p-6"
               >
                 <span className="text-3xl font-black text-[#F47C20]/25">
                   {item.step}

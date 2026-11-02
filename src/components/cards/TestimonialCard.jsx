@@ -4,7 +4,7 @@ import { Quote, Star } from "lucide-react";
 export default function TestimonialCard({ testimonial, className = "" }) {
   return (
     <div
-      className={`relative flex flex-col justify-between rounded-2xl border border-[#3D3D3D]/10 bg-white p-7 shadow-xs transition-all duration-300 hover:border-[#F47C20]/30 hover:shadow-lg hover:shadow-[#F47C20]/5 ${className}`}
+      className={`relative flex flex-col justify-between rounded-2xl border border-stone-200/80 bg-white p-7 shadow-xs transition-all duration-300 hover:border-[#F47C20]/30 hover:shadow-lg hover:shadow-[#F47C20]/5 ${className}`}
     >
       <div>
         <div className="flex items-center justify-between">
@@ -21,7 +21,7 @@ export default function TestimonialCard({ testimonial, className = "" }) {
         </p>
       </div>
 
-      <div className="mt-6 flex items-center justify-between border-t border-[#3D3D3D]/10 pt-4">
+      <div className="mt-6 flex items-center justify-between border-t border-stone-100 pt-4">
         <div>
           <h4 className="text-sm font-bold text-[#262626]">
             {testimonial.author}
@@ -32,7 +32,7 @@ export default function TestimonialCard({ testimonial, className = "" }) {
         </div>
 
         {testimonial.project && (
-          <span className="hidden sm:inline-block rounded-full bg-[#FFF8F0] px-2.5 py-1 text-[11px] font-semibold text-[#d8690f] border border-[#F47C20]/20">
+          <span className="hidden sm:inline-block rounded-full bg-[#FFF8F0] px-2.5 py-1 text-[11px] font-semibold text-[#d8690f] border border-orange-200/60">
             {testimonial.project}
           </span>
         )}

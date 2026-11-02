@@ -51,7 +51,7 @@ export default function ServiceDetails() {
   return (
     <div>
       {/* Header / Hero */}
-      <section className="border-b border-[#3D3D3D]/10 bg-[#FFFCF7] pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16">
+      <section className="border-b border-stone-200/80 bg-[#FFFCF7] pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16">
         <Container>
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12">
             <div className="lg:col-span-8">
@@ -59,7 +59,7 @@ export default function ServiceDetails() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20] border border-[#F47C20]/20">
                   <Icon size={24} />
                 </div>
-                <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-[#d8690f] border border-[#3D3D3D]/10">
+                <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-[#d8690f] border border-stone-200/80">
                   {service.badge}
                 </span>
               </div>
@@ -84,7 +84,7 @@ export default function ServiceDetails() {
 
             {/* Quick Summary Card */}
             <div className="lg:col-span-4">
-              <div className="rounded-2xl border border-[#3D3D3D]/10 bg-white p-6 shadow-sm">
+              <div className="rounded-2xl border border-stone-200/80 bg-white p-6 shadow-sm">
                 <h3 className="text-sm font-bold uppercase tracking-wider text-[#262626]">
                   Technology Stack
                 </h3>
@@ -92,14 +92,14 @@ export default function ServiceDetails() {
                   {service.technologies.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="rounded-lg bg-[#FFFCF7] px-2.5 py-1 text-xs font-semibold text-[#3D3D3D] border border-[#3D3D3D]/10"
+                      className="rounded-lg bg-[#FFFCF7] px-2.5 py-1 text-xs font-semibold text-[#3D3D3D] border border-stone-200/80"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="mt-6 border-t border-[#3D3D3D]/10 pt-4">
+                <div className="mt-6 border-t border-stone-200/80 pt-4">
                   <span className="block text-xs font-semibold text-[#3D3D3D]/65">
                     Engagement Model
                   </span>
@@ -133,7 +133,7 @@ export default function ServiceDetails() {
                 {service.deliverables.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start gap-3 rounded-xl border border-[#3D3D3D]/10 bg-[#FFFCF7] p-4 transition-colors hover:border-[#F47C20]/30"
+                    className="flex items-start gap-3 rounded-xl border border-stone-200/80 bg-[#FFFCF7] p-4 transition-colors hover:border-[#F47C20]/30"
                   >
                     <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[#F47C20]" />
                     <span className="text-sm font-semibold text-[#262626]">
@@ -160,7 +160,7 @@ export default function ServiceDetails() {
                 {service.benefits.map((b, idx) => (
                   <div
                     key={idx}
-                    className="rounded-2xl border border-[#3D3D3D]/10 bg-white p-6 shadow-xs"
+                    className="rounded-2xl border border-stone-200/80 bg-white p-6 shadow-xs"
                   >
                     <h3 className="text-base font-bold text-[#262626]">
                       {b.title}
@@ -178,7 +178,7 @@ export default function ServiceDetails() {
 
       {/* Delivery Process */}
       {service.process && (
-        <section className="py-16 sm:py-24 bg-[#FFFCF7] border-y border-[#3D3D3D]/10">
+        <section className="py-16 sm:py-24 bg-[#FFFCF7] border-y border-stone-200/80">
           <Container>
             <SectionHeading
               badge="Structured Execution"
@@ -191,7 +191,7 @@ export default function ServiceDetails() {
               {service.process.map((step, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-[#3D3D3D]/10 bg-white p-6 shadow-2xs"
+                  className="rounded-2xl border border-stone-200/80 bg-white p-6 shadow-2xs"
                 >
                   <span className="text-3xl font-black text-[#F47C20]">
                     {step.step}
@@ -237,7 +237,7 @@ export default function ServiceDetails() {
                 <Link
                   key={other.slug}
                   to={`/services/${other.slug}`}
-                  className="group rounded-2xl border border-[#3D3D3D]/10 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#F47C20]/40 hover:shadow-md"
+                  className="group rounded-2xl border border-stone-200/80 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#F47C20]/40 hover:shadow-md"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
                     <OtherIcon size={20} />

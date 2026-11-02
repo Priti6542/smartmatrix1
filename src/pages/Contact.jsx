@@ -31,7 +31,7 @@ export default function Contact() {
   return (
     <div>
       {/* Header */}
-      <section className="border-b border-[#3D3D3D]/10 bg-[#FFFCF7] pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16">
+      <section className="border-b border-stone-200/80 bg-[#FFFCF7] pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16">
         <Container>
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#F47C20]/20 bg-[#FFF8F0] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#d8690f]">
@@ -66,7 +66,7 @@ export default function Contact() {
 
               {/* Info Cards */}
               <div className="space-y-4">
-                <div className="flex items-start gap-4 rounded-2xl border border-[#3D3D3D]/10 bg-[#FFFCF7] p-5">
+                <div className="flex items-start gap-4 rounded-2xl border border-stone-200/80 bg-[#FFFCF7] p-5">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
                     <MapPin size={22} />
                   </div>
@@ -80,7 +80,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 rounded-2xl border border-[#3D3D3D]/10 bg-[#FFFCF7] p-5">
+                <div className="flex items-start gap-4 rounded-2xl border border-stone-200/80 bg-[#FFFCF7] p-5">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
                     <Phone size={22} />
                   </div>
@@ -98,7 +98,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 rounded-2xl border border-[#3D3D3D]/10 bg-[#FFFCF7] p-5">
+                <div className="flex items-start gap-4 rounded-2xl border border-stone-200/80 bg-[#FFFCF7] p-5">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
                     <Mail size={22} />
                   </div>
@@ -116,7 +116,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 rounded-2xl border border-[#3D3D3D]/10 bg-[#FFFCF7] p-5">
+                <div className="flex items-start gap-4 rounded-2xl border border-stone-200/80 bg-[#FFFCF7] p-5">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
                     <Clock size={22} />
                   </div>
@@ -147,7 +147,7 @@ export default function Contact() {
       </section>
 
       {/* Frequently Asked Questions */}
-      <section className="py-16 sm:py-24 bg-[#FFFCF7] border-t border-[#3D3D3D]/10">
+      <section className="py-16 sm:py-24 bg-[#FFFCF7] border-t border-stone-200/80">
         <Container size="sm">
           <SectionHeading
             badge="Common Questions"
@@ -160,7 +160,7 @@ export default function Contact() {
             {CONTACT_FAQS.map((faq, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl border border-[#3D3D3D]/10 bg-white p-6 shadow-2xs"
+                className="rounded-2xl border border-stone-200/80 bg-white p-6 shadow-2xs"
               >
                 <h3 className="text-base font-bold text-[#262626]">
                   {faq.q}

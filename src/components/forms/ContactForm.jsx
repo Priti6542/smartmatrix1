@@ -50,7 +50,7 @@ export default function ContactForm({ className = "" }) {
 
   return (
     <div
-      className={`rounded-2xl border border-[#3D3D3D]/10 bg-white p-6 sm:p-9 shadow-sm ${className}`}
+      className={`rounded-2xl border border-stone-200/80 bg-white p-6 sm:p-9 shadow-sm ${className}`}
     >
       <div className="mb-6">
         <h3 className="text-xl font-bold text-[#262626] sm:text-2xl">
@@ -96,7 +96,7 @@ export default function ContactForm({ className = "" }) {
                 className={`w-full rounded-xl border px-4 py-3 text-sm text-[#262626] transition-colors duration-200 placeholder:text-[#3D3D3D]/35 focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20 ${
                   errors.name
                     ? "border-rose-400 bg-rose-50/20"
-                    : "border-[#3D3D3D]/15 bg-white focus:border-[#F47C20]"
+                    : "border-stone-200 bg-white focus:border-[#F47C20]"
                 }`}
               />
             </div>
@@ -124,7 +124,7 @@ export default function ContactForm({ className = "" }) {
                 className={`w-full rounded-xl border px-4 py-3 text-sm text-[#262626] transition-colors duration-200 placeholder:text-[#3D3D3D]/35 focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20 ${
                   errors.email
                     ? "border-rose-400 bg-rose-50/20"
-                    : "border-[#3D3D3D]/15 bg-white focus:border-[#F47C20]"
+                    : "border-stone-200 bg-white focus:border-[#F47C20]"
                 }`}
               />
             </div>
@@ -153,7 +153,7 @@ export default function ContactForm({ className = "" }) {
               className={`w-full rounded-xl border px-4 py-3 text-sm text-[#262626] transition-colors duration-200 placeholder:text-[#3D3D3D]/35 focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20 ${
                 errors.contact
                   ? "border-rose-400 bg-rose-50/20"
-                  : "border-[#3D3D3D]/15 bg-white focus:border-[#F47C20]"
+                  : "border-stone-200 bg-white focus:border-[#F47C20]"
               }`}
             />
           </div>
@@ -181,7 +181,7 @@ export default function ContactForm({ className = "" }) {
               className={`w-full rounded-xl border px-4 py-3 text-sm text-[#262626] transition-colors duration-200 placeholder:text-[#3D3D3D]/35 focus:outline-none focus:ring-2 focus:ring-[#F47C20]/20 ${
                 errors.message
                   ? "border-rose-400 bg-rose-50/20"
-                  : "border-[#3D3D3D]/15 bg-white focus:border-[#F47C20]"
+                  : "border-stone-200 bg-white focus:border-[#F47C20]"
               }`}
             />
           </div>

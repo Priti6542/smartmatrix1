@@ -4,7 +4,7 @@ import { COMPANY_STATS } from "../../data/company";
 
 export default function StatisticsSection({ className = "" }) {
   return (
-    <section className={`border-y border-[#3D3D3D]/10 bg-white py-12 sm:py-16 ${className}`}>
+    <section className={`border-y border-stone-200/80 bg-white py-12 sm:py-16 ${className}`}>
       <Container>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {COMPANY_STATS.map((stat, idx) => (

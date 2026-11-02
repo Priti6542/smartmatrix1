@@ -4,6 +4,7 @@ import { ChevronDown, Mail, Phone, X } from "lucide-react";
 import Button from "../common/Button";
 import { NAV_LINKS } from "../../data/navigation";
 import { COMPANY_INFO } from "../../data/company";
+import smartLogo from "../../assets/logos/smart_logo.webp";
 
 export default function MobileMenu({ isOpen, onClose }) {
   const [servicesExpanded, setServicesExpanded] = useState(false);
@@ -23,10 +24,10 @@ export default function MobileMenu({ isOpen, onClose }) {
       {/* Drawer */}
       <div className="fixed inset-y-0 right-0 z-50 flex w-full max-w-sm flex-col justify-between bg-white shadow-2xl transition-transform duration-300">
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-[#3D3D3D]/10 px-6 py-5">
+        <div className="flex items-center justify-between border-b border-stone-200/80 px-6 py-5">
           <Link to="/" onClick={onClose} className="flex items-center gap-2.5">
             <img
-              src="/src/assets/logos/smart_logo.webp"
+              src={smartLogo}
               alt="Smart Matrix"
               className="h-8 w-auto object-contain"
             />
@@ -39,7 +40,7 @@ export default function MobileMenu({ isOpen, onClose }) {
             type="button"
             onClick={onClose}
             aria-label="Close menu"
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#3D3D3D]/10 text-[#3D3D3D] hover:bg-[#FFF8F0] hover:text-[#F47C20]"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-stone-200/80 text-[#3D3D3D] hover:bg-[#FFF8F0] hover:text-[#F47C20]"
           >
             <X size={20} />
           </button>
@@ -53,7 +54,7 @@ export default function MobileMenu({ isOpen, onClose }) {
 
               if (item.hasDropdown) {
                 return (
-                  <div key={idx} className="border-b border-[#3D3D3D]/5 pb-2">
+                  <div key={idx} className="border-b border-stone-100 pb-2">
                     <div className="flex items-center justify-between py-2.5">
                       <Link
                         to={item.path}
@@ -116,7 +117,7 @@ export default function MobileMenu({ isOpen, onClose }) {
         </div>
 
         {/* Footer shortcuts */}
-        <div className="border-t border-[#3D3D3D]/10 bg-[#FFFCF7] p-6">
+        <div className="border-t border-stone-200/80 bg-[#FFFCF7] p-6">
           <div className="mb-4 space-y-2 text-xs text-[#3D3D3D]/75">
             <a
               href={`tel:${COMPANY_INFO.phone}`}

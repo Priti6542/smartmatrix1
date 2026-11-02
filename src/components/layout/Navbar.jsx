@@ -16,6 +16,7 @@ import {
 import Button from "../common/Button";
 import MobileMenu from "./MobileMenu";
 import { NAV_LINKS } from "../../data/navigation";
+import smartLogo from "../../assets/logos/smart_logo.webp";
 
 const ICON_MAP = {
   Globe,
@@ -67,7 +68,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "border-b border-[#3D3D3D]/10 bg-white/95 backdrop-blur-md shadow-xs py-3.5"
+            ? "border-b border-stone-200/80 bg-white/95 backdrop-blur-md shadow-xs py-3.5"
             : "border-b border-transparent bg-white/80 backdrop-blur-xs py-5"
         }`}
       >
@@ -75,7 +76,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
             <img
-              src="/src/assets/logos/smart_logo.webp"
+              src={smartLogo}
               alt="Smart Matrix"
               className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
@@ -127,8 +128,8 @@ export default function Navbar() {
                     {/* Mega Dropdown */}
                     {servicesDropdownOpen && (
                       <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[680px]">
-                        <div className="overflow-hidden rounded-2xl border border-[#3D3D3D]/10 bg-white p-5 shadow-2xl">
-                          <div className="mb-3 flex items-center justify-between border-b border-[#3D3D3D]/5 pb-3">
+                        <div className="overflow-hidden rounded-2xl border border-stone-200/80 bg-white p-5 shadow-2xl">
+                          <div className="mb-3 flex items-center justify-between border-b border-stone-100 pb-3">
                             <span className="text-xs font-bold uppercase tracking-wider text-[#d8690f]">
                               Our Core Capabilities
                             </span>
@@ -149,7 +150,7 @@ export default function Navbar() {
                                   to={`/services/${child.slug}`}
                                   className="group flex items-start gap-3 rounded-xl p-2.5 transition-colors duration-200 hover:bg-[#FFF8F0]"
                                 >
-                                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#F47C20]/20 bg-white text-[#F47C20] transition-colors duration-200 group-hover:bg-[#F47C20] group-hover:text-white">
+                                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#FFF8F0] text-[#F47C20] transition-colors duration-200 group-hover:bg-[#F47C20] group-hover:text-white">
                                     <Icon size={18} />
                                   </div>
                                   <div>
@@ -199,7 +200,7 @@ export default function Navbar() {
             type="button"
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open mobile menu"
-            className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#3D3D3D]/10 text-[#262626] hover:bg-[#FFF8F0] hover:text-[#F47C20] lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-stone-200/80 text-[#262626] hover:bg-[#FFF8F0] hover:text-[#F47C20] lg:hidden"
           >
             <Menu size={22} />
           </button>

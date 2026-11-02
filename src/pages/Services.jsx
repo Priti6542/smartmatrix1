@@ -13,7 +13,7 @@ export default function Services() {
   return (
     <div>
       {/* Header */}
-      <section className="border-b border-[#3D3D3D]/10 bg-[#FFFCF7] pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16">
+      <section className="border-b border-stone-200/80 bg-[#FFFCF7] pt-8 pb-12 sm:pt-10 sm:pb-14 lg:pt-12 lg:pb-16">
         <Container>
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#F47C20]/20 bg-[#FFF8F0] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#d8690f]">
@@ -43,7 +43,7 @@ export default function Services() {
       </section>
 
       {/* Architecture Standards Section */}
-      <section className="py-16 sm:py-20 bg-[#FFFCF7] border-t border-[#3D3D3D]/10">
+      <section className="py-16 sm:py-20 bg-[#FFFCF7] border-t border-stone-200/80">
         <Container>
           <div className="mx-auto max-w-4xl text-center">
             <SectionHeading
@@ -54,7 +54,7 @@ export default function Services() {
             />
 
             <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3 text-left">
-              <div className="rounded-2xl border border-[#3D3D3D]/10 bg-white p-6 shadow-xs">
+              <div className="rounded-2xl border border-stone-200/80 bg-white p-6 shadow-xs">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
                   <CheckCircle2 size={20} />
                 </div>
@@ -66,7 +66,7 @@ export default function Services() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#3D3D3D]/10 bg-white p-6 shadow-xs">
+              <div className="rounded-2xl border border-stone-200/80 bg-white p-6 shadow-xs">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
                   <CheckCircle2 size={20} />
                 </div>
@@ -78,7 +78,7 @@ export default function Services() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#3D3D3D]/10 bg-white p-6 shadow-xs">
+              <div className="rounded-2xl border border-stone-200/80 bg-white p-6 shadow-xs">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFF8F0] text-[#F47C20]">
                   <CheckCircle2 size={20} />
                 </div>
