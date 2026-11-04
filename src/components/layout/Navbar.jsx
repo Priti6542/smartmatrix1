@@ -190,9 +190,9 @@ export default function Navbar() {
 
           {/* Desktop Right CTA */}
           <div className="hidden items-center gap-3 lg:flex">
-            <Button to="/contact" variant="primary" size="md">
+            {/* <Button to="/contact" variant="primary" size="md">
               Start a Project
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile Menu Trigger */}
